@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Font */
+  --font-sans: var(--font-urbanist), system-ui, -apple-system, sans-serif;
+
+  /* Core Colors */
+  --color-charcoal: #0B1220;
+  --color-slate-dark: #1F2A37;
+  --color-steel: #334155;
+  --color-mist: #F5F7FA;
+
+  /* Neo (Teal) Scale */
+  --color-neo-50: #F0FDFA;
+  --color-neo-100: #CCFBF1;
+  --color-neo-200: #99F6E4;
+  --color-neo-300: #5EEAD4;
+  --color-neo-400: #2DD4BF;
+  --color-neo-500: #14B8A6;
+  --color-neo-600: #0D9488;
+  --color-neo-700: #0F766E;
+  --color-neo-800: #115E59;
+  --color-neo-900: #134E4A;
+  --color-neo-950: #042F2E;
+
+  /* Product Colors */
+  --color-product-ai: #8B5CF6;
+  --color-product-crm: #3B82F6;
+  --color-product-clinic: #10B981;
+  --color-product-kalender: #3B82F6;
+  --color-product-cloud: #6366F1;
+  --color-product-pay: #EC4899;
+
+  /* Semantic Colors */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #0EA5E9;
+
+  /* Container */
+  --container-max-width-xl: 1280px;
+}
+
+/* Base styles */
+body {
+  background: #ffffff;
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-neo-200);
+  color: var(--color-charcoal);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--color-neo-500);
+  outline-offset: 2px;
+}

@@ -1,0 +1,337 @@
+{
+  "common": {
+    "nav": {
+      "home": "Início",
+      "about": "Sobre",
+      "peopleCulture": "Pessoas & Cultura",
+      "products": "Produtos",
+      "contact": "Contato",
+      "privacy": "Política de Privacidade",
+      "terms": "Termos de Uso"
+    },
+    "footer": {
+      "brand": "Holding de tecnologia construindo o futuro com engenharia de excelência.",
+      "products": "Produtos",
+      "company": "Empresa",
+      "legal": "Legal",
+      "rights": "Todos os direitos reservados."
+    },
+    "cta": {
+      "learnMore": "Saiba Mais",
+      "getStarted": "Comece Agora",
+      "contactUs": "Fale Conosco",
+      "viewAll": "Ver Todos",
+      "readMore": "Leia Mais",
+      "backToHome": "Voltar ao Início"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "A Nova Base da Tecnologia",
+      "subtitle": "Somos uma holding de tecnologia que combina engenharia de excelência com inovação para construir produtos que transformam negócios.",
+      "cta1": "Conheça Nossos Produtos",
+      "cta2": "Sobre a Cerneo"
+    },
+    "manifesto": {
+      "title": "Por Que Cerneo?",
+      "paragraph1": "O nome Cerneo nasce da fusão de duas palavras: Cerne, o núcleo, a essência, a base sólida, e Neo, o novo, a evolução, o futuro.",
+      "paragraph2": "Acreditamos que toda grande tecnologia começa com uma base sólida. Não construímos apenas software. Construímos os alicerces sobre os quais negócios inteiros se transformam.",
+      "paragraph3": "Cada produto Cerneo é projetado com arquitetura limpa, princípios SOLID e obsessão por qualidade. Porque o futuro da tecnologia exige mais do que código. Exige engenharia."
+    },
+    "logo": {
+      "title": "O Hexágono Cerneo",
+      "subtitle": "Nosso símbolo é um hexágono, a forma mais eficiente da natureza.",
+      "item1Title": "Estrutura",
+      "item1Desc": "Assim como o hexágono é a estrutura mais resistente encontrada na natureza, nossas soluções são construídas para durar.",
+      "item2Title": "Modularidade",
+      "item2Desc": "Hexágonos se encaixam perfeitamente, sem espaços. Nossos produtos são projetados para integração perfeita.",
+      "item3Title": "Engenharia",
+      "item3Desc": "A geometria hexagonal aparece em engenharia molecular, colmeias e cristais. Representa precisão e propósito."
+    },
+    "products": {
+      "title": "Nossos Produtos",
+      "subtitle": "Um ecossistema de soluções tecnológicas construídas com excelência.",
+      "ai": {
+        "name": "Cerneo AI",
+        "description": "Inteligência artificial aplicada para automatização inteligente e insights de negócio."
+      },
+      "crm": {
+        "name": "Cerneo CRM",
+        "description": "Gestão de relacionamento com clientes moderna, intuitiva e poderosa."
+      },
+      "clinic": {
+        "name": "Cerneo Clinic",
+        "description": "Sistema completo para gestão de clínicas e consultórios de saúde."
+      },
+      "kalender": {
+        "name": "Cerneo Kalender",
+        "description": "Agendamento inteligente com automações e integrações para seu negócio."
+      },
+      "comingSoon": "Em Breve"
+    },
+    "differentials": {
+      "title": "Por Que Escolher a Cerneo",
+      "subtitle": "Soluções tecnológicas que geram resultados mensuráveis para o seu negócio.",
+      "reliability": {
+        "title": "Confiabilidade",
+        "description": "Sistemas robustos com alta disponibilidade, projetados para operar sem interrupções e garantir a continuidade do seu negócio."
+      },
+      "scalability": {
+        "title": "Escalabilidade",
+        "description": "Plataformas que crescem junto com a sua empresa, sem necessidade de migrações ou reestruturações custosas."
+      },
+      "agility": {
+        "title": "Agilidade na Entrega",
+        "description": "Processos otimizados que permitem entregas rápidas e incrementais, acelerando o retorno sobre o investimento."
+      },
+      "datadriven": {
+        "title": "Decisões Baseadas em Dados",
+        "description": "Dashboards e relatórios integrados que transformam dados em insights acionáveis para a tomada de decisão."
+      },
+      "security": {
+        "title": "Segurança e Conformidade",
+        "description": "Proteção de dados em conformidade com a LGPD e as melhores práticas de segurança da informação."
+      },
+      "support": {
+        "title": "Suporte Dedicado",
+        "description": "Equipe especializada pronta para atender sua empresa com agilidade e foco na resolução de problemas."
+      }
+    },
+    "culture": {
+      "title": "Nossa Cultura",
+      "subtitle": "Construímos tecnologia de excelência porque investimos em pessoas de excelência.",
+      "cta": "Conheça Nossa Cultura"
+    },
+    "trust": {
+      "title": "Transparência e Confiança",
+      "subtitle": "Operamos com total transparência. Conheça nossos compromissos legais.",
+      "privacyTitle": "Política de Privacidade",
+      "privacyDesc": "Como coletamos, usamos e protegemos seus dados pessoais.",
+      "termsTitle": "Termos de Uso",
+      "termsDesc": "Condições gerais de uso dos nossos serviços e plataformas."
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Sobre a Cerneo",
+      "subtitle": "Uma holding de tecnologia nascida da convicção de que engenharia de excelência transforma negócios."
+    },
+    "story": {
+      "title": "Nossa História",
+      "paragraph1": "A Cerneo nasceu da visão de criar uma holding de tecnologia que não apenas desenvolve software, mas constrói soluções com engenharia de verdade.",
+      "paragraph2": "Fundada por engenheiros de software apaixonados por qualidade, a Cerneo reúne sob um mesmo guarda-chuva produtos que compartilham uma base tecnológica comum: arquitetura limpa, código testado e design centrado no usuário.",
+      "paragraph3": "Nosso nome, fusão de Cerne (essência) e Neo (novo), reflete nosso compromisso: construir o novo a partir de bases sólidas."
+    },
+    "timeline": {
+      "title": "Nossa Trajetória",
+      "item1": {
+        "year": "2024",
+        "title": "Fundação",
+        "description": "Cerneo é fundada com a missão de construir tecnologia de excelência."
+      },
+      "item2": {
+        "year": "2024",
+        "title": "Primeiros Produtos",
+        "description": "Lançamento do Cerneo Clinic e início do desenvolvimento do CRM."
+      },
+      "item3": {
+        "year": "2025",
+        "title": "Expansão",
+        "description": "Expansão do portfólio com Cerneo AI e Cerneo Kalender."
+      },
+      "item4": {
+        "year": "2025",
+        "title": "Ecossistema",
+        "description": "Consolidação do ecossistema Cerneo com soluções integradas."
+      }
+    },
+    "values": {
+      "title": "Nossos Valores",
+      "subtitle": "Os princípios que guiam cada decisão na Cerneo.",
+      "excellence": {
+        "title": "Excelência",
+        "description": "Não aceitamos o medíocre. Cada produto, cada feature, cada linha de código reflete nosso compromisso com qualidade."
+      },
+      "innovation": {
+        "title": "Inovação",
+        "description": "Buscamos constantemente novas formas de resolver problemas. Inovação não é opção, é obrigação."
+      },
+      "transparency": {
+        "title": "Transparência",
+        "description": "Operamos com honestidade radical. Com nossos clientes, parceiros e entre nós mesmos."
+      },
+      "impact": {
+        "title": "Impacto",
+        "description": "Construímos tecnologia que gera impacto real nos negócios dos nossos clientes."
+      }
+    },
+    "cta": {
+      "title": "Quer Fazer Parte?",
+      "subtitle": "Estamos sempre em busca de engenheiros apaixonados por excelência.",
+      "button": "Conheça Nossa Cultura"
+    }
+  },
+  "peopleCulture": {
+    "hero": {
+      "title": "Pessoas & Cultura",
+      "subtitle": "Acreditamos que tecnologia excepcional é construída por pessoas excepcionais."
+    },
+    "philosophy": {
+      "title": "Nossa Filosofia",
+      "paragraph1": "Na Cerneo, cultura não é um documento pendurado na parede. É como trabalhamos todos os dias.",
+      "paragraph2": "Acreditamos que as melhores soluções nascem de equipes que combinam excelência técnica com colaboração genuína. Por isso, investimos tanto em pessoas quanto em tecnologia.",
+      "paragraph3": "Nosso ambiente é construído sobre autonomia, confiança e responsabilidade. Aqui, cada pessoa tem o poder e a responsabilidade de fazer a diferença."
+    },
+    "values": {
+      "title": "O Que Valorizamos",
+      "subtitle": "Os pilares que definem como trabalhamos e quem somos.",
+      "ownership": {
+        "title": "Responsabilidade",
+        "description": "Cada pessoa é dona do seu trabalho. Tomamos decisões, assumimos consequências e entregamos resultados."
+      },
+      "quality": {
+        "title": "Qualidade",
+        "description": "Fazemos bem feito desde o início. Atalhos geram retrabalho, e retrabalho custa mais caro que fazer certo."
+      },
+      "collaboration": {
+        "title": "Colaboração",
+        "description": "Ninguém constrói nada sozinho. As melhores soluções nascem quando perspectivas diferentes se encontram."
+      },
+      "growth": {
+        "title": "Evolução Contínua",
+        "description": "Quem para de aprender para de crescer. Investimos no desenvolvimento técnico e pessoal de cada um."
+      },
+      "transparency": {
+        "title": "Transparência",
+        "description": "Falamos com clareza, mesmo quando é difícil. Problemas escondidos viram problemas maiores."
+      },
+      "balance": {
+        "title": "Equilíbrio",
+        "description": "Resultado consistente exige energia consistente. Respeitamos limites e valorizamos a vida fora do trabalho."
+      }
+    },
+    "howWeWork": {
+      "title": "Como Trabalhamos",
+      "subtitle": "Práticas e rituais que mantêm nossa cultura viva.",
+      "remote": {
+        "title": "Remote-First",
+        "description": "Trabalho remoto como padrão, com flexibilidade total de horários e localização."
+      },
+      "async": {
+        "title": "Comunicação Assíncrona",
+        "description": "Priorizamos documentação escrita sobre reuniões, respeitando o foco de cada um."
+      },
+      "reviews": {
+        "title": "Code Reviews",
+        "description": "Todo código passa por revisão. É uma oportunidade de aprendizado mútuo."
+      },
+      "learning": {
+        "title": "Learning Budget",
+        "description": "Investimento em cursos, conferências e certificações para cada membro da equipe."
+      }
+    },
+    "cta": {
+      "title": "Quer Construir o Futuro Conosco?",
+      "subtitle": "Estamos sempre em busca de pessoas apaixonadas por tecnologia e excelência.",
+      "button": "Fale Conosco"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Política de Privacidade",
+      "lastUpdated": "Última atualização: Fevereiro de 2025",
+      "intro": {
+        "title": "1. Introdução",
+        "content": "A Cerneo Tecnologia Ltda. (\"Cerneo\", \"nós\") valoriza a privacidade dos nossos usuários. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos seus dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018)."
+      },
+      "collection": {
+        "title": "2. Dados Coletados",
+        "content": "Podemos coletar os seguintes dados pessoais:",
+        "items": [
+          "Dados de identificação: nome, e-mail, telefone, CPF/CNPJ",
+          "Dados de uso: páginas visitadas, tempo de navegação, endereço IP",
+          "Dados de dispositivo: tipo de navegador, sistema operacional, resolução de tela",
+          "Dados fornecidos voluntariamente: mensagens de contato, feedbacks"
+        ]
+      },
+      "usage": {
+        "title": "3. Uso dos Dados",
+        "content": "Utilizamos seus dados para:",
+        "items": [
+          "Fornecer e melhorar nossos serviços e produtos",
+          "Comunicar atualizações, novidades e informações relevantes",
+          "Garantir a segurança e integridade dos nossos sistemas",
+          "Cumprir obrigações legais e regulatórias",
+          "Análises estatísticas e melhoria de experiência do usuário"
+        ]
+      },
+      "sharing": {
+        "title": "4. Compartilhamento de Dados",
+        "content": "Não vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros para fins comerciais. Podemos compartilhar dados com: prestadores de serviço essenciais (hospedagem, analytics), autoridades legais quando exigido por lei, e empresas do grupo Cerneo para fins operacionais."
+      },
+      "storage": {
+        "title": "5. Armazenamento e Segurança",
+        "content": "Seus dados são armazenados em servidores seguros com criptografia em trânsito e em repouso. Implementamos medidas técnicas e organizacionais adequadas para proteger seus dados contra acesso não autorizado, alteração, divulgação ou destruição."
+      },
+      "rights": {
+        "title": "6. Seus Direitos",
+        "content": "Conforme a LGPD, você tem direito a:",
+        "items": [
+          "Confirmar a existência de tratamento de dados",
+          "Acessar seus dados pessoais",
+          "Corrigir dados incompletos ou desatualizados",
+          "Solicitar anonimização, bloqueio ou eliminação de dados",
+          "Solicitar portabilidade dos dados",
+          "Revogar consentimento a qualquer momento"
+        ]
+      },
+      "contact": {
+        "title": "7. Contato",
+        "content": "Para exercer seus direitos ou esclarecer dúvidas sobre esta política, entre em contato com nosso Encarregado de Proteção de Dados (DPO) pelo e-mail: privacidade@cerneo.com.br"
+      }
+    },
+    "terms": {
+      "title": "Termos de Uso",
+      "lastUpdated": "Última atualização: Fevereiro de 2025",
+      "acceptance": {
+        "title": "1. Aceitação dos Termos",
+        "content": "Ao acessar e utilizar os serviços da Cerneo Tecnologia Ltda. (\"Cerneo\"), você concorda com estes Termos de Uso. Se não concordar com qualquer parte destes termos, não utilize nossos serviços."
+      },
+      "services": {
+        "title": "2. Descrição dos Serviços",
+        "content": "A Cerneo é uma holding de tecnologia que oferece um ecossistema de produtos de software, incluindo mas não limitado a: Cerneo AI, Cerneo CRM, Cerneo Clinic e Cerneo Kalender. Cada produto pode ter termos específicos adicionais."
+      },
+      "responsibilities": {
+        "title": "3. Responsabilidades do Usuário",
+        "content": "Ao utilizar nossos serviços, você se compromete a:",
+        "items": [
+          "Fornecer informações verdadeiras e atualizadas",
+          "Manter a confidencialidade de suas credenciais de acesso",
+          "Não utilizar os serviços para fins ilegais ou não autorizados",
+          "Não tentar acessar áreas restritas dos nossos sistemas",
+          "Respeitar a propriedade intelectual da Cerneo e de terceiros"
+        ]
+      },
+      "ip": {
+        "title": "4. Propriedade Intelectual",
+        "content": "Todo o conteúdo, código-fonte, design, marcas, logos e materiais disponíveis nos serviços da Cerneo são de propriedade exclusiva da Cerneo ou de seus licenciadores. Nenhum direito de propriedade intelectual é transferido ao usuário pelo uso dos serviços."
+      },
+      "liability": {
+        "title": "5. Limitação de Responsabilidade",
+        "content": "A Cerneo se esforça para manter seus serviços disponíveis e funcionais, mas não garante disponibilidade ininterrupta. Não nos responsabilizamos por: danos indiretos, lucros cessantes, perda de dados causada por fatores fora do nosso controle, ou indisponibilidade temporária dos serviços."
+      },
+      "modifications": {
+        "title": "6. Modificações",
+        "content": "A Cerneo reserva-se o direito de modificar estes Termos de Uso a qualquer momento. Alterações significativas serão comunicadas por e-mail ou através de aviso nos nossos serviços. O uso continuado após as alterações constitui aceitação dos novos termos."
+      },
+      "governing": {
+        "title": "7. Lei Aplicável",
+        "content": "Estes Termos de Uso são regidos pelas leis da República Federativa do Brasil. Qualquer disputa será submetida ao foro da comarca de São Paulo, SP, com exclusão de qualquer outro."
+      },
+      "contact": {
+        "title": "8. Contato",
+        "content": "Para dúvidas sobre estes Termos de Uso, entre em contato pelo e-mail: juridico@cerneo.com.br"
+      }
+    }
+  }
+}
