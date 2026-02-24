@@ -6,6 +6,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "../../src/i18n/routing";
 import { Navbar } from "../../src/design-system/components/layout/Navbar";
 import { Footer } from "../../src/design-system/components/layout/Footer";
+import { Analytics } from "@vercel/analytics/next";
 import "../globals.css";
 
 const urbanist = Urbanist({
@@ -62,6 +63,7 @@ export default async function LocaleLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
