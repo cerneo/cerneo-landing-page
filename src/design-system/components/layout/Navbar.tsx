@@ -31,7 +31,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <Image
-              src="/images/cerneo-logo.png"
+              src="/images/logo-cerneo.png"
               alt="Cerneo"
               width={28}
               height={36}

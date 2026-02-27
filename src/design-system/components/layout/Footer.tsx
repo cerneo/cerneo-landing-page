@@ -36,7 +36,7 @@ export function Footer() {
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2 mb-4">
                 <Image
-                  src="/images/cerneo-logo.png"
+                  src="/images/logo-cerneo.png"
                   alt="Cerneo"
                   width={24}
                   height={32}

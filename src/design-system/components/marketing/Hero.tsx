@@ -284,7 +284,7 @@ export function Hero({
                     style={{ transformStyle: "preserve-3d" }}
                   >
                     <Image
-                      src="/images/cerneo-logo.png"
+                      src="/images/logo-cerneo.png"
                       alt="Cerneo"
                       width={246}
                       height={320}
