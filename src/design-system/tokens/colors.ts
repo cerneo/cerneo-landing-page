@@ -22,7 +22,7 @@ export const colors = {
     ai: "#8B5CF6",
     crm: "#3B82F6",
     clinic: "#10B981",
-    kalender: "#F59E0B",
+    kalender: "#0EA5E9",
     cloud: "#6366F1",
     pay: "#EC4899",
   },
