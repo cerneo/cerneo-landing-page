@@ -49,25 +49,12 @@
       "item3Desc": "A geometria hexagonal aparece em engenharia molecular, colmeias e cristais. Representa precisão e propósito."
     },
     "products": {
-      "title": "Nossos Produtos",
-      "subtitle": "Um ecossistema de soluções tecnológicas construídas com excelência.",
-      "ai": {
-        "name": "Cerneo AI",
-        "description": "Inteligência artificial aplicada para automatização inteligente e insights de negócio."
-      },
-      "crm": {
-        "name": "Cerneo CRM",
-        "description": "Gestão de relacionamento com clientes moderna, intuitiva e poderosa."
-      },
-      "clinic": {
-        "name": "Cerneo Clinic",
-        "description": "Sistema completo para gestão de clínicas e consultórios de saúde."
-      },
+      "title": "Nosso Produto",
+      "subtitle": "Solução tecnológica construída com engenharia de excelência.",
       "kalender": {
         "name": "Cerneo Kalender",
         "description": "Agendamento inteligente com automações e integrações para seu negócio."
-      },
-      "comingSoon": "Em Breve"
+      }
     },
     "differentials": {
       "title": "Por Que Escolher a Cerneo",
@@ -131,13 +118,13 @@
       },
       "item2": {
         "year": "2024",
-        "title": "Primeiros Produtos",
-        "description": "Lançamento do Cerneo Clinic e início do desenvolvimento do CRM."
+        "title": "Primeiro Produto",
+        "description": "Início do desenvolvimento do Cerneo Kalender."
       },
       "item3": {
         "year": "2025",
-        "title": "Expansão",
-        "description": "Expansão do portfólio com Cerneo AI e Cerneo Kalender."
+        "title": "Lançamento",
+        "description": "Lançamento do Cerneo Kalender em produção."
       },
       "item4": {
         "year": "2025",
@@ -299,7 +286,7 @@
       },
       "services": {
         "title": "2. Descrição dos Serviços",
-        "content": "A Cerneo é uma holding de tecnologia que oferece um ecossistema de produtos de software, incluindo mas não limitado a: Cerneo AI, Cerneo CRM, Cerneo Clinic e Cerneo Kalender. Cada produto pode ter termos específicos adicionais."
+        "content": "A Cerneo é uma holding de tecnologia que oferece produtos de software, incluindo o Cerneo Kalender. Cada produto pode ter termos específicos adicionais."
       },
       "responsibilities": {
         "title": "3. Responsabilidades do Usuário",

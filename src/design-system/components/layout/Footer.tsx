@@ -4,10 +4,7 @@ import { Link } from "../../../i18n/navigation";
 import { Container } from "./Container";
 
 const productLinks = [
-  { label: "Cerneo AI", href: "#" },
-  { label: "Cerneo CRM", href: "#" },
-  { label: "Cerneo Clinic", href: "#" },
-  { label: "Cerneo Kalender", href: "#" },
+  { label: "Cerneo Kalender", href: "https://www.kalender.com.br" },
 ];
 
 const companyLinks = [

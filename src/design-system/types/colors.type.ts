@@ -8,10 +8,4 @@ export type TColor =
   | "error"
   | "info";
 
-export type TProductColor =
-  | "product-ai"
-  | "product-crm"
-  | "product-clinic"
-  | "product-kalender"
-  | "product-cloud"
-  | "product-pay";
+export type TProductColor = "product-kalender";

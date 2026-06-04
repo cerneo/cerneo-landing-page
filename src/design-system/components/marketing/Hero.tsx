@@ -227,7 +227,7 @@ export function Hero({
                 className="mt-12 flex items-center gap-6 justify-center lg:justify-start"
               >
                 {[
-                  { value: "4", label: "Produtos" },
+                  { value: "1", label: "Produto" },
                   { value: "99.9%", label: "Uptime" },
                   { value: "LGPD", label: "Compliant" },
                 ].map((stat) => (
@@ -294,23 +294,17 @@ export function Hero({
                   </motion.div>
                 </div>
 
-                {/* Floating product dots around logo */}
-                {[
-                  { color: "bg-product-ai", angle: 45, label: "AI" },
-                  { color: "bg-product-crm", angle: 135, label: "CRM" },
-                  { color: "bg-product-clinic", angle: 225, label: "Clinic" },
-                  { color: "bg-product-kalender", angle: 315, label: "Kalender", logoSrc: "/images/product-logo/kalender-logo.png" },
-                ].map((product, i) => {
+                {/* Floating product dot around logo */}
+                {(() => {
                   const r = 145;
-                  const rad = (product.angle * Math.PI) / 180;
+                  const rad = (315 * Math.PI) / 180;
                   const px = Math.cos(rad) * r;
                   const py = Math.sin(rad) * r;
                   return (
                     <motion.div
-                      key={product.label}
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.8 + i * 0.15, duration: 0.5, type: "spring", stiffness: 200 }}
+                      transition={{ delay: 0.8, duration: 0.5, type: "spring", stiffness: 200 }}
                       className="absolute"
                       style={{
                         top: `calc(50% + ${py}px - 16px)`,
@@ -319,23 +313,19 @@ export function Hero({
                     >
                       <motion.div
                         animate={{ y: [0, -4, 0] }}
-                        transition={{ duration: 3 + i, repeat: Infinity, ease: "easeInOut", delay: i * 0.5 }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                         className="group relative"
                       >
-                        <div className={classnames("h-8 w-8 rounded-full flex items-center justify-center shadow-lg", product.logoSrc ? "bg-white" : product.color)}>
-                          {product.logoSrc ? (
-                            <Image src={product.logoSrc} alt={product.label} width={20} height={20} className="h-5 w-5 object-contain" />
-                          ) : (
-                            <span className="text-[10px] font-bold text-white">{product.label.charAt(0)}</span>
-                          )}
+                        <div className="h-8 w-8 rounded-full flex items-center justify-center shadow-lg bg-white">
+                          <Image src="/images/product-logo/kalender-logo.png" alt="Kalender" width={20} height={20} className="h-5 w-5 object-contain" />
                         </div>
                         <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                          <span className="text-[10px] text-gray-400">{product.label}</span>
+                          <span className="text-[10px] text-gray-400">Kalender</span>
                         </div>
                       </motion.div>
                     </motion.div>
                   );
-                })}
+                })()}
               </div>
             </motion.div>
           </div>

@@ -49,25 +49,12 @@
       "item3Desc": "Hexagonal geometry appears in molecular engineering, beehives, and crystals. It represents precision and purpose."
     },
     "products": {
-      "title": "Our Products",
-      "subtitle": "An ecosystem of technology solutions built with excellence.",
-      "ai": {
-        "name": "Cerneo AI",
-        "description": "Applied artificial intelligence for smart automation and business insights."
-      },
-      "crm": {
-        "name": "Cerneo CRM",
-        "description": "Modern, intuitive, and powerful customer relationship management."
-      },
-      "clinic": {
-        "name": "Cerneo Clinic",
-        "description": "Complete system for managing health clinics and practices."
-      },
+      "title": "Our Product",
+      "subtitle": "Technology solution built with engineering excellence.",
       "kalender": {
         "name": "Cerneo Kalender",
         "description": "Smart scheduling with automations and integrations for your business."
-      },
-      "comingSoon": "Coming Soon"
+      }
     },
     "differentials": {
       "title": "Why Choose Cerneo",
@@ -131,13 +118,13 @@
       },
       "item2": {
         "year": "2024",
-        "title": "First Products",
-        "description": "Launch of Cerneo Clinic and start of CRM development."
+        "title": "First Product",
+        "description": "Start of Cerneo Kalender development."
       },
       "item3": {
         "year": "2025",
-        "title": "Expansion",
-        "description": "Portfolio expansion with Cerneo AI and Cerneo Kalender."
+        "title": "Launch",
+        "description": "Launch of Cerneo Kalender in production."
       },
       "item4": {
         "year": "2025",
@@ -299,7 +286,7 @@
       },
       "services": {
         "title": "2. Description of Services",
-        "content": "Cerneo is a technology holding that offers an ecosystem of software products, including but not limited to: Cerneo AI, Cerneo CRM, Cerneo Clinic, and Cerneo Kalender. Each product may have additional specific terms."
+        "content": "Cerneo is a technology holding that offers software products, including Cerneo Kalender. Each product may have additional specific terms."
       },
       "responsibilities": {
         "title": "3. User Responsibilities",

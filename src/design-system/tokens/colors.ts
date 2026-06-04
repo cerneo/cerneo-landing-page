@@ -19,12 +19,7 @@ export const colors = {
     950: "#042F2E",
   },
   products: {
-    ai: "#8B5CF6",
-    crm: "#3B82F6",
-    clinic: "#10B981",
     kalender: "#0EA5E9",
-    cloud: "#6366F1",
-    pay: "#EC4899",
   },
   semantic: {
     success: "#10B981",

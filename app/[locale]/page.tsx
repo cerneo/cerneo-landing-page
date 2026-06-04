@@ -1,8 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
-  Brain,
-  Users,
-  Activity,
   Calendar,
   Hexagon,
   ArrowRight,
@@ -32,12 +29,12 @@ export default async function HomePage({
   const t = await getTranslations("home");
   const tCta = await getTranslations("common.cta");
 
-  const products = [
-    { key: "ai", icon: <Brain className="h-6 w-6 text-product-ai" />, accent: "bg-product-ai" },
-    { key: "crm", icon: <Users className="h-6 w-6 text-product-crm" />, accent: "bg-product-crm" },
-    { key: "clinic", icon: <Activity className="h-6 w-6 text-product-clinic" />, accent: "bg-product-clinic" },
-    { key: "kalender", icon: <Calendar className="h-6 w-6 text-product-kalender" />, accent: "bg-product-kalender", logoSrc: "/images/product-logo/kalender-logo.png" },
-  ];
+  const kalender = {
+    key: "kalender",
+    icon: <Calendar className="h-6 w-6 text-product-kalender" />,
+    accent: "bg-product-kalender",
+    logoSrc: "/images/product-logo/kalender-logo.png",
+  };
 
   const differentials = [
     { key: "reliability", icon: <ShieldCheck className="h-5 w-5" /> },
@@ -121,19 +118,14 @@ export default async function HomePage({
             </h2>
             <p className="mt-4 text-lg text-steel">{t("products.subtitle")}</p>
           </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto">
-            {products.map((product) => (
-              <ProductCard
-                key={product.key}
-                name={t(`products.${product.key}.name`)}
-                description={t(`products.${product.key}.description`)}
-                icon={product.icon}
-                accentColor={product.accent}
-                logoSrc={product.logoSrc}
-                comingSoon
-                comingSoonLabel={t("products.comingSoon")}
-              />
-            ))}
+          <div className="flex justify-center max-w-md mx-auto">
+            <ProductCard
+              name={t(`products.${kalender.key}.name`)}
+              description={t(`products.${kalender.key}.description`)}
+              icon={kalender.icon}
+              accentColor={kalender.accent}
+              logoSrc={kalender.logoSrc}
+            />
           </div>
         </Container>
       </Section>
