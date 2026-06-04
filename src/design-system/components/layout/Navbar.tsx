@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
-import { Globe, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import classnames from "classnames";
 import { Link, usePathname, useRouter } from "../../../i18n/navigation";
 import { Button } from "../ui/Button";
@@ -16,18 +16,37 @@ const navLinks = [
   { href: "/people-culture", key: "peopleCulture" },
 ] as const;
 
+const localeConfig = [
+  { code: "pt-BR", label: "PT", flag: "🇧🇷" },
+  { code: "en", label: "EN", flag: "🇺🇸" },
+  { code: "es", label: "ES", flag: "🇪🇸" },
+] as const;
+
 export function Navbar() {
   const t = useTranslations("common.nav");
   const pathname = usePathname();
   const router = useRouter();
   const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
 
-  const nextLocale = locale === "pt-BR" ? "en" : "pt-BR";
-  const switchLabel = locale === "pt-BR" ? "EN" : "PT";
+  const currentLocale = localeConfig.find((l) => l.code === locale) ?? localeConfig[0];
 
-  function handleLocaleSwitch() {
-    router.replace(pathname, { locale: nextLocale });
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  function handleLocaleSwitch(newLocale: string) {
+    router.replace(pathname, { locale: newLocale });
+    setLangOpen(false);
+    setIsOpen(false);
   }
 
   return (
@@ -75,19 +94,42 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex md:items-center md:gap-2">
-            <button
-              type="button"
-              onClick={handleLocaleSwitch}
-              className={classnames(
-                "flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg cursor-pointer",
-                "text-steel hover:text-charcoal hover:bg-gray-50",
-                themeConfig.defaultTransition
+            <div ref={langRef} className="relative">
+              <button
+                type="button"
+                onClick={() => setLangOpen(!langOpen)}
+                className={classnames(
+                  "flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg cursor-pointer",
+                  "text-steel hover:text-charcoal hover:bg-gray-50",
+                  themeConfig.defaultTransition
+                )}
+                aria-label="Change language"
+              >
+                <span className="text-base leading-none">{currentLocale.flag}</span>
+                {currentLocale.label}
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 mt-1 w-36 rounded-lg border border-gray-200 bg-white py-1 shadow-lg">
+                  {localeConfig
+                    .filter((l) => l.code !== locale)
+                    .map((l) => (
+                      <button
+                        key={l.code}
+                        type="button"
+                        onClick={() => handleLocaleSwitch(l.code)}
+                        className={classnames(
+                          "flex w-full items-center gap-2 px-3 py-2 text-sm font-medium cursor-pointer",
+                          "text-steel hover:text-charcoal hover:bg-gray-50",
+                          themeConfig.defaultTransition
+                        )}
+                      >
+                        <span className="text-base leading-none">{l.flag}</span>
+                        {l.label}
+                      </button>
+                    ))}
+                </div>
               )}
-              aria-label={`Switch to ${nextLocale}`}
-            >
-              <Globe className="h-4 w-4" />
-              {switchLabel}
-            </button>
+            </div>
             <Button size="sm" color="neo">
               {t("contact") ?? "Contato"}
             </Button>
@@ -126,22 +168,26 @@ export function Navbar() {
                 </Link>
               );
             })}
-            <button
-              type="button"
-              onClick={() => {
-                handleLocaleSwitch();
-                setIsOpen(false);
-              }}
-              className={classnames(
-                "flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg cursor-pointer w-full",
-                "text-steel hover:text-charcoal hover:bg-gray-50",
-                themeConfig.defaultTransition
-              )}
-              aria-label={`Switch to ${nextLocale}`}
-            >
-              <Globe className="h-4 w-4" />
-              {switchLabel}
-            </button>
+            <div className="flex items-center gap-1 px-3 py-2">
+              {localeConfig.map((l) => (
+                <button
+                  key={l.code}
+                  type="button"
+                  onClick={() => handleLocaleSwitch(l.code)}
+                  disabled={l.code === locale}
+                  className={classnames(
+                    "flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-lg cursor-pointer",
+                    themeConfig.defaultTransition,
+                    l.code === locale
+                      ? "text-neo-600 bg-neo-50 cursor-default"
+                      : "text-steel hover:text-charcoal hover:bg-gray-50"
+                  )}
+                >
+                  <span className="text-base leading-none">{l.flag}</span>
+                  {l.label}
+                </button>
+              ))}
+            </div>
             <div className="pt-2 px-3">
               <Button size="sm" color="neo" fullWidth>
                 {t("contact") ?? "Contato"}
