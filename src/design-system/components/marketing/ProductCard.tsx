@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import classnames from "classnames";
+import { ExternalLink } from "lucide-react";
 import { Badge } from "../ui/Badge";
 
 interface ProductCardProps {
@@ -11,6 +12,7 @@ interface ProductCardProps {
   logoSrc?: string;
   comingSoon?: boolean;
   comingSoonLabel?: string;
+  href?: string;
   className?: string;
 }
 
@@ -22,14 +24,16 @@ export function ProductCard({
   logoSrc,
   comingSoon = false,
   comingSoonLabel = "Em Breve",
+  href,
   className,
 }: ProductCardProps) {
-  return (
+  const card = (
     <div
       data-component-name="ProductCard"
       className={classnames(
         "group relative rounded-xl border border-gray-200 bg-white p-6",
         "hover:shadow-lg hover:border-gray-300 transition-all duration-300",
+        href && "cursor-pointer",
         className
       )}
     >
@@ -64,8 +68,23 @@ export function ProductCard({
         )}
       </div>
 
-      <h3 className="mt-4 text-lg font-semibold text-charcoal">{name}</h3>
+      <div className="flex items-center gap-2 mt-4">
+        <h3 className="text-lg font-semibold text-charcoal">{name}</h3>
+        {href && (
+          <ExternalLink className="h-4 w-4 text-steel group-hover:text-neo-600 transition-colors duration-300" />
+        )}
+      </div>
       <p className="mt-2 text-sm leading-relaxed text-steel">{description}</p>
     </div>
   );
+
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {card}
+      </a>
+    );
+  }
+
+  return card;
 }

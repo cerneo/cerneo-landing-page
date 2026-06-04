@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Globe, Menu, X } from "lucide-react";
 import classnames from "classnames";
-import { Link, usePathname } from "../../../i18n/navigation";
+import { Link, usePathname, useRouter } from "../../../i18n/navigation";
 import { Button } from "../ui/Button";
 import { Container } from "./Container";
 import { themeConfig } from "../../config/theme.config";
@@ -19,7 +19,16 @@ const navLinks = [
 export function Navbar() {
   const t = useTranslations("common.nav");
   const pathname = usePathname();
+  const router = useRouter();
+  const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
+
+  const nextLocale = locale === "pt-BR" ? "en" : "pt-BR";
+  const switchLabel = locale === "pt-BR" ? "EN" : "PT";
+
+  function handleLocaleSwitch() {
+    router.replace(pathname, { locale: nextLocale });
+  }
 
   return (
     <header
@@ -65,7 +74,20 @@ export function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex md:items-center md:gap-2">
+            <button
+              type="button"
+              onClick={handleLocaleSwitch}
+              className={classnames(
+                "flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg cursor-pointer",
+                "text-steel hover:text-charcoal hover:bg-gray-50",
+                themeConfig.defaultTransition
+              )}
+              aria-label={`Switch to ${nextLocale}`}
+            >
+              <Globe className="h-4 w-4" />
+              {switchLabel}
+            </button>
             <Button size="sm" color="neo">
               {t("contact") ?? "Contato"}
             </Button>
@@ -104,6 +126,22 @@ export function Navbar() {
                 </Link>
               );
             })}
+            <button
+              type="button"
+              onClick={() => {
+                handleLocaleSwitch();
+                setIsOpen(false);
+              }}
+              className={classnames(
+                "flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg cursor-pointer w-full",
+                "text-steel hover:text-charcoal hover:bg-gray-50",
+                themeConfig.defaultTransition
+              )}
+              aria-label={`Switch to ${nextLocale}`}
+            >
+              <Globe className="h-4 w-4" />
+              {switchLabel}
+            </button>
             <div className="pt-2 px-3">
               <Button size="sm" color="neo" fullWidth>
                 {t("contact") ?? "Contato"}
