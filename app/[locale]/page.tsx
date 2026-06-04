@@ -125,6 +125,7 @@ export default async function HomePage({
               icon={kalender.icon}
               accentColor={kalender.accent}
               logoSrc={kalender.logoSrc}
+              href="https://www.kalender.com.br"
             />
           </div>
         </Container>
