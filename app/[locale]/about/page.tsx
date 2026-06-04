@@ -53,10 +53,10 @@ export default async function AboutPage({
       <Section variant="default">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal md:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
               {t("story.title")}
             </h2>
-            <div className="mt-8 space-y-4 text-lg leading-relaxed text-steel">
+            <div className="mt-8 space-y-4 text-lg leading-relaxed text-steel dark:text-gray-400">
               <p>{t("story.paragraph1")}</p>
               <p>{t("story.paragraph2")}</p>
               <p>{t("story.paragraph3")}</p>
@@ -69,7 +69,7 @@ export default async function AboutPage({
       <Section variant="mist">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal md:text-4xl mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl mb-12">
               {t("timeline.title")}
             </h2>
             <Timeline>
@@ -91,10 +91,10 @@ export default async function AboutPage({
       <Section variant="default">
         <Container>
           <div className="mx-auto max-w-2xl text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal md:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
               {t("values.title")}
             </h2>
-            <p className="mt-4 text-lg text-steel">{t("values.subtitle")}</p>
+            <p className="mt-4 text-lg text-steel dark:text-gray-400">{t("values.subtitle")}</p>
           </div>
           <FeatureGrid
             columns={2}

@@ -3,7 +3,8 @@
 import { useState, useRef, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "next-themes";
 import classnames from "classnames";
 import { Link, usePathname, useRouter } from "../../../i18n/navigation";
 import { Button } from "../ui/Button";
@@ -29,9 +30,13 @@ export function Navbar() {
   const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
+  const { theme, setTheme } = useTheme();
 
   const currentLocale = localeConfig.find((l) => l.code === locale) ?? localeConfig[0];
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -52,7 +57,7 @@ export function Navbar() {
   return (
     <header
       data-component-name="Navbar"
-      className="sticky top-0 z-50 border-b border-gray-200/50 bg-white/80 backdrop-blur-lg"
+      className="sticky top-0 z-50 border-b border-gray-200/50 bg-white/80 backdrop-blur-lg dark:border-gray-700/50 dark:bg-charcoal/80"
     >
       <Container>
         <nav className="flex h-16 items-center justify-between">
@@ -65,7 +70,7 @@ export function Navbar() {
               height={36}
               className={classnames("h-9 w-auto", themeConfig.defaultTransition, "group-hover:opacity-80")}
             />
-            <span className="text-xl font-bold text-charcoal tracking-tight uppercase">
+            <span className="text-xl font-bold text-charcoal dark:text-gray-100 tracking-tight uppercase">
               Cerneo
             </span>
           </Link>
@@ -82,8 +87,8 @@ export function Navbar() {
                     "px-3 py-2 text-sm font-medium rounded-lg",
                     themeConfig.defaultTransition,
                     isActive
-                      ? "text-neo-600 bg-neo-50"
-                      : "text-steel hover:text-charcoal hover:bg-gray-50"
+                      ? "text-neo-600 bg-neo-50 dark:text-neo-400 dark:bg-neo-950"
+                      : "text-steel hover:text-charcoal hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-white/5"
                   )}
                 >
                   {t(link.key)}
@@ -94,6 +99,21 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex md:items-center md:gap-2">
+            {mounted && (
+              <button
+                type="button"
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className={classnames(
+                  "p-2 rounded-lg cursor-pointer",
+                  "text-steel hover:text-charcoal hover:bg-gray-50",
+                  "dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-white/5",
+                  themeConfig.defaultTransition
+                )}
+                aria-label="Toggle theme"
+              >
+                {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              </button>
+            )}
             <div ref={langRef} className="relative">
               <button
                 type="button"
@@ -101,6 +121,7 @@ export function Navbar() {
                 className={classnames(
                   "flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg cursor-pointer",
                   "text-steel hover:text-charcoal hover:bg-gray-50",
+                  "dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-white/5",
                   themeConfig.defaultTransition
                 )}
                 aria-label="Change language"
@@ -109,7 +130,7 @@ export function Navbar() {
                 {currentLocale.label}
               </button>
               {langOpen && (
-                <div className="absolute right-0 mt-1 w-36 rounded-lg border border-gray-200 bg-white py-1 shadow-lg">
+                <div className="absolute right-0 mt-1 w-36 rounded-lg border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-slate-dark">
                   {localeConfig
                     .filter((l) => l.code !== locale)
                     .map((l) => (
@@ -120,6 +141,7 @@ export function Navbar() {
                         className={classnames(
                           "flex w-full items-center gap-2 px-3 py-2 text-sm font-medium cursor-pointer",
                           "text-steel hover:text-charcoal hover:bg-gray-50",
+                          "dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-white/5",
                           themeConfig.defaultTransition
                         )}
                       >
@@ -138,7 +160,7 @@ export function Navbar() {
           {/* Mobile hamburger */}
           <button
             type="button"
-            className="md:hidden p-2 text-steel hover:text-charcoal cursor-pointer"
+            className="md:hidden p-2 text-steel hover:text-charcoal dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -148,7 +170,7 @@ export function Navbar() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="md:hidden border-t border-gray-100 py-4 space-y-1">
+          <div className="md:hidden border-t border-gray-100 dark:border-gray-800 py-4 space-y-1">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -160,8 +182,8 @@ export function Navbar() {
                     "block px-3 py-2 text-sm font-medium rounded-lg",
                     themeConfig.defaultTransition,
                     isActive
-                      ? "text-neo-600 bg-neo-50"
-                      : "text-steel hover:text-charcoal hover:bg-gray-50"
+                      ? "text-neo-600 bg-neo-50 dark:text-neo-400 dark:bg-neo-950"
+                      : "text-steel hover:text-charcoal hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-white/5"
                   )}
                 >
                   {t(link.key)}
@@ -179,14 +201,29 @@ export function Navbar() {
                     "flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-lg cursor-pointer",
                     themeConfig.defaultTransition,
                     l.code === locale
-                      ? "text-neo-600 bg-neo-50 cursor-default"
-                      : "text-steel hover:text-charcoal hover:bg-gray-50"
+                      ? "text-neo-600 bg-neo-50 dark:text-neo-400 dark:bg-neo-950 cursor-default"
+                      : "text-steel hover:text-charcoal hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-white/5"
                   )}
                 >
                   <span className="text-base leading-none">{l.flag}</span>
                   {l.label}
                 </button>
               ))}
+              {mounted && (
+                <button
+                  type="button"
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  className={classnames(
+                    "p-2 rounded-lg cursor-pointer",
+                    "text-steel hover:text-charcoal hover:bg-gray-50",
+                    "dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-white/5",
+                    themeConfig.defaultTransition
+                  )}
+                  aria-label="Toggle theme"
+                >
+                  {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                </button>
+              )}
             </div>
             <div className="pt-2 px-3">
               <Button size="sm" color="neo" fullWidth>

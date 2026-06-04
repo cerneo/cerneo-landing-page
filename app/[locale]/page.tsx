@@ -69,10 +69,10 @@ export default async function HomePage({
       <Section variant="default">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal md:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
               {t("manifesto.title")}
             </h2>
-            <div className="mt-8 space-y-4 text-lg leading-relaxed text-steel">
+            <div className="mt-8 space-y-4 text-lg leading-relaxed text-steel dark:text-gray-400">
               <p>{t("manifesto.paragraph1")}</p>
               <p>{t("manifesto.paragraph2")}</p>
               <p>{t("manifesto.paragraph3")}</p>
@@ -86,21 +86,21 @@ export default async function HomePage({
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-12">
             <Hexagon className="mx-auto h-16 w-16 text-neo-500 mb-6" />
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal md:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
               {t("logo.title")}
             </h2>
-            <p className="mt-4 text-lg text-steel">{t("logo.subtitle")}</p>
+            <p className="mt-4 text-lg text-steel dark:text-gray-400">{t("logo.subtitle")}</p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3 max-w-4xl mx-auto">
             {[1, 2, 3].map((i) => (
               <div key={i} className="text-center">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-neo-50">
-                  <Hexagon className="h-6 w-6 text-neo-600" />
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-neo-50 dark:bg-neo-950">
+                  <Hexagon className="h-6 w-6 text-neo-600 dark:text-neo-400" />
                 </div>
-                <h3 className="mt-4 text-lg font-semibold text-charcoal">
+                <h3 className="mt-4 text-lg font-semibold text-charcoal dark:text-gray-100">
                   {t(`logo.item${i}Title`)}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-steel">
+                <p className="mt-2 text-sm leading-relaxed text-steel dark:text-gray-400">
                   {t(`logo.item${i}Desc`)}
                 </p>
               </div>
@@ -113,10 +113,10 @@ export default async function HomePage({
       <Section variant="default" id="products">
         <Container>
           <div className="mx-auto max-w-2xl text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal md:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
               {t("products.title")}
             </h2>
-            <p className="mt-4 text-lg text-steel">{t("products.subtitle")}</p>
+            <p className="mt-4 text-lg text-steel dark:text-gray-400">{t("products.subtitle")}</p>
           </div>
           <div className="flex justify-center max-w-md mx-auto">
             <ProductCard
@@ -135,10 +135,10 @@ export default async function HomePage({
       <Section variant="mist">
         <Container>
           <div className="mx-auto max-w-2xl text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal md:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
               {t("differentials.title")}
             </h2>
-            <p className="mt-4 text-lg text-steel">
+            <p className="mt-4 text-lg text-steel dark:text-gray-400">
               {t("differentials.subtitle")}
             </p>
           </div>

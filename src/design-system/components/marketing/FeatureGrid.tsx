@@ -36,15 +36,15 @@ export function FeatureGrid({
       {features.map((feature, index) => (
         <div
           key={index}
-          className="group rounded-xl border border-gray-100 bg-white p-6 hover:border-gray-200 hover:shadow-sm transition-all duration-300"
+          className="group rounded-xl border border-gray-100 bg-white p-6 hover:border-gray-200 hover:shadow-sm dark:border-gray-800 dark:bg-slate-dark dark:hover:border-gray-700 dark:hover:shadow-neo-500/5 transition-all duration-300"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-neo-50 text-neo-600 group-hover:bg-neo-100 transition-colors duration-300">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-neo-50 text-neo-600 group-hover:bg-neo-100 dark:bg-neo-950 dark:text-neo-400 dark:group-hover:bg-neo-900 transition-colors duration-300">
             {feature.icon}
           </div>
-          <h3 className="mt-4 text-base font-semibold text-charcoal">
+          <h3 className="mt-4 text-base font-semibold text-charcoal dark:text-gray-100">
             {feature.title}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-steel">
+          <p className="mt-2 text-sm leading-relaxed text-steel dark:text-gray-400">
             {feature.description}
           </p>
         </div>

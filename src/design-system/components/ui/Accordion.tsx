@@ -59,7 +59,7 @@ export const Accordion = forwardRef<HTMLDivElement, AccordionProps>(
         <div
           ref={ref}
           data-component-name="Accordion"
-          className={classnames("divide-y divide-gray-200", className)}
+          className={classnames("divide-y divide-gray-200 dark:divide-gray-700", className)}
           {...rest}
         >
           {children}
@@ -95,23 +95,23 @@ export const AccordionItem = forwardRef<HTMLDivElement, AccordionItemProps>(
           type="button"
           onClick={() => toggle(id)}
           className={classnames(
-            "flex w-full items-center justify-between py-4 text-left font-medium text-charcoal",
+            "flex w-full items-center justify-between py-4 text-left font-medium text-charcoal dark:text-gray-100",
             themeConfig.defaultTransition,
-            "hover:text-neo-600 cursor-pointer"
+            "hover:text-neo-600 dark:hover:text-neo-400 cursor-pointer"
           )}
           aria-expanded={isOpen}
         >
           <span>{title}</span>
           <ChevronDown
             className={classnames(
-              "h-5 w-5 shrink-0 text-steel",
+              "h-5 w-5 shrink-0 text-steel dark:text-gray-400",
               themeConfig.defaultTransition,
               { "rotate-180": isOpen }
             )}
           />
         </button>
         <Collapse isOpen={isOpen}>
-          <div className="pb-4 text-steel leading-relaxed">{children}</div>
+          <div className="pb-4 text-steel dark:text-gray-400 leading-relaxed">{children}</div>
         </Collapse>
       </div>
     );

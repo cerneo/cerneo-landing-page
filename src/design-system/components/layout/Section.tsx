@@ -8,9 +8,9 @@ interface SectionProps extends HTMLAttributes<HTMLElement> {
 }
 
 const variantMap: Record<TSectionVariant, string> = {
-  default: "bg-white",
+  default: "bg-white dark:bg-charcoal",
   dark: "bg-charcoal text-white",
-  mist: "bg-mist",
+  mist: "bg-mist dark:bg-slate-dark",
   gradient: "bg-gradient-to-br from-charcoal via-slate-dark to-charcoal text-white",
 };
 
