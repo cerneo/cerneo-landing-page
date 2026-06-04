@@ -21,7 +21,7 @@ export function LegalLayout({ title, lastUpdated, children }: LegalLayoutProps) 
       </Section>
       <Section variant="default">
         <Container>
-          <div className="prose prose-gray max-w-none prose-headings:text-charcoal prose-headings:font-semibold prose-p:text-steel prose-p:leading-relaxed prose-li:text-steel prose-a:text-neo-600 prose-a:no-underline hover:prose-a:underline">
+          <div className="prose prose-gray max-w-none prose-headings:text-charcoal prose-headings:font-semibold prose-p:text-steel prose-p:leading-relaxed prose-li:text-steel prose-a:text-neo-600 prose-a:no-underline hover:prose-a:underline dark:prose-headings:text-gray-100 dark:prose-p:text-gray-400 dark:prose-li:text-gray-400 dark:prose-a:text-neo-400">
             {children}
           </div>
         </Container>

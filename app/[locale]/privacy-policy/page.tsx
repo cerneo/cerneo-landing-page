@@ -26,10 +26,10 @@ export default async function PrivacyPolicyPage({
     <LegalLayout title={t("title")} lastUpdated={t("lastUpdated")}>
       {sections.map((section) => (
         <div key={section} className="mb-8">
-          <h2 className="text-xl font-semibold text-charcoal mb-3">
+          <h2 className="text-xl font-semibold text-charcoal dark:text-gray-100 mb-3">
             {t(`${section}.title`)}
           </h2>
-          <p className="text-steel leading-relaxed mb-3">
+          <p className="text-steel dark:text-gray-400 leading-relaxed mb-3">
             {t(`${section}.content`)}
           </p>
           {sectionsWithItems.includes(section) && (
@@ -37,7 +37,7 @@ export default async function PrivacyPolicyPage({
               {(
                 t.raw(`${section}.items`) as string[]
               ).map((item: string, index: number) => (
-                <li key={index} className="text-steel">
+                <li key={index} className="text-steel dark:text-gray-400">
                   {item}
                 </li>
               ))}

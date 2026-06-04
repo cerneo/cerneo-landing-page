@@ -32,7 +32,8 @@ export function ProductCard({
       data-component-name="ProductCard"
       className={classnames(
         "group relative rounded-xl border border-gray-200 bg-white p-6",
-        "hover:shadow-lg hover:border-gray-300 transition-all duration-300",
+        "dark:border-gray-700 dark:bg-slate-dark",
+        "hover:shadow-lg hover:border-gray-300 dark:hover:shadow-neo-500/5 dark:hover:border-gray-600 transition-all duration-300",
         href && "cursor-pointer",
         className
       )}
@@ -46,7 +47,7 @@ export function ProductCard({
         <div
           className={classnames(
             "flex h-12 w-12 items-center justify-center rounded-lg",
-            "bg-gray-50 group-hover:bg-gray-100 transition-colors duration-300"
+            "bg-gray-50 group-hover:bg-gray-100 dark:bg-gray-800 dark:group-hover:bg-gray-700 transition-colors duration-300"
           )}
         >
           {logoSrc ? (
@@ -69,12 +70,12 @@ export function ProductCard({
       </div>
 
       <div className="flex items-center gap-2 mt-4">
-        <h3 className="text-lg font-semibold text-charcoal">{name}</h3>
+        <h3 className="text-lg font-semibold text-charcoal dark:text-gray-100">{name}</h3>
         {href && (
-          <ExternalLink className="h-4 w-4 text-steel group-hover:text-neo-600 transition-colors duration-300" />
+          <ExternalLink className="h-4 w-4 text-steel dark:text-gray-400 group-hover:text-neo-600 dark:group-hover:text-neo-400 transition-colors duration-300" />
         )}
       </div>
-      <p className="mt-2 text-sm leading-relaxed text-steel">{description}</p>
+      <p className="mt-2 text-sm leading-relaxed text-steel dark:text-gray-400">{description}</p>
     </div>
   );
 

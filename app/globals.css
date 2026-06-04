@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   /* Font */
   --font-sans: var(--font-urbanist), system-ui, -apple-system, sans-serif;
@@ -45,10 +47,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dark body {
+  background: var(--color-charcoal);
+  color: #f3f4f6;
+}
+
 /* Selection */
 ::selection {
   background-color: var(--color-neo-200);
   color: var(--color-charcoal);
+}
+
+.dark ::selection {
+  background-color: var(--color-neo-800);
+  color: #f3f4f6;
 }
 
 /* Smooth scroll */

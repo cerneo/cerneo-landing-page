@@ -6,6 +6,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "../../src/i18n/routing";
 import { Navbar } from "../../src/design-system/components/layout/Navbar";
 import { Footer } from "../../src/design-system/components/layout/Footer";
+import { ThemeProvider } from "../../src/design-system/components/layout/ThemeProvider";
 import { Analytics } from "@vercel/analytics/next";
 import "../globals.css";
 
@@ -56,12 +57,14 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={urbanist.variable}>
+    <html lang={locale} className={urbanist.variable} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <ThemeProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </ThemeProvider>
         </NextIntlClientProvider>
         <Analytics />
       </body>

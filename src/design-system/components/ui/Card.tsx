@@ -31,11 +31,11 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
         ref={ref}
         data-component-name="Card"
         className={classnames(
-          "bg-white overflow-hidden",
+          "bg-white dark:bg-slate-dark overflow-hidden",
           roundedClass,
           {
-            "border border-gray-200": bordered,
-            "shadow-sm hover:shadow-md transition-shadow duration-300": shadow,
+            "border border-gray-200 dark:border-gray-700": bordered,
+            "shadow-sm hover:shadow-md dark:hover:shadow-neo-500/5 transition-shadow duration-300": shadow,
           },
           className
         )}
@@ -59,7 +59,7 @@ export const CardHeader = forwardRef<HTMLDivElement, CardHeaderProps>(
     <div
       ref={ref}
       data-component-name="CardHeader"
-      className={classnames("px-6 py-4 border-b border-gray-100", className)}
+      className={classnames("px-6 py-4 border-b border-gray-100 dark:border-gray-800", className)}
       {...rest}
     >
       {children}
@@ -79,7 +79,7 @@ export const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
     <h3
       ref={ref}
       data-component-name="CardTitle"
-      className={classnames("text-lg font-semibold text-charcoal", className)}
+      className={classnames("text-lg font-semibold text-charcoal dark:text-gray-100", className)}
       {...rest}
     >
       {children}
@@ -120,7 +120,7 @@ export const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(
       ref={ref}
       data-component-name="CardFooter"
       className={classnames(
-        "px-6 py-4 border-t border-gray-100 bg-mist/50",
+        "px-6 py-4 border-t border-gray-100 bg-mist/50 dark:border-gray-800 dark:bg-charcoal/50",
         className
       )}
       {...rest}
