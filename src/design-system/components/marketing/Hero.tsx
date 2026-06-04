@@ -221,22 +221,6 @@ export function Hero({
                 </motion.div>
               )}
 
-              {/* Trust indicators */}
-              <motion.div
-                variants={fadeInUp}
-                className="mt-12 flex items-center gap-6 justify-center lg:justify-start"
-              >
-                {[
-                  { value: "1", label: "Produto" },
-                  { value: "99.9%", label: "Uptime" },
-                  { value: "LGPD", label: "Compliant" },
-                ].map((stat) => (
-                  <div key={stat.label} className="text-center lg:text-left">
-                    <div className="text-lg font-bold text-neo-400">{stat.value}</div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wider">{stat.label}</div>
-                  </div>
-                ))}
-              </motion.div>
             </motion.div>
 
             {/* Right: 3D logo composition */}
