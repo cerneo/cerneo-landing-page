@@ -10,7 +10,7 @@
       "terms": "Termos de Uso"
     },
     "footer": {
-      "brand": "Holding de tecnologia construindo o futuro com engenharia de excelência.",
+      "brand": "Produtos digitais que simplificam operações e impulsionam negócios.",
       "products": "Produtos",
       "company": "Empresa",
       "legal": "Legal",
@@ -27,94 +27,94 @@
   },
   "home": {
     "hero": {
-      "title": "A Nova Base da Tecnologia",
-      "subtitle": "Somos uma holding de tecnologia que combina engenharia de excelência com inovação para construir produtos que transformam negócios.",
+      "title": "Software bem feito. Para negócios que não param.",
+      "subtitle": "A Cerneo desenvolve produtos digitais que resolvem problemas reais, com a robustez que a sua operação exige.",
       "cta1": "Conheça Nossos Produtos",
       "cta2": "Sobre a Cerneo"
     },
     "manifesto": {
       "title": "Por Que Cerneo?",
-      "paragraph1": "O nome Cerneo nasce da fusão de duas palavras: Cerne, o núcleo, a essência, a base sólida, e Neo, o novo, a evolução, o futuro.",
-      "paragraph2": "Acreditamos que toda grande tecnologia começa com uma base sólida. Não construímos apenas software. Construímos os alicerces sobre os quais negócios inteiros se transformam.",
-      "paragraph3": "Cada produto Cerneo é projetado com arquitetura limpa, princípios SOLID e obsessão por qualidade. Porque o futuro da tecnologia exige mais do que código. Exige engenharia."
+      "paragraph1": "Cerneo vem da fusão de Cerne — o núcleo, a essência — com Neo — o novo, a evolução. Tecnologia construída a partir de uma base sólida.",
+      "paragraph2": "Existimos porque software bom não deveria ser exceção. Negócios dependem de ferramentas que funcionam, que escalam e que não quebram quando mais importa.",
+      "paragraph3": "Cada produto que construímos resolve um problema específico, de forma simples e confiável. Sem complexidade desnecessária. Sem promessas vazias."
     },
     "logo": {
       "title": "O Hexágono Cerneo",
-      "subtitle": "Nosso símbolo é um hexágono, a forma mais eficiente da natureza.",
+      "subtitle": "Nosso símbolo é o hexágono — a forma mais eficiente encontrada na natureza.",
       "item1Title": "Estrutura",
-      "item1Desc": "Assim como o hexágono é a estrutura mais resistente encontrada na natureza, nossas soluções são construídas para durar.",
+      "item1Desc": "A geometria mais resistente da natureza. Nossas soluções seguem o mesmo princípio: construídas para durar.",
       "item2Title": "Modularidade",
-      "item2Desc": "Hexágonos se encaixam perfeitamente, sem espaços. Nossos produtos são projetados para integração perfeita.",
-      "item3Title": "Engenharia",
-      "item3Desc": "A geometria hexagonal aparece em engenharia molecular, colmeias e cristais. Representa precisão e propósito."
+      "item2Desc": "Hexágonos se encaixam sem deixar lacunas. Nossos produtos são projetados para funcionar juntos, de forma integrada.",
+      "item3Title": "Precisão",
+      "item3Desc": "Presente em cristais, colmeias e engenharia molecular. Cada detalhe existe por um motivo."
     },
     "products": {
-      "title": "Nosso Produto",
-      "subtitle": "Solução tecnológica construída com engenharia de excelência.",
+      "title": "Nossos Produtos",
+      "subtitle": "Ferramentas digitais que resolvem problemas reais do dia a dia.",
       "kalender": {
         "name": "Cerneo Kalender",
-        "description": "Agendamento inteligente com automações e integrações para seu negócio."
+        "description": "Agendamento inteligente para empresas. Automatize reservas, reduza no-shows e gerencie horários em um só lugar."
       }
     },
     "differentials": {
       "title": "Por Que Escolher a Cerneo",
-      "subtitle": "Soluções tecnológicas que geram resultados mensuráveis para o seu negócio.",
+      "subtitle": "Resultados concretos para a operação do seu negócio.",
       "reliability": {
-        "title": "Confiabilidade",
-        "description": "Sistemas robustos com alta disponibilidade, projetados para operar sem interrupções e garantir a continuidade do seu negócio."
+        "title": "Estabilidade",
+        "description": "Sistemas projetados para alta disponibilidade. Sua operação continua rodando, mesmo nos horários de pico."
       },
       "scalability": {
         "title": "Escalabilidade",
-        "description": "Plataformas que crescem junto com a sua empresa, sem necessidade de migrações ou reestruturações custosas."
+        "description": "Infraestrutura que acompanha o crescimento da sua empresa. Sem migrações forçadas, sem surpresas."
       },
       "agility": {
-        "title": "Agilidade na Entrega",
-        "description": "Processos otimizados que permitem entregas rápidas e incrementais, acelerando o retorno sobre o investimento."
+        "title": "Evolução Contínua",
+        "description": "Atualizações frequentes com base em feedback real. Nossos produtos melhoram junto com as necessidades do seu negócio."
       },
       "datadriven": {
-        "title": "Decisões Baseadas em Dados",
-        "description": "Dashboards e relatórios integrados que transformam dados em insights acionáveis para a tomada de decisão."
+        "title": "Dados que Fazem Sentido",
+        "description": "Painéis e relatórios que traduzem números em decisões. Informação clara para quem precisa agir rápido."
       },
       "security": {
-        "title": "Segurança e Conformidade",
-        "description": "Proteção de dados em conformidade com a LGPD e as melhores práticas de segurança da informação."
+        "title": "Segurança de Verdade",
+        "description": "Proteção de dados em conformidade com a LGPD. Criptografia, controle de acesso e monitoramento contínuo."
       },
       "support": {
-        "title": "Suporte Dedicado",
-        "description": "Equipe especializada pronta para atender sua empresa com agilidade e foco na resolução de problemas."
+        "title": "Suporte que Resolve",
+        "description": "Equipe técnica que entende o produto. Sem scripts prontos, sem burocracia."
       }
     },
     "culture": {
       "title": "Nossa Cultura",
-      "subtitle": "Construímos tecnologia de excelência porque investimos em pessoas de excelência.",
+      "subtitle": "Bons produtos nascem de boas equipes. Investimos nas pessoas por trás da tecnologia.",
       "cta": "Conheça Nossa Cultura"
     },
     "trust": {
-      "title": "Transparência e Confiança",
-      "subtitle": "Operamos com total transparência. Conheça nossos compromissos legais.",
+      "title": "Transparência",
+      "subtitle": "Operamos de forma aberta. Conheça nossos compromissos.",
       "privacyTitle": "Política de Privacidade",
-      "privacyDesc": "Como coletamos, usamos e protegemos seus dados pessoais.",
+      "privacyDesc": "Como tratamos e protegemos seus dados.",
       "termsTitle": "Termos de Uso",
-      "termsDesc": "Condições gerais de uso dos nossos serviços e plataformas."
+      "termsDesc": "Condições de uso dos nossos serviços."
     }
   },
   "about": {
     "hero": {
       "title": "Sobre a Cerneo",
-      "subtitle": "Uma holding de tecnologia nascida da convicção de que engenharia de excelência transforma negócios."
+      "subtitle": "Uma empresa de tecnologia que acredita que software bem construído muda a forma como negócios operam."
     },
     "story": {
       "title": "Nossa História",
-      "paragraph1": "A Cerneo nasceu da visão de criar uma holding de tecnologia que não apenas desenvolve software, mas constrói soluções com engenharia de verdade.",
-      "paragraph2": "Fundada por engenheiros de software apaixonados por qualidade, a Cerneo reúne sob um mesmo guarda-chuva produtos que compartilham uma base tecnológica comum: arquitetura limpa, código testado e design centrado no usuário.",
-      "paragraph3": "Nosso nome, fusão de Cerne (essência) e Neo (novo), reflete nosso compromisso: construir o novo a partir de bases sólidas."
+      "paragraph1": "A Cerneo nasceu de uma pergunta simples: por que tantas ferramentas de negócios são tão difíceis de usar?",
+      "paragraph2": "Fundada por engenheiros de software, a empresa existe para criar produtos que funcionam como deveriam — confiáveis, intuitivos e prontos para o dia a dia real. Reunimos sob um mesmo teto soluções que compartilham a mesma base: código testado, design pensado no usuário e infraestrutura sólida.",
+      "paragraph3": "Nosso nome une Cerne (essência) e Neo (novo). Construímos o novo a partir de bases que funcionam."
     },
     "timeline": {
       "title": "Nossa Trajetória",
       "item1": {
         "year": "2024",
         "title": "Fundação",
-        "description": "Cerneo é fundada com a missão de construir tecnologia de excelência."
+        "description": "Nasce a Cerneo com a missão de criar produtos digitais que realmente resolvem problemas."
       },
       "item2": {
         "year": "2024",
@@ -124,102 +124,102 @@
       "item3": {
         "year": "2025",
         "title": "Lançamento",
-        "description": "Lançamento do Cerneo Kalender em produção."
+        "description": "Cerneo Kalender entra em produção com os primeiros clientes."
       },
       "item4": {
         "year": "2025",
-        "title": "Ecossistema",
-        "description": "Consolidação do ecossistema Cerneo com soluções integradas."
+        "title": "Expansão",
+        "description": "Crescimento do ecossistema Cerneo com novas funcionalidades e integrações."
       }
     },
     "values": {
       "title": "Nossos Valores",
-      "subtitle": "Os princípios que guiam cada decisão na Cerneo.",
+      "subtitle": "O que guia cada decisão na Cerneo.",
       "excellence": {
-        "title": "Excelência",
-        "description": "Não aceitamos o medíocre. Cada produto, cada feature, cada linha de código reflete nosso compromisso com qualidade."
+        "title": "Capricho",
+        "description": "Detalhes importam. Do código ao pixel, cada entrega reflete o padrão que exigimos de nós mesmos."
       },
       "innovation": {
-        "title": "Inovação",
-        "description": "Buscamos constantemente novas formas de resolver problemas. Inovação não é opção, é obrigação."
+        "title": "Pragmatismo",
+        "description": "Inovação é resolver problemas de forma melhor, não usar tecnologia por modismo."
       },
       "transparency": {
-        "title": "Transparência",
-        "description": "Operamos com honestidade radical. Com nossos clientes, parceiros e entre nós mesmos."
+        "title": "Honestidade",
+        "description": "Falamos o que pensamos — com clientes, parceiros e entre nós. Transparência não é valor de parede."
       },
       "impact": {
         "title": "Impacto",
-        "description": "Construímos tecnologia que gera impacto real nos negócios dos nossos clientes."
+        "description": "Medimos sucesso pelo resultado que geramos para quem usa nossos produtos."
       }
     },
     "cta": {
       "title": "Quer Fazer Parte?",
-      "subtitle": "Estamos sempre em busca de engenheiros apaixonados por excelência.",
+      "subtitle": "Estamos crescendo e buscando pessoas que compartilham essa mentalidade.",
       "button": "Conheça Nossa Cultura"
     }
   },
   "peopleCulture": {
     "hero": {
       "title": "Pessoas & Cultura",
-      "subtitle": "Acreditamos que tecnologia excepcional é construída por pessoas excepcionais."
+      "subtitle": "Tecnologia boa é feita por gente boa. Simples assim."
     },
     "philosophy": {
-      "title": "Nossa Filosofia",
-      "paragraph1": "Na Cerneo, cultura não é um documento pendurado na parede. É como trabalhamos todos os dias.",
-      "paragraph2": "Acreditamos que as melhores soluções nascem de equipes que combinam excelência técnica com colaboração genuína. Por isso, investimos tanto em pessoas quanto em tecnologia.",
-      "paragraph3": "Nosso ambiente é construído sobre autonomia, confiança e responsabilidade. Aqui, cada pessoa tem o poder e a responsabilidade de fazer a diferença."
+      "title": "Como Pensamos",
+      "paragraph1": "Cultura não é poster na parede. É como a gente toma decisão no dia a dia.",
+      "paragraph2": "Acreditamos que as melhores soluções nascem de equipes que combinam competência técnica com respeito genuíno. Por isso, investimos tanto nas pessoas quanto nos produtos.",
+      "paragraph3": "Nosso ambiente é construído sobre três pilares: autonomia para fazer, confiança para experimentar e responsabilidade para entregar."
     },
     "values": {
       "title": "O Que Valorizamos",
-      "subtitle": "Os pilares que definem como trabalhamos e quem somos.",
+      "subtitle": "Os princípios que definem como trabalhamos.",
       "ownership": {
-        "title": "Responsabilidade",
-        "description": "Cada pessoa é dona do seu trabalho. Tomamos decisões, assumimos consequências e entregamos resultados."
+        "title": "Ownership",
+        "description": "Cada pessoa é dona do seu trabalho. Decidimos, executamos e respondemos pelos resultados."
       },
       "quality": {
         "title": "Qualidade",
-        "description": "Fazemos bem feito desde o início. Atalhos geram retrabalho, e retrabalho custa mais caro que fazer certo."
+        "description": "Fazemos bem feito desde o início. Atalho vira retrabalho, e retrabalho custa caro."
       },
       "collaboration": {
         "title": "Colaboração",
-        "description": "Ninguém constrói nada sozinho. As melhores soluções nascem quando perspectivas diferentes se encontram."
+        "description": "Ninguém constrói nada sozinho. As melhores ideias surgem quando visões diferentes se encontram."
       },
       "growth": {
-        "title": "Evolução Contínua",
-        "description": "Quem para de aprender para de crescer. Investimos no desenvolvimento técnico e pessoal de cada um."
+        "title": "Evolução",
+        "description": "Quem para de aprender, para de crescer. Investimos no desenvolvimento de cada pessoa do time."
       },
       "transparency": {
-        "title": "Transparência",
-        "description": "Falamos com clareza, mesmo quando é difícil. Problemas escondidos viram problemas maiores."
+        "title": "Franqueza",
+        "description": "Falamos com clareza, mesmo quando é desconfortável. Problema escondido vira problema maior."
       },
       "balance": {
         "title": "Equilíbrio",
-        "description": "Resultado consistente exige energia consistente. Respeitamos limites e valorizamos a vida fora do trabalho."
+        "description": "Resultado consistente exige energia consistente. Vida fora do trabalho não é opcional."
       }
     },
     "howWeWork": {
       "title": "Como Trabalhamos",
-      "subtitle": "Práticas e rituais que mantêm nossa cultura viva.",
+      "subtitle": "Práticas que sustentam a nossa forma de operar.",
       "remote": {
         "title": "Remote-First",
-        "description": "Trabalho remoto como padrão, com flexibilidade total de horários e localização."
+        "description": "Trabalho remoto como padrão. Flexibilidade de horário e localização."
       },
       "async": {
         "title": "Comunicação Assíncrona",
-        "description": "Priorizamos documentação escrita sobre reuniões, respeitando o foco de cada um."
+        "description": "Documentação escrita sobre reuniões. Respeitamos o foco e o tempo de cada um."
       },
       "reviews": {
-        "title": "Code Reviews",
-        "description": "Todo código passa por revisão. É uma oportunidade de aprendizado mútuo."
+        "title": "Code Review",
+        "description": "Todo código passa por revisão. É aprendizado, não burocracia."
       },
       "learning": {
-        "title": "Learning Budget",
-        "description": "Investimento em cursos, conferências e certificações para cada membro da equipe."
+        "title": "Budget de Aprendizado",
+        "description": "Investimento em cursos, conferências e certificações para todo o time."
       }
     },
     "cta": {
-      "title": "Quer Construir o Futuro Conosco?",
-      "subtitle": "Estamos sempre em busca de pessoas apaixonadas por tecnologia e excelência.",
+      "title": "Quer Trabalhar na Cerneo?",
+      "subtitle": "Buscamos pessoas que querem construir produtos que fazem diferença.",
       "button": "Fale Conosco"
     }
   },
