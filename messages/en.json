@@ -10,7 +10,7 @@
       "terms": "Terms of Use"
     },
     "footer": {
-      "brand": "Technology holding building the future with engineering excellence.",
+      "brand": "Digital products that simplify operations and drive business forward.",
       "products": "Products",
       "company": "Company",
       "legal": "Legal",
@@ -27,199 +27,199 @@
   },
   "home": {
     "hero": {
-      "title": "The New Foundation of Technology",
-      "subtitle": "We are a technology holding that combines engineering excellence with innovation to build products that transform businesses.",
+      "title": "Well-crafted software. For businesses that don't stop.",
+      "subtitle": "Cerneo builds digital products that solve real problems, with the reliability your operation demands.",
       "cta1": "Discover Our Products",
       "cta2": "About Cerneo"
     },
     "manifesto": {
       "title": "Why Cerneo?",
-      "paragraph1": "The name Cerneo is born from the fusion of two words: Cerne, the core, the essence, the solid foundation, and Neo, the new, the evolution, the future.",
-      "paragraph2": "We believe that all great technology starts with a solid foundation. We don't just build software. We build the foundations upon which entire businesses transform.",
-      "paragraph3": "Every Cerneo product is designed with clean architecture, SOLID principles, and an obsession with quality. Because the future of technology demands more than code. It demands engineering."
+      "paragraph1": "Cerneo comes from the fusion of Cerne — the core, the essence — and Neo — the new, the evolution. Technology built from a solid foundation.",
+      "paragraph2": "We exist because good software shouldn't be the exception. Businesses depend on tools that work, that scale, and that don't break when it matters most.",
+      "paragraph3": "Every product we build solves a specific problem, simply and reliably. No unnecessary complexity. No empty promises."
     },
     "logo": {
       "title": "The Cerneo Hexagon",
-      "subtitle": "Our symbol is a hexagon, nature's most efficient shape.",
+      "subtitle": "Our symbol is the hexagon — nature's most efficient shape.",
       "item1Title": "Structure",
-      "item1Desc": "Just as the hexagon is the most resistant structure found in nature, our solutions are built to last.",
+      "item1Desc": "Nature's most resistant geometry. Our solutions follow the same principle: built to last.",
       "item2Title": "Modularity",
-      "item2Desc": "Hexagons fit perfectly together, without gaps. Our products are designed for seamless integration.",
-      "item3Title": "Engineering",
-      "item3Desc": "Hexagonal geometry appears in molecular engineering, beehives, and crystals. It represents precision and purpose."
+      "item2Desc": "Hexagons fit together without gaps. Our products are designed to work together, seamlessly.",
+      "item3Title": "Precision",
+      "item3Desc": "Found in crystals, beehives, and molecular engineering. Every detail exists for a reason."
     },
     "products": {
-      "title": "Our Product",
-      "subtitle": "Technology solution built with engineering excellence.",
+      "title": "Our Products",
+      "subtitle": "Digital tools that solve real, everyday problems.",
       "kalender": {
         "name": "Cerneo Kalender",
-        "description": "Smart scheduling with automations and integrations for your business."
+        "description": "Smart scheduling for businesses. Automate bookings, reduce no-shows, and manage schedules in one place."
       }
     },
     "differentials": {
       "title": "Why Choose Cerneo",
-      "subtitle": "Technology solutions that deliver measurable results for your business.",
+      "subtitle": "Concrete results for your business operations.",
       "reliability": {
-        "title": "Reliability",
-        "description": "Systems designed for 99.9% uptime. Your operations never stop."
+        "title": "Stability",
+        "description": "Systems designed for high availability. Your operation keeps running, even during peak hours."
       },
       "scalability": {
         "title": "Scalability",
-        "description": "Infrastructure that grows with your business, with no friction or rework."
+        "description": "Infrastructure that keeps up with your company's growth. No forced migrations, no surprises."
       },
       "agility": {
-        "title": "Delivery Speed",
-        "description": "Agile processes that reduce time-to-market and accelerate your digital transformation."
+        "title": "Continuous Evolution",
+        "description": "Frequent updates based on real feedback. Our products improve alongside your business needs."
       },
       "datadriven": {
-        "title": "Data-Driven Decisions",
-        "description": "Dashboards and reports that turn data into strategic insights for leadership."
+        "title": "Data That Makes Sense",
+        "description": "Dashboards and reports that turn numbers into decisions. Clear information for those who need to act fast."
       },
       "security": {
-        "title": "Security and Compliance",
-        "description": "Data protection aligned with LGPD and international best practices."
+        "title": "Real Security",
+        "description": "Data protection compliant with LGPD. Encryption, access control, and continuous monitoring."
       },
       "support": {
-        "title": "Dedicated Support",
-        "description": "Specialized team ready to ensure your operations run continuously."
+        "title": "Support That Delivers",
+        "description": "A technical team that understands the product. No canned scripts, no red tape."
       }
     },
     "culture": {
       "title": "Our Culture",
-      "subtitle": "We build excellent technology because we invest in excellent people.",
+      "subtitle": "Great products come from great teams. We invest in the people behind the technology.",
       "cta": "Discover Our Culture"
     },
     "trust": {
-      "title": "Transparency and Trust",
-      "subtitle": "We operate with total transparency. Learn about our legal commitments.",
+      "title": "Transparency",
+      "subtitle": "We operate openly. Learn about our commitments.",
       "privacyTitle": "Privacy Policy",
-      "privacyDesc": "How we collect, use, and protect your personal data.",
+      "privacyDesc": "How we handle and protect your data.",
       "termsTitle": "Terms of Use",
-      "termsDesc": "General conditions for using our services and platforms."
+      "termsDesc": "Terms and conditions for using our services."
     }
   },
   "about": {
     "hero": {
       "title": "About Cerneo",
-      "subtitle": "A technology holding born from the conviction that engineering excellence transforms businesses."
+      "subtitle": "A technology company that believes well-built software changes how businesses operate."
     },
     "story": {
       "title": "Our Story",
-      "paragraph1": "Cerneo was born from the vision of creating a technology holding that doesn't just develop software, but builds solutions with real engineering.",
-      "paragraph2": "Founded by software engineers passionate about quality, Cerneo brings together under one umbrella products that share a common technological foundation: clean architecture, tested code, and user-centered design.",
-      "paragraph3": "Our name, a fusion of Cerne (essence) and Neo (new), reflects our commitment: building the new from solid foundations."
+      "paragraph1": "Cerneo was born from a simple question: why are so many business tools so hard to use?",
+      "paragraph2": "Founded by software engineers, the company exists to build products that work as they should — reliable, intuitive, and ready for the real world. We bring together solutions that share the same foundation: tested code, user-centered design, and solid infrastructure.",
+      "paragraph3": "Our name combines Cerne (essence) and Neo (new). We build the new from foundations that work."
     },
     "timeline": {
       "title": "Our Journey",
       "item1": {
         "year": "2024",
         "title": "Foundation",
-        "description": "Cerneo is founded with the mission to build technology of excellence."
+        "description": "Cerneo is founded with the mission to build digital products that actually solve problems."
       },
       "item2": {
         "year": "2024",
         "title": "First Product",
-        "description": "Start of Cerneo Kalender development."
+        "description": "Development of Cerneo Kalender begins."
       },
       "item3": {
         "year": "2025",
         "title": "Launch",
-        "description": "Launch of Cerneo Kalender in production."
+        "description": "Cerneo Kalender goes live with its first customers."
       },
       "item4": {
         "year": "2025",
-        "title": "Ecosystem",
-        "description": "Consolidation of the Cerneo ecosystem with integrated solutions."
+        "title": "Expansion",
+        "description": "Growth of the Cerneo ecosystem with new features and integrations."
       }
     },
     "values": {
       "title": "Our Values",
-      "subtitle": "The principles that guide every decision at Cerneo.",
+      "subtitle": "What guides every decision at Cerneo.",
       "excellence": {
-        "title": "Excellence",
-        "description": "We don't accept mediocrity. Every product, feature, and line of code reflects our commitment to quality."
+        "title": "Craftsmanship",
+        "description": "Details matter. From code to pixel, every delivery reflects the standard we hold ourselves to."
       },
       "innovation": {
-        "title": "Innovation",
-        "description": "We constantly seek new ways to solve problems. Innovation is not optional, it's mandatory."
+        "title": "Pragmatism",
+        "description": "Innovation means solving problems better, not chasing technology trends."
       },
       "transparency": {
-        "title": "Transparency",
-        "description": "We operate with radical honesty. With our clients, partners, and among ourselves."
+        "title": "Honesty",
+        "description": "We say what we think — to clients, partners, and to each other. Transparency isn't a wall poster."
       },
       "impact": {
         "title": "Impact",
-        "description": "We build technology that generates real impact on our clients' businesses."
+        "description": "We measure success by the results we generate for the people who use our products."
       }
     },
     "cta": {
       "title": "Want to Join?",
-      "subtitle": "We're always looking for engineers passionate about excellence.",
+      "subtitle": "We're growing and looking for people who share this mindset.",
       "button": "Discover Our Culture"
     }
   },
   "peopleCulture": {
     "hero": {
       "title": "People & Culture",
-      "subtitle": "We believe exceptional technology is built by exceptional people."
+      "subtitle": "Great technology is made by great people. It's that simple."
     },
     "philosophy": {
-      "title": "Our Philosophy",
-      "paragraph1": "At Cerneo, culture isn't a document hanging on the wall. It's how we work every day.",
-      "paragraph2": "We believe the best solutions come from teams that combine technical excellence with genuine collaboration. That's why we invest as much in people as in technology.",
-      "paragraph3": "Our environment is built on autonomy, trust, and responsibility. Here, every person has the power and the responsibility to make a difference."
+      "title": "How We Think",
+      "paragraph1": "Culture isn't a poster on the wall. It's how we make decisions every day.",
+      "paragraph2": "We believe the best solutions come from teams that combine technical skill with genuine respect. That's why we invest as much in people as in products.",
+      "paragraph3": "Our environment is built on three pillars: autonomy to act, trust to experiment, and responsibility to deliver."
     },
     "values": {
       "title": "What We Value",
-      "subtitle": "The pillars that define how we work and who we are.",
+      "subtitle": "The principles that define how we work.",
       "ownership": {
-        "title": "Responsibility",
-        "description": "Every person owns their work. We make decisions, take accountability, and deliver results."
+        "title": "Ownership",
+        "description": "Every person owns their work. We decide, execute, and answer for the results."
       },
       "quality": {
         "title": "Quality",
-        "description": "We get it right from the start. Shortcuts create rework, and rework costs more than doing it right."
+        "description": "We get it right from the start. Shortcuts become rework, and rework is expensive."
       },
       "collaboration": {
         "title": "Collaboration",
-        "description": "Nobody builds anything alone. The best solutions emerge when different perspectives come together."
+        "description": "Nobody builds anything alone. The best ideas emerge when different perspectives meet."
       },
       "growth": {
-        "title": "Continuous Growth",
-        "description": "Those who stop learning stop growing. We invest in the technical and personal development of everyone."
+        "title": "Growth",
+        "description": "Stop learning, stop growing. We invest in every person's development on the team."
       },
       "transparency": {
-        "title": "Transparency",
-        "description": "We speak clearly, even when it's hard. Hidden problems become bigger problems."
+        "title": "Candor",
+        "description": "We speak clearly, even when it's uncomfortable. Hidden problems become bigger problems."
       },
       "balance": {
         "title": "Balance",
-        "description": "Consistent results require consistent energy. We respect limits and value life outside of work."
+        "description": "Consistent results require consistent energy. Life outside of work isn't optional."
       }
     },
     "howWeWork": {
       "title": "How We Work",
-      "subtitle": "Practices and rituals that keep our culture alive.",
+      "subtitle": "Practices that sustain the way we operate.",
       "remote": {
         "title": "Remote-First",
-        "description": "Remote work as default, with full flexibility of hours and location."
+        "description": "Remote work by default. Flexibility on schedule and location."
       },
       "async": {
         "title": "Async Communication",
-        "description": "We prioritize written documentation over meetings, respecting everyone's focus."
+        "description": "Written documentation over meetings. We respect everyone's focus and time."
       },
       "reviews": {
-        "title": "Code Reviews",
-        "description": "All code goes through review. It's a mutual learning opportunity."
+        "title": "Code Review",
+        "description": "All code goes through review. It's learning, not bureaucracy."
       },
       "learning": {
         "title": "Learning Budget",
-        "description": "Investment in courses, conferences, and certifications for every team member."
+        "description": "Investment in courses, conferences, and certifications for the entire team."
       }
     },
     "cta": {
-      "title": "Want to Build the Future With Us?",
-      "subtitle": "We're always looking for people passionate about technology and excellence.",
+      "title": "Want to Work at Cerneo?",
+      "subtitle": "We're looking for people who want to build products that make a difference.",
       "button": "Contact Us"
     }
   },
