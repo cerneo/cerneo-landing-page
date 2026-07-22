@@ -56,6 +56,13 @@ export function Footer() {
                 Cidade Mon&ccedil;&otilde;es, S&atilde;o Paulo &ndash; SP
                 <br />
                 CEP 04571-000
+                <br />
+                <a
+                  href="mailto:contato@cerneo.com.br"
+                  className="hover:text-neo-400 transition-colors duration-300"
+                >
+                  contato@cerneo.com.br
+                </a>
               </address>
             </div>
 
