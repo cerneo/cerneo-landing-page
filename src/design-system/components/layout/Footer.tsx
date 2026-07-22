@@ -46,6 +46,17 @@ export function Footer() {
               <p className="text-sm leading-relaxed text-gray-400">
                 {t("footer.brand")}
               </p>
+              <address className="mt-4 text-xs leading-relaxed text-gray-500 not-italic">
+                Cerneo Tecnologia LTDA
+                <br />
+                CNPJ: 50.545.668/0001-92
+                <br />
+                Av. Eng. Luiz Carlos Berrini, 1748 &ndash; Conj. 1710
+                <br />
+                Cidade Mon&ccedil;&otilde;es, S&atilde;o Paulo &ndash; SP
+                <br />
+                CEP 04571-000
+              </address>
             </div>
 
             {/* Products */}
