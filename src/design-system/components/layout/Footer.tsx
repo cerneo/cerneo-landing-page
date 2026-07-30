@@ -16,6 +16,9 @@ const companyLinks = [
 const legalLinks = [
   { key: "privacy", href: "/privacy-policy" },
   { key: "terms", href: "/terms-of-use" },
+  { key: "conduct", href: "/code-of-conduct" },
+  { key: "antiCorruption", href: "/anti-corruption" },
+  { key: "whistleblowing", href: "/whistleblowing" },
 ];
 
 export function Footer() {

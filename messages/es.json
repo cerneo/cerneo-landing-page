@@ -7,7 +7,10 @@
       "products": "Productos",
       "contact": "Contacto",
       "privacy": "Política de Privacidad",
-      "terms": "Términos de Uso"
+      "terms": "Términos de Uso",
+      "conduct": "Código de Conducta",
+      "antiCorruption": "Política Anticorrupción",
+      "whistleblowing": "Canal de Denuncias"
     },
     "footer": {
       "brand": "Productos digitales que simplifican operaciones e impulsan negocios.",
@@ -318,6 +321,135 @@
       "contact": {
         "title": "8. Contacto",
         "content": "Para dudas sobre estos Términos de Uso, contáctenos por correo electrónico: juridico@cerneo.com.br"
+      }
+    },
+    "conduct": {
+      "title": "Código de Conducta y Ética",
+      "lastUpdated": "Última actualización: Julio de 2026",
+      "commitment": {
+        "title": "1. Nuestro Compromiso",
+        "content": "Cerneo Tecnologia Ltda. (\"Cerneo\") conduce sus negocios con integridad y respeto por las personas. Este Código de Conducta y Ética se aplica a todos los socios, colaboradores, contratistas, proveedores y socios comerciales de Cerneo. Nuestra actuación está alineada con la Carta Internacional de Derechos Humanos, la Declaración de la Organización Internacional del Trabajo (OIT) relativa a los Principios y Derechos Fundamentales en el Trabajo, los Diez Principios del Pacto Mundial de las Naciones Unidas y los Principios Rectores de la ONU sobre Empresas y Derechos Humanos."
+      },
+      "humanRights": {
+        "title": "2. Derechos Humanos",
+        "content": "Respetamos y apoyamos la protección de los derechos humanos internacionalmente reconocidos en todas nuestras operaciones y relaciones comerciales. Buscamos identificar, prevenir y mitigar cualquier impacto adverso sobre los derechos humanos que pueda estar relacionado con nuestras actividades, productos o alianzas."
+      },
+      "labor": {
+        "title": "3. Prácticas Laborales y Libertad de Asociación",
+        "content": "Cumplimos plenamente la legislación laboral brasileña y observamos las normas internacionales del trabajo. Esto incluye:",
+        "items": [
+          "Contratación formal y remuneración justa, conforme a la legislación aplicable",
+          "Respeto a la jornada laboral y a los períodos de descanso",
+          "Libertad de asociación y reconocimiento efectivo del derecho a la negociación colectiva",
+          "Un entorno de trabajo digno, con respeto y trato equitativo para todos"
+        ]
+      },
+      "slavery": {
+        "title": "4. Trabajo Forzoso, Esclavitud Moderna y Trabajo Infantil",
+        "content": "Tenemos tolerancia cero con cualquier forma de trabajo forzoso u obligatorio, esclavitud moderna, trata de personas y trabajo infantil. No empleamos a menores en contravención de la legislación y exigimos el mismo compromiso a todos nuestros proveedores y socios comerciales."
+      },
+      "discrimination": {
+        "title": "5. No Discriminación e Igualdad de Oportunidades",
+        "content": "Todas las decisiones de contratación, remuneración, promoción y desvinculación se basan exclusivamente en el mérito, la competencia y la necesidad del negocio. No toleramos la discriminación por motivos de:",
+        "items": [
+          "Raza, color, etnia o nacionalidad",
+          "Género, identidad de género u orientación sexual",
+          "Edad, estado civil o situación familiar",
+          "Religión, creencias u opinión política",
+          "Discapacidad o condición de salud",
+          "Afiliación sindical"
+        ]
+      },
+      "harassment": {
+        "title": "6. Un Entorno Libre de Violencia y Acoso",
+        "content": "Garantizamos un entorno de trabajo libre de violencia física, amenazas, castigos corporales, coerción mental, abuso verbal, comportamiento irrespetuoso, bullying y acoso de cualquier tipo, incluido el acoso moral y sexual. Cualquier conducta de este tipo da lugar a medidas disciplinarias, incluida la desvinculación y la comunicación a las autoridades cuando corresponda."
+      },
+      "health": {
+        "title": "7. Salud y Seguridad",
+        "content": "Proporcionamos un entorno de trabajo seguro y saludable. Como empresa remote-first, esto incluye orientación sobre ergonomía, respeto a los límites de jornada, fomento del equilibrio entre vida personal y profesional y atención a la salud mental del equipo. Cumplimos las normas de salud y seguridad ocupacional aplicables a nuestras actividades."
+      },
+      "minerals": {
+        "title": "8. Abastecimiento Responsable de Minerales",
+        "content": "Como empresa de software, Cerneo no adquiere ni procesa directamente minerales en su cadena de valor. Aun así, esperamos que los proveedores de equipos y hardware adopten prácticas de abastecimiento responsable de minerales, libres de conflicto, en línea con las directrices de la OCDE."
+      },
+      "suppliers": {
+        "title": "9. Proveedores y Socios",
+        "content": "Esperamos que nuestros proveedores y socios comerciales compartan los compromisos de este Código, incluido el respeto a los derechos humanos, las leyes laborales, la integridad en los negocios y la protección de datos. La violación de estos principios puede resultar en la terminación de la relación comercial."
+      },
+      "reporting": {
+        "title": "10. Violaciones y Denuncias",
+        "content": "Cualquier persona puede reportar violaciones —reales o presuntas— de este Código a través de nuestro Canal de Denuncias, por el correo etica@cerneo.com.br. Garantizamos confidencialidad, posibilidad de anonimato y protección contra represalias, según se describe en nuestra política del Canal de Denuncias."
+      }
+    },
+    "antiCorruption": {
+      "title": "Política Anticorrupción",
+      "lastUpdated": "Última actualización: Julio de 2026",
+      "commitment": {
+        "title": "1. Compromiso",
+        "content": "Cerneo Tecnologia Ltda. adopta tolerancia cero con la corrupción y el soborno en todas sus formas. Cumplimos la Ley Anticorrupción brasileña (Ley nº 12.846/2013), el Código Penal y demás normas aplicables, así como los principios de la legislación internacional contra la corrupción. Esta política se aplica a todos los socios, colaboradores, contratistas y terceros que actúen en nombre de Cerneo."
+      },
+      "prohibited": {
+        "title": "2. Conductas Prohibidas",
+        "content": "Quedan expresamente prohibidas, entre otras:",
+        "items": [
+          "Ofrecer, prometer, pagar o autorizar sobornos o comisiones ilícitas a agentes públicos o privados",
+          "Solicitar o aceptar ventajas indebidas, directa o indirectamente",
+          "Pagos de facilitación para acelerar actos administrativos",
+          "Fraude, falsificación de documentos o registros contables",
+          "Lavado de dinero o financiación de actividades ilícitas"
+        ]
+      },
+      "gifts": {
+        "title": "3. Regalos y Hospitalidad",
+        "content": "Los regalos y la hospitalidad solo son aceptables cuando tienen valor simbólico, no son recurrentes y no buscan influir en decisiones de negocio. Está prohibido ofrecer o recibir cualquier cosa de valor con el fin de obtener una ventaja indebida."
+      },
+      "thirdParties": {
+        "title": "4. Terceros y Debida Diligencia",
+        "content": "Evaluamos la integridad de proveedores y socios antes y durante la relación comercial. Los contratos incluyen cláusulas anticorrupción cuando corresponde. Los terceros que actúen en nombre de Cerneo deben observar íntegramente esta política."
+      },
+      "records": {
+        "title": "5. Libros y Registros",
+        "content": "Mantenemos libros y registros contables precisos y completos, que reflejan fielmente todas las transacciones. Ningún registro puede ser falsificado, omitido o distorsionado para encubrir pagos o fines indebidos."
+      },
+      "reporting": {
+        "title": "6. Denuncias y Consecuencias",
+        "content": "Las sospechas de violación de esta política deben comunicarse a través del Canal de Denuncias (etica@cerneo.com.br), con garantía de confidencialidad y no represalia. Las violaciones sujetan a los involucrados a medidas disciplinarias, rescisión contractual y comunicación a las autoridades competentes."
+      }
+    },
+    "whistleblowing": {
+      "title": "Canal de Denuncias",
+      "lastUpdated": "Última actualización: Julio de 2026",
+      "purpose": {
+        "title": "1. Objetivo",
+        "content": "El Canal de Denuncias de Cerneo es el medio oficial para que colaboradores, proveedores, socios, clientes y cualquier tercero reporten, de buena fe, violaciones reales o presuntas de nuestras políticas, de nuestro Código de Conducta y Ética o de la ley."
+      },
+      "scope": {
+        "title": "2. Qué Se Puede Reportar",
+        "content": "Ejemplos de temas que pueden reportarse:",
+        "items": [
+          "Acoso, bullying, violencia o comportamiento irrespetuoso",
+          "Discriminación de cualquier tipo",
+          "Corrupción, soborno, fraude o conflictos de interés",
+          "Violaciones laborales o de derechos humanos",
+          "Trabajo forzoso, esclavitud moderna o trabajo infantil",
+          "Violaciones de privacidad y protección de datos"
+        ]
+      },
+      "how": {
+        "title": "3. Cómo Denunciar",
+        "content": "Las denuncias pueden enviarse al correo etica@cerneo.com.br. No es necesario identificarse: las denuncias anónimas se aceptan y se tratan con la misma seriedad. Cuantos más detalles se proporcionen (hechos, fechas, personas involucradas, evidencias), más efectiva será la investigación."
+      },
+      "confidentiality": {
+        "title": "4. Confidencialidad",
+        "content": "Todas las denuncias se tratan con estricta confidencialidad. La identidad del denunciante, cuando se proporciona, solo la conocen las personas directamente responsables de la investigación y nunca se revela a las personas involucradas en la denuncia."
+      },
+      "nonRetaliation": {
+        "title": "5. Protección Contra Represalias",
+        "content": "Cerneo prohíbe expresamente cualquier forma de represalia —como despido, degradación, persecución o trato hostil— contra quien, de buena fe, presente una denuncia o colabore con una investigación. Los actos de represalia son, en sí mismos, violaciones graves sujetas a medidas disciplinarias."
+      },
+      "handling": {
+        "title": "6. Tratamiento de las Denuncias",
+        "content": "Toda denuncia se registra, analiza e investiga con imparcialidad y en un plazo razonable. Cuando resulta fundada, da lugar a medidas correctivas y disciplinarias proporcionales, que pueden incluir la desvinculación, la rescisión de contratos y la comunicación a las autoridades. El denunciante identificado recibe información sobre la conclusión del caso, dentro de los límites de confidencialidad."
       }
     }
   }

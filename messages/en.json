@@ -7,7 +7,10 @@
       "products": "Products",
       "contact": "Contact",
       "privacy": "Privacy Policy",
-      "terms": "Terms of Use"
+      "terms": "Terms of Use",
+      "conduct": "Code of Conduct",
+      "antiCorruption": "Anti-Corruption Policy",
+      "whistleblowing": "Whistleblowing Channel"
     },
     "footer": {
       "brand": "Digital products that simplify operations and drive business forward.",
@@ -318,6 +321,135 @@
       "contact": {
         "title": "8. Contact",
         "content": "For questions about these Terms of Use, contact us at: legal@cerneo.com.br"
+      }
+    },
+    "conduct": {
+      "title": "Code of Conduct and Ethics",
+      "lastUpdated": "Last updated: July 2026",
+      "commitment": {
+        "title": "1. Our Commitment",
+        "content": "Cerneo Tecnologia Ltda. (\"Cerneo\") conducts its business with integrity and respect for people. This Code of Conduct and Ethics applies to all partners, employees, contractors, suppliers and business partners of Cerneo. Our practices are aligned with the International Bill of Human Rights, the International Labour Organization (ILO) Declaration on Fundamental Principles and Rights at Work, the Ten Principles of the United Nations Global Compact and the UN Guiding Principles on Business and Human Rights."
+      },
+      "humanRights": {
+        "title": "2. Human Rights",
+        "content": "We respect and support the protection of internationally recognized human rights across all our operations and business relationships. We seek to identify, prevent and mitigate any adverse human rights impacts that may be linked to our activities, products or partnerships."
+      },
+      "labor": {
+        "title": "3. Labor Practices and Freedom of Association",
+        "content": "We fully comply with Brazilian employment law and observe international labour standards. This includes:",
+        "items": [
+          "Formal employment and fair compensation in accordance with applicable law",
+          "Respect for working hours and rest periods",
+          "Freedom of association and effective recognition of the right to collective bargaining",
+          "A dignified work environment, with respect and fair treatment for everyone"
+        ]
+      },
+      "slavery": {
+        "title": "4. Forced Labor, Modern Slavery and Child Labor",
+        "content": "We have zero tolerance for any form of forced or compulsory labor, modern slavery, human trafficking and child labor. We do not employ minors in violation of applicable law, and we require the same commitment from all our suppliers and business partners."
+      },
+      "discrimination": {
+        "title": "5. Non-Discrimination and Equal Opportunity",
+        "content": "All decisions on hiring, compensation, promotion and termination are based solely on merit, competence and business need. We do not tolerate discrimination based on:",
+        "items": [
+          "Race, color, ethnicity or nationality",
+          "Gender, gender identity or sexual orientation",
+          "Age, marital or family status",
+          "Religion, belief or political opinion",
+          "Disability or health condition",
+          "Union membership"
+        ]
+      },
+      "harassment": {
+        "title": "6. A Workplace Free from Violence and Harassment",
+        "content": "We ensure a work environment free from physical violence, threats, corporal punishment, mental coercion, verbal abuse, disrespectful behaviour, bullying and harassment of any kind, including moral and sexual harassment. Any such conduct results in disciplinary measures, up to termination and referral to the authorities where applicable."
+      },
+      "health": {
+        "title": "7. Health and Safety",
+        "content": "We provide a safe and healthy work environment. As a remote-first company, this includes guidance on ergonomics, respect for working-time limits, encouragement of work-life balance and attention to the team's mental health. We comply with the occupational health and safety regulations applicable to our activities."
+      },
+      "minerals": {
+        "title": "8. Responsible Mineral Sourcing",
+        "content": "As a software company, Cerneo does not directly source or process minerals in its value chain. Nevertheless, we expect equipment and hardware suppliers to adopt responsible, conflict-free mineral sourcing practices in line with OECD guidance."
+      },
+      "suppliers": {
+        "title": "9. Suppliers and Partners",
+        "content": "We expect our suppliers and business partners to share the commitments in this Code, including respect for human rights, employment laws, business integrity and data protection. Violation of these principles may result in termination of the business relationship."
+      },
+      "reporting": {
+        "title": "10. Violations and Reporting",
+        "content": "Anyone may report actual or suspected violations of this Code through our Whistleblowing Channel at etica@cerneo.com.br. We guarantee confidentiality, the option of anonymity and protection from retaliation, as described in our Whistleblowing Channel policy."
+      }
+    },
+    "antiCorruption": {
+      "title": "Anti-Corruption Policy",
+      "lastUpdated": "Last updated: July 2026",
+      "commitment": {
+        "title": "1. Commitment",
+        "content": "Cerneo Tecnologia Ltda. has zero tolerance for corruption and bribery in all their forms. We comply with the Brazilian Anti-Corruption Law (Law No. 12,846/2013), the Criminal Code and other applicable rules, as well as the principles of international anti-corruption legislation. This policy applies to all partners, employees, contractors and third parties acting on behalf of Cerneo."
+      },
+      "prohibited": {
+        "title": "2. Prohibited Conduct",
+        "content": "The following are expressly prohibited, among others:",
+        "items": [
+          "Offering, promising, paying or authorizing bribes or kickbacks to public or private agents",
+          "Requesting or accepting improper advantages, directly or indirectly",
+          "Facilitation payments to speed up administrative acts",
+          "Fraud, falsification of documents or accounting records",
+          "Money laundering or financing of illicit activities"
+        ]
+      },
+      "gifts": {
+        "title": "3. Gifts and Hospitality",
+        "content": "Gifts and hospitality are acceptable only when of symbolic value, non-recurring and without intent to influence business decisions. Offering or receiving anything of value to obtain an improper advantage is prohibited."
+      },
+      "thirdParties": {
+        "title": "4. Third Parties and Due Diligence",
+        "content": "We assess the integrity of suppliers and partners before and during the business relationship. Contracts include anti-corruption clauses whenever applicable. Third parties acting on behalf of Cerneo must fully observe this policy."
+      },
+      "records": {
+        "title": "5. Books and Records",
+        "content": "We keep accurate and complete books and records that faithfully reflect all transactions. No record may be falsified, omitted or distorted to conceal improper payments or purposes."
+      },
+      "reporting": {
+        "title": "6. Reporting and Consequences",
+        "content": "Suspected violations of this policy must be reported through the Whistleblowing Channel (etica@cerneo.com.br), with guaranteed confidentiality and non-retaliation. Violations subject those involved to disciplinary measures, contract termination and referral to the competent authorities."
+      }
+    },
+    "whistleblowing": {
+      "title": "Whistleblowing Channel",
+      "lastUpdated": "Last updated: July 2026",
+      "purpose": {
+        "title": "1. Purpose",
+        "content": "Cerneo's Whistleblowing Channel is the official means for employees, suppliers, partners, customers and any third party to report, in good faith, actual or suspected violations of our policies, our Code of Conduct and Ethics or the law."
+      },
+      "scope": {
+        "title": "2. What Can Be Reported",
+        "content": "Examples of matters that can be reported:",
+        "items": [
+          "Harassment, bullying, violence or disrespectful behaviour",
+          "Discrimination of any kind",
+          "Corruption, bribery, fraud or conflicts of interest",
+          "Labor or human rights violations",
+          "Forced labor, modern slavery or child labor",
+          "Privacy and data protection violations"
+        ]
+      },
+      "how": {
+        "title": "3. How to Report",
+        "content": "Reports can be sent to etica@cerneo.com.br. Identification is not required: anonymous reports are accepted and treated with the same seriousness. The more detail provided (facts, dates, people involved, evidence), the more effective the investigation."
+      },
+      "confidentiality": {
+        "title": "4. Confidentiality",
+        "content": "All reports are handled with strict confidentiality. The reporter's identity, when provided, is known only to the people directly responsible for the investigation and is never disclosed to those involved in the report."
+      },
+      "nonRetaliation": {
+        "title": "5. Protection from Retaliation",
+        "content": "Cerneo expressly prohibits any form of retaliation — such as dismissal, demotion, persecution or hostile treatment — against anyone who, in good faith, submits a report or cooperates with an investigation. Acts of retaliation are themselves serious violations subject to disciplinary measures."
+      },
+      "handling": {
+        "title": "6. Handling of Reports",
+        "content": "Every report is recorded, analyzed and investigated impartially and within a reasonable time. When substantiated, it results in proportionate corrective and disciplinary measures, which may include termination, contract rescission and referral to the authorities. Identified reporters receive feedback on the conclusion of the case, within the limits of confidentiality."
       }
     }
   }
