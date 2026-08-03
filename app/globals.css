@@ -115,7 +115,7 @@ html {
 
   /* Compact variant — scales the whole fixed-px composition down */
   .env-scene--compact {
-    zoom: 0.68;
+    zoom: 0.58;
   }
 
   .env-mail {
