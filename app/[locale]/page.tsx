@@ -68,10 +68,10 @@ export default async function HomePage({
 
       {/* 2. Manifesto */}
       <Section variant="dark" className="relative overflow-hidden">
-        <div aria-hidden="true" className="pointer-events-none absolute left-0 top-0 flex gap-4">
-          <span className="h-2 w-48 bg-[repeating-linear-gradient(-45deg,var(--color-neo-500)_0px,var(--color-neo-500)_2px,transparent_2px,transparent_9px)] opacity-70 md:w-80" />
-          <span className="h-2 w-10 bg-[repeating-linear-gradient(-45deg,var(--color-neo-500)_0px,var(--color-neo-500)_2px,transparent_2px,transparent_9px)] opacity-70" />
-        </div>
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-neo-500/70 via-neo-500/20 to-transparent"
+        />
         <Container>
           <div className="grid items-center gap-12 md:grid-cols-2 md:gap-0">
             <div className="md:pr-14">
