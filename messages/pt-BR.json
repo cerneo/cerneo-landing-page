@@ -37,9 +37,10 @@
     },
     "manifesto": {
       "title": "Por Que Cerneo?",
-      "paragraph1": "Cerneo vem da fusão de Cerne — o núcleo, a essência — com Neo — o novo, a evolução. Tecnologia construída a partir de uma base sólida.",
-      "paragraph2": "Existimos porque software bom não deveria ser exceção. Negócios dependem de ferramentas que funcionam, que escalam e que não quebram quando mais importa.",
-      "paragraph3": "Cada produto que construímos resolve um problema específico, de forma simples e confiável. Sem complexidade desnecessária. Sem promessas vazias."
+      "quote": "Software bom não deveria ser exceção",
+      "paragraph1": "Cerneo vem da fusão de <strong>Cerne</strong> — o núcleo, a essência — com <strong>Neo</strong> — o novo, a evolução. Tecnologia construída a partir de uma base sólida.",
+      "paragraph2": "Existimos porque software bom não deveria ser exceção. Negócios dependem de <strong>ferramentas que funcionam, que escalam e que não quebram quando mais importa</strong>.",
+      "paragraph3": "Cada produto que construímos resolve um problema específico, de forma simples e confiável. <strong>Sem complexidade desnecessária. Sem promessas vazias.</strong>"
     },
     "logo": {
       "title": "O Hexágono Cerneo",

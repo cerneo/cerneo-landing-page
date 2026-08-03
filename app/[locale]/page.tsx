@@ -67,16 +67,31 @@ export default async function HomePage({
       </Hero>
 
       {/* 2. Manifesto */}
-      <Section variant="default">
+      <Section variant="dark" className="relative overflow-hidden">
+        <div aria-hidden="true" className="pointer-events-none absolute left-0 top-0 flex gap-4">
+          <span className="h-2 w-48 bg-[repeating-linear-gradient(-45deg,var(--color-neo-500)_0px,var(--color-neo-500)_2px,transparent_2px,transparent_9px)] opacity-70 md:w-80" />
+          <span className="h-2 w-10 bg-[repeating-linear-gradient(-45deg,var(--color-neo-500)_0px,var(--color-neo-500)_2px,transparent_2px,transparent_9px)] opacity-70" />
+        </div>
         <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
-              {t("manifesto.title")}
-            </h2>
-            <div className="mt-8 space-y-4 text-lg leading-relaxed text-steel dark:text-gray-400">
-              <p>{t("manifesto.paragraph1")}</p>
-              <p>{t("manifesto.paragraph2")}</p>
-              <p>{t("manifesto.paragraph3")}</p>
+          <div className="grid items-center gap-12 md:grid-cols-2 md:gap-0">
+            <div className="md:pr-14">
+              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-neo-400">
+                {t("manifesto.title")}
+              </span>
+              <blockquote className="mt-6 border-l-4 border-neo-500 pl-6 text-3xl font-semibold italic leading-snug text-white md:text-4xl">
+                &ldquo;{t("manifesto.quote")}&rdquo;
+              </blockquote>
+            </div>
+            <div className="space-y-5 leading-relaxed text-gray-400 md:border-l md:border-white/10 md:pl-14">
+              {(["paragraph1", "paragraph2", "paragraph3"] as const).map((key) => (
+                <p key={key}>
+                  {t.rich(`manifesto.${key}`, {
+                    strong: (chunks) => (
+                      <strong className="font-semibold text-white">{chunks}</strong>
+                    ),
+                  })}
+                </p>
+              ))}
             </div>
           </div>
         </Container>
