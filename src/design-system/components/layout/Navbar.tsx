@@ -152,9 +152,11 @@ export function Navbar() {
                 </div>
               )}
             </div>
-            <Button size="sm" color="neo">
-              {t("contact") ?? "Contato"}
-            </Button>
+            <Link href="/#contact">
+              <Button size="sm" color="neo">
+                {t("contact")}
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile hamburger */}
@@ -226,9 +228,11 @@ export function Navbar() {
               )}
             </div>
             <div className="pt-2 px-3">
-              <Button size="sm" color="neo" fullWidth>
-                {t("contact") ?? "Contato"}
-              </Button>
+              <Link href="/#contact" className="block" onClick={() => setIsOpen(false)}>
+                <Button size="sm" color="neo" fullWidth>
+                  {t("contact")}
+                </Button>
+              </Link>
             </div>
           </div>
         )}

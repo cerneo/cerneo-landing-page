@@ -101,6 +101,44 @@
       "termsDesc": "Condiciones de uso de nuestros servicios."
     }
   },
+  "contact": {
+    "title": "Hablemos",
+    "subtitle": "¿Tienes un proyecto, duda o propuesta? Elige el canal que prefieras.",
+    "email": {
+      "cardTitle": "Envía un Email",
+      "cardDescription": "Completa el formulario y responderemos en 1 día hábil.",
+      "directLinkPrefix": "O escribe directamente a"
+    },
+    "whatsapp": {
+      "cardTitle": "Escríbenos por WhatsApp",
+      "cardDescription": "Habla ahora con nuestro equipo por WhatsApp."
+    },
+    "form": {
+      "title": "Contáctenos",
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@empresa.com",
+      "company": "Empresa",
+      "companyOptional": "opcional",
+      "companyPlaceholder": "Nombre de la empresa",
+      "message": "Mensaje",
+      "messagePlaceholder": "¿Cómo podemos ayudarte?",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "successTitle": "¡Mensaje enviado!",
+      "successMessage": "Gracias por contactarnos. Te responderemos pronto.",
+      "close": "Cerrar",
+      "errorMessage": "No pudimos enviar tu mensaje. Inténtalo de nuevo o escribe a contato@cerneo.com.br.",
+      "directPrefix": "¿Prefieres email directo?",
+      "validation": {
+        "nameRequired": "Ingresa tu nombre.",
+        "emailRequired": "Ingresa tu email.",
+        "emailInvalid": "Email inválido.",
+        "messageRequired": "Escribe un mensaje de al menos 10 caracteres."
+      }
+    }
+  },
   "about": {
     "hero": {
       "title": "Sobre Cerneo",

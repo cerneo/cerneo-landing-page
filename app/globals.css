@@ -34,8 +34,23 @@
   --color-error: #EF4444;
   --color-info: #0EA5E9;
 
+  /* Brand Colors (third-party) */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #128C7E;
+
   /* Container */
   --container-max-width-xl: 1280px;
+
+  /* Animations */
+  --animate-whatsapp-ping: whatsapp-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+
+  @keyframes whatsapp-ping {
+    75%,
+    100% {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+  }
 }
 
 /* Base styles */
@@ -72,4 +87,178 @@ html {
 *:focus-visible {
   outline: 2px solid var(--color-neo-500);
   outline-offset: 2px;
+}
+
+/* Animated envelope (AnimatedEnvelope component) — hover is driven by the
+   parent card carrying the Tailwind `group` class. Triangle folds are built
+   with borders, so all sizes below are coupled: body 200x100, folds 100x50. */
+@layer components {
+  .env-scene {
+    --env-body: var(--color-neo-600);
+    --env-fold: var(--color-neo-700);
+    --env-top: var(--color-neo-500);
+    --env-letter: #ffffff;
+    --env-line: var(--color-neo-200);
+    --env-accent: var(--color-neo-400);
+    --env-shadow: rgb(0 0 0 / 0.18);
+    position: relative;
+    width: 200px;
+    height: 190px;
+    margin-inline: auto;
+  }
+
+  .dark .env-scene {
+    --env-letter: var(--color-mist);
+    --env-line: var(--color-neo-300);
+    --env-shadow: rgb(0 0 0 / 0.45);
+  }
+
+  .env-mail {
+    position: absolute;
+    bottom: 30px;
+    width: 200px;
+    height: 100px;
+    transition: transform 0.4s;
+  }
+
+  .env-back-fold {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100px;
+    background: var(--env-fold);
+    z-index: 0;
+  }
+
+  .env-letter {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    width: 160px;
+    height: 60px;
+    background: var(--env-letter);
+    border-radius: 4px 4px 0 0;
+    z-index: 1;
+    overflow: hidden;
+    transition: height 0.4s 0.2s;
+  }
+
+  .env-letter-border {
+    height: 10px;
+    width: 100%;
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--env-line),
+      var(--env-line) 8px,
+      transparent 8px,
+      transparent 18px
+    );
+  }
+
+  .env-letter-title {
+    margin: 10px 0 0 10px;
+    height: 8px;
+    width: 40%;
+    border-radius: 4px;
+    background: var(--env-accent);
+  }
+
+  .env-letter-context {
+    margin: 8px 0 0 10px;
+    height: 8px;
+    width: 20%;
+    border-radius: 4px;
+    background: var(--env-line);
+  }
+
+  .env-letter-stamp {
+    margin: 26px 0 0 116px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background: var(--env-accent);
+    opacity: 0.35;
+  }
+
+  .env-top-fold {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 100px 0 100px;
+    border-color: var(--env-top) transparent transparent transparent;
+    transform-origin: 50% 0%;
+    transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    z-index: 2;
+  }
+
+  .env-body {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 200px;
+    border-color: transparent transparent var(--env-body) transparent;
+    z-index: 2;
+  }
+
+  .env-left-fold {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 0 50px 100px;
+    border-color: transparent transparent transparent var(--env-fold);
+    z-index: 2;
+  }
+
+  .env-shadow {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    width: 200px;
+    height: 14px;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    background: radial-gradient(var(--env-shadow), transparent 70%);
+    transition: width 0.4s;
+  }
+
+  .group:hover .env-mail,
+  .group:focus-visible .env-mail {
+    transform: translateY(30px);
+  }
+
+  .group:hover .env-top-fold,
+  .group:focus-visible .env-top-fold {
+    transition: transform 0.4s, z-index 0.2s;
+    transform: rotateX(180deg);
+    z-index: 0;
+  }
+
+  .group:hover .env-letter,
+  .group:focus-visible .env-letter {
+    height: 150px;
+  }
+
+  .group:hover .env-shadow,
+  .group:focus-visible .env-shadow {
+    width: 250px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .env-mail,
+    .env-top-fold,
+    .env-letter,
+    .env-shadow {
+      transition: none;
+    }
+
+    .animate-whatsapp-ping {
+      animation: none;
+    }
+  }
 }

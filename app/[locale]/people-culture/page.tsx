@@ -18,6 +18,7 @@ import { CTA } from "../../../src/design-system/components/marketing/CTA";
 import { Section } from "../../../src/design-system/components/layout/Section";
 import { Container } from "../../../src/design-system/components/layout/Container";
 import { Button } from "../../../src/design-system/components/ui/Button";
+import { Link } from "../../../src/i18n/navigation";
 
 export default async function PeopleCulturePage({
   params,
@@ -117,15 +118,17 @@ export default async function PeopleCulturePage({
         title={t("cta.title")}
         subtitle={t("cta.subtitle")}
       >
-        <Button
-          variant="solid"
-          color="white"
-          size="lg"
-          icon={<ArrowRight className="h-4 w-4" />}
-          iconPosition="right"
-        >
-          {t("cta.button")}
-        </Button>
+        <Link href="/#contact">
+          <Button
+            variant="solid"
+            color="white"
+            size="lg"
+            icon={<ArrowRight className="h-4 w-4" />}
+            iconPosition="right"
+          >
+            {t("cta.button")}
+          </Button>
+        </Link>
       </CTA>
     </>
   );

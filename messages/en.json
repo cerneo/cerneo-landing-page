@@ -101,6 +101,44 @@
       "termsDesc": "Terms and conditions for using our services."
     }
   },
+  "contact": {
+    "title": "Let's Talk",
+    "subtitle": "Have a project, question or proposal? Pick the channel you prefer.",
+    "email": {
+      "cardTitle": "Send an Email",
+      "cardDescription": "Fill in the form and we'll get back to you within 1 business day.",
+      "directLinkPrefix": "Or write directly to"
+    },
+    "whatsapp": {
+      "cardTitle": "Chat on WhatsApp",
+      "cardDescription": "Talk to our team right now on WhatsApp."
+    },
+    "form": {
+      "title": "Contact Us",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company",
+      "companyOptional": "optional",
+      "companyPlaceholder": "Company name",
+      "message": "Message",
+      "messagePlaceholder": "How can we help?",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successTitle": "Message sent!",
+      "successMessage": "Thanks for reaching out. We'll get back to you soon.",
+      "close": "Close",
+      "errorMessage": "We couldn't send your message. Try again or write to contato@cerneo.com.br.",
+      "directPrefix": "Prefer direct email?",
+      "validation": {
+        "nameRequired": "Please enter your name.",
+        "emailRequired": "Please enter your email.",
+        "emailInvalid": "Invalid email address.",
+        "messageRequired": "Please write a message of at least 10 characters."
+      }
+    }
+  },
   "about": {
     "hero": {
       "title": "About Cerneo",

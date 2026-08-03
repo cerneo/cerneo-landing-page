@@ -14,6 +14,7 @@ import { Hero } from "../../src/design-system/components/marketing/Hero";
 import { ProductCard } from "../../src/design-system/components/marketing/ProductCard";
 import { FeatureGrid } from "../../src/design-system/components/marketing/FeatureGrid";
 import { CTA } from "../../src/design-system/components/marketing/CTA";
+import { ContactSection } from "../../src/design-system/components/marketing/ContactSection";
 import { Section } from "../../src/design-system/components/layout/Section";
 import { Container } from "../../src/design-system/components/layout/Container";
 import { Button } from "../../src/design-system/components/ui/Button";
@@ -110,7 +111,7 @@ export default async function HomePage({
       </Section>
 
       {/* 4. Products */}
-      <Section variant="default" id="products">
+      <Section variant="default" id="products" className="scroll-mt-16">
         <Container>
           <div className="mx-auto max-w-2xl text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
@@ -167,6 +168,8 @@ export default async function HomePage({
         </Link>
       </CTA>
 
+      {/* 7. Contact */}
+      <ContactSection />
     </>
   );
 }
