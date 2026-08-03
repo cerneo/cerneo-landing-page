@@ -113,6 +113,11 @@ html {
     --env-shadow: rgb(0 0 0 / 0.45);
   }
 
+  /* Compact variant — scales the whole fixed-px composition down */
+  .env-scene--compact {
+    zoom: 0.68;
+  }
+
   .env-mail {
     position: absolute;
     bottom: 30px;

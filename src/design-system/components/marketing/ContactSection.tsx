@@ -14,7 +14,7 @@ import { fadeInUp, staggerContainer } from "../../tokens";
 import { themeConfig } from "../../config/theme.config";
 
 const cardClasses = classnames(
-  "group flex h-full w-full cursor-pointer flex-col rounded-2xl border p-8 text-center",
+  "group flex h-full w-full cursor-pointer flex-col rounded-2xl border p-6 text-center",
   "border-gray-200 bg-white hover:border-neo-300 hover:shadow-xl",
   "dark:border-gray-700 dark:bg-charcoal dark:hover:border-neo-700",
   themeConfig.defaultTransition
@@ -33,27 +33,27 @@ export function ContactSection() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          <motion.div variants={fadeInUp} className="mx-auto mb-12 max-w-2xl text-center">
+          <motion.div variants={fadeInUp} className="mx-auto mb-10 max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
               {t("title")}
             </h2>
             <p className="mt-4 text-lg text-steel dark:text-gray-400">{t("subtitle")}</p>
           </motion.div>
 
-          <div className="mx-auto grid max-w-3xl grid-cols-1 items-stretch gap-8 md:grid-cols-2">
+          <div className="mx-auto grid max-w-3xl grid-cols-1 items-stretch gap-6 md:grid-cols-2">
             <motion.div variants={fadeInUp} className="flex flex-col">
               <button type="button" onClick={() => setIsModalOpen(true)} className={cardClasses}>
-                <span className="flex flex-1 items-center justify-center">
-                  <AnimatedEnvelope />
+                <span className="flex h-32 items-center justify-center">
+                  <AnimatedEnvelope className="env-scene--compact" />
                 </span>
-                <span className="block text-lg font-semibold text-charcoal dark:text-gray-100">
+                <span className="mt-3 block text-lg font-semibold text-charcoal dark:text-gray-100">
                   {t("email.cardTitle")}
                 </span>
-                <span className="mt-2 block text-sm leading-relaxed text-steel dark:text-gray-400">
+                <span className="mt-1.5 block text-sm leading-relaxed text-steel dark:text-gray-400">
                   {t("email.cardDescription")}
                 </span>
               </button>
-              <p className="mt-3 text-center text-xs text-steel dark:text-gray-400">
+              <p className="mt-2.5 text-center text-xs text-steel dark:text-gray-400">
                 {t("email.directLinkPrefix")}{" "}
                 <a
                   href="mailto:contato@cerneo.com.br"
@@ -70,7 +70,7 @@ export function ContactSection() {
                 sublabel={t("whatsapp.cardDescription")}
                 className={cardClasses}
               />
-              <p className="mt-3 text-center text-xs text-steel dark:text-gray-400">
+              <p className="mt-2.5 text-center text-xs text-steel dark:text-gray-400">
                 +55 11 95213-4621
               </p>
             </motion.div>
