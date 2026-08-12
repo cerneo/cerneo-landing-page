@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: "Cerneo | A Nova Base da Tecnologia",
   },
   description:
-    "Holding de tecnologia que combina engenharia de excelência com inovação para construir produtos que transformam negócios.",
+    "Consultoria de tecnologia e produtos digitais. Engenharia sênior para construir, modernizar e escalar o software que sustenta o seu negócio.",
   icons: {
     icon: [
       { url: "/images/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Cerneo",
     title: "Cerneo | A Nova Base da Tecnologia",
     description:
-      "Holding de tecnologia que combina engenharia de excelência com inovação para construir produtos que transformam negócios.",
+      "Consultoria de tecnologia e produtos digitais. Engenharia sênior para construir, modernizar e escalar o software que sustenta o seu negócio.",
   },
 };
 

@@ -2,6 +2,7 @@
   "common": {
     "nav": {
       "home": "Inicio",
+      "services": "Servicios",
       "about": "Sobre",
       "peopleCulture": "Personas & Cultura",
       "products": "Productos",
@@ -13,7 +14,8 @@
       "whistleblowing": "Canal de Denuncias"
     },
     "footer": {
-      "brand": "Productos digitales que simplifican operaciones e impulsan negocios.",
+      "brand": "Productos digitales y consultoría de tecnología para negocios que no paran.",
+      "services": "Servicios",
       "products": "Productos",
       "company": "Empresa",
       "legal": "Legal",
@@ -31,16 +33,33 @@
   "home": {
     "hero": {
       "title": "Software bien hecho. Para negocios que no paran.",
-      "subtitle": "Cerneo desarrolla productos digitales que resuelven problemas reales, con la robustez que su operación exige.",
-      "cta1": "Conozca Nuestros Productos",
-      "cta2": "Sobre Cerneo"
+      "subtitle": "Cerneo construye productos digitales propios y pone la misma ingeniería al servicio de otras empresas — del discovery a la operación.",
+      "cta1": "Conozca Nuestros Servicios",
+      "cta2": "Nuestros Productos"
     },
     "manifesto": {
       "title": "¿Por Qué Cerneo?",
       "quote": "El buen software no debería ser la excepción",
       "paragraph1": "Cerneo viene de la fusión de <strong>Cerne</strong> — el núcleo, la esencia — con <strong>Neo</strong> — lo nuevo, la evolución. Tecnología construida desde una base sólida.",
       "paragraph2": "Existimos porque el buen software no debería ser la excepción. Los negocios dependen de <strong>herramientas que funcionan, que escalan y que no fallan cuando más importa</strong>.",
-      "paragraph3": "Cada producto que construimos resuelve un problema específico, de forma simple y confiable. <strong>Sin complejidad innecesaria. Sin promesas vacías.</strong>"
+      "paragraph3": "Cada solución que construimos — producto propio o proyecto de cliente — resuelve un problema específico, de forma simple y confiable. <strong>Sin complejidad innecesaria. Sin promesas vacías.</strong>"
+    },
+    "services": {
+      "title": "Nuestros Servicios",
+      "subtitle": "La misma ingeniería de nuestros productos, al servicio de su negocio.",
+      "development": {
+        "title": "Desarrollo de Producto",
+        "description": "Del discovery al lanzamiento: MVPs, aplicaciones web y productos digitales completos. Construimos para clientes con el mismo rigor que aplicamos en nuestros propios productos."
+      },
+      "consulting": {
+        "title": "Consultoría Técnica & Arquitectura",
+        "description": "Arquitectura de software, revisión técnica, modernización de stack y cloud. Un diagnóstico honesto y un plan de acción que su equipo puede ejecutar."
+      },
+      "staffing": {
+        "title": "Equipo Extendido",
+        "description": "Squads completos o especialistas integrados a su equipo. Seniority, autonomía y cultura de entrega desde el primer día."
+      },
+      "cta": "Hable con Nuestro Equipo"
     },
     "logo": {
       "title": "El Hexágono Cerneo",
@@ -54,7 +73,7 @@
     },
     "products": {
       "title": "Nuestros Productos",
-      "subtitle": "Herramientas digitales que resuelven problemas reales del día a día.",
+      "subtitle": "Herramientas propias que resuelven problemas reales — y prueban, en producción, la ingeniería que practicamos.",
       "kalender": {
         "name": "Cerneo Kalender",
         "description": "Agendamiento inteligente para empresas. Automatice reservas, reduzca ausencias y gestione horarios en un solo lugar."
@@ -73,7 +92,7 @@
       },
       "agility": {
         "title": "Evolución Continua",
-        "description": "Actualizaciones frecuentes basadas en feedback real. Nuestros productos mejoran junto con las necesidades de su negocio."
+        "description": "Entregas frecuentes basadas en feedback real. El software evoluciona junto con las necesidades de su negocio."
       },
       "datadriven": {
         "title": "Datos con Sentido",
@@ -85,7 +104,7 @@
       },
       "support": {
         "title": "Soporte que Resuelve",
-        "description": "Equipo técnico que entiende el producto. Sin guiones predefinidos, sin burocracia."
+        "description": "Equipo técnico que conoce lo que construye. Sin guiones predefinidos, sin burocracia."
       }
     },
     "culture": {
@@ -148,7 +167,7 @@
     "story": {
       "title": "Nuestra Historia",
       "paragraph1": "Cerneo nació de una pregunta simple: ¿por qué tantas herramientas de negocio son tan difíciles de usar?",
-      "paragraph2": "Fundada por ingenieros de software, la empresa existe para crear productos que funcionan como deberían — confiables, intuitivos y listos para el día a día real. Reunimos bajo un mismo techo soluciones que comparten la misma base: código probado, diseño centrado en el usuario e infraestructura sólida.",
+      "paragraph2": "Fundada por ingenieros de software, la empresa existe para crear productos que funcionan como deberían — confiables, intuitivos y listos para el día a día real. Reunimos bajo un mismo techo soluciones que comparten la misma base: código probado, diseño centrado en el usuario e infraestructura sólida. Hoy, además de los productos propios, ponemos esa ingeniería al servicio de otras empresas — en desarrollo de producto, consultoría técnica y equipos extendidos.",
       "paragraph3": "Nuestro nombre une Cerne (esencia) y Neo (nuevo). Construimos lo nuevo a partir de bases que funcionan."
     },
     "timeline": {
@@ -172,6 +191,11 @@
         "year": "2025",
         "title": "Expansión",
         "description": "Crecimiento del ecosistema Cerneo con nuevas funcionalidades e integraciones."
+      },
+      "item5": {
+        "year": "2026",
+        "title": "Servicios & Consultoría",
+        "description": "Cerneo comienza a ofrecer su ingeniería como servicio: desarrollo de producto, consultoría técnica y equipos extendidos."
       }
     },
     "values": {
@@ -328,7 +352,7 @@
       },
       "services": {
         "title": "2. Descripción de los Servicios",
-        "content": "Cerneo es una holding de tecnología que ofrece productos de software, incluyendo Cerneo Kalender. Cada producto puede tener términos específicos adicionales."
+        "content": "Cerneo es una empresa de tecnología que desarrolla productos propios de software — incluyendo Cerneo Kalender — y presta servicios de desarrollo, consultoría y asignación de equipos. Cada producto o servicio puede tener términos específicos adicionales."
       },
       "responsibilities": {
         "title": "3. Responsabilidades del Usuario",

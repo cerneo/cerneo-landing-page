@@ -13,6 +13,8 @@ import { themeConfig } from "../../config/theme.config";
 
 const navLinks = [
   { href: "/", key: "home" },
+  { href: "/#services", key: "services" },
+  { href: "/#products", key: "products" },
   { href: "/about", key: "about" },
   { href: "/people-culture", key: "peopleCulture" },
 ] as const;

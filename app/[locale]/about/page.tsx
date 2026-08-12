@@ -39,6 +39,7 @@ export default async function AboutPage({
     { key: "item2" },
     { key: "item3" },
     { key: "item4" },
+    { key: "item5" },
   ];
 
   return (

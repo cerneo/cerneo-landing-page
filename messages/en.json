@@ -2,6 +2,7 @@
   "common": {
     "nav": {
       "home": "Home",
+      "services": "Services",
       "about": "About",
       "peopleCulture": "People & Culture",
       "products": "Products",
@@ -13,7 +14,8 @@
       "whistleblowing": "Whistleblowing Channel"
     },
     "footer": {
-      "brand": "Digital products that simplify operations and drive business forward.",
+      "brand": "Digital products and technology consulting for businesses that don't stop.",
+      "services": "Services",
       "products": "Products",
       "company": "Company",
       "legal": "Legal",
@@ -31,16 +33,33 @@
   "home": {
     "hero": {
       "title": "Well-crafted software. For businesses that don't stop.",
-      "subtitle": "Cerneo builds digital products that solve real problems, with the reliability your operation demands.",
-      "cta1": "Discover Our Products",
-      "cta2": "About Cerneo"
+      "subtitle": "Cerneo builds its own digital products and puts the same engineering to work for other companies — from discovery to operation.",
+      "cta1": "Discover Our Services",
+      "cta2": "Our Products"
     },
     "manifesto": {
       "title": "Why Cerneo?",
       "quote": "Good software shouldn't be the exception",
       "paragraph1": "Cerneo comes from the fusion of <strong>Cerne</strong> — the core, the essence — and <strong>Neo</strong> — the new, the evolution. Technology built from a solid foundation.",
       "paragraph2": "We exist because good software shouldn't be the exception. Businesses depend on <strong>tools that work, that scale, and that don't break when it matters most</strong>.",
-      "paragraph3": "Every product we build solves a specific problem, simply and reliably. <strong>No unnecessary complexity. No empty promises.</strong>"
+      "paragraph3": "Everything we build — our own products or client projects — solves a specific problem, simply and reliably. <strong>No unnecessary complexity. No empty promises.</strong>"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "The same engineering behind our products, at the service of your business.",
+      "development": {
+        "title": "Product Development",
+        "description": "From discovery to launch: MVPs, web applications, and complete digital products. We build for clients with the same rigor we apply to our own products."
+      },
+      "consulting": {
+        "title": "Technical & Architecture Consulting",
+        "description": "Software architecture, technical review, stack modernization, and cloud. An honest diagnosis and an action plan your team can execute."
+      },
+      "staffing": {
+        "title": "Extended Team",
+        "description": "Complete squads or specialists embedded in your team. Seniority, autonomy, and a delivery culture from day one."
+      },
+      "cta": "Talk to Our Team"
     },
     "logo": {
       "title": "The Cerneo Hexagon",
@@ -54,7 +73,7 @@
     },
     "products": {
       "title": "Our Products",
-      "subtitle": "Digital tools that solve real, everyday problems.",
+      "subtitle": "Our own tools that solve real problems — and prove, in production, the engineering we practice.",
       "kalender": {
         "name": "Cerneo Kalender",
         "description": "Smart scheduling for businesses. Automate bookings, reduce no-shows, and manage schedules in one place."
@@ -73,7 +92,7 @@
       },
       "agility": {
         "title": "Continuous Evolution",
-        "description": "Frequent updates based on real feedback. Our products improve alongside your business needs."
+        "description": "Frequent deliveries based on real feedback. The software evolves alongside your business needs."
       },
       "datadriven": {
         "title": "Data That Makes Sense",
@@ -85,7 +104,7 @@
       },
       "support": {
         "title": "Support That Delivers",
-        "description": "A technical team that understands the product. No canned scripts, no red tape."
+        "description": "A technical team that knows what it builds. No canned scripts, no red tape."
       }
     },
     "culture": {
@@ -148,7 +167,7 @@
     "story": {
       "title": "Our Story",
       "paragraph1": "Cerneo was born from a simple question: why are so many business tools so hard to use?",
-      "paragraph2": "Founded by software engineers, the company exists to build products that work as they should — reliable, intuitive, and ready for the real world. We bring together solutions that share the same foundation: tested code, user-centered design, and solid infrastructure.",
+      "paragraph2": "Founded by software engineers, the company exists to build products that work as they should — reliable, intuitive, and ready for the real world. We bring together solutions that share the same foundation: tested code, user-centered design, and solid infrastructure. Today, beyond our own products, we put that engineering to work for other companies — in product development, technical consulting, and extended teams.",
       "paragraph3": "Our name combines Cerne (essence) and Neo (new). We build the new from foundations that work."
     },
     "timeline": {
@@ -172,6 +191,11 @@
         "year": "2025",
         "title": "Expansion",
         "description": "Growth of the Cerneo ecosystem with new features and integrations."
+      },
+      "item5": {
+        "year": "2026",
+        "title": "Services & Consulting",
+        "description": "Cerneo begins offering its engineering as a service: product development, technical consulting, and extended teams."
       }
     },
     "values": {
@@ -328,7 +352,7 @@
       },
       "services": {
         "title": "2. Description of Services",
-        "content": "Cerneo is a technology holding that offers software products, including Cerneo Kalender. Each product may have additional specific terms."
+        "content": "Cerneo is a technology company that develops its own software products — including Cerneo Kalender — and provides development, consulting, and team augmentation services. Each product or service may have additional specific terms."
       },
       "responsibilities": {
         "title": "3. User Responsibilities",

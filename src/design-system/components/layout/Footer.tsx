@@ -3,6 +3,12 @@ import { useTranslations } from "next-intl";
 import { Link } from "../../../i18n/navigation";
 import { Container } from "./Container";
 
+const serviceLinks = [
+  { key: "development", href: "/#services" },
+  { key: "consulting", href: "/#services" },
+  { key: "staffing", href: "/#services" },
+];
+
 const productLinks = [
   { label: "Cerneo Kalender", href: "https://www.kalender.com.br" },
 ];
@@ -23,6 +29,7 @@ const legalLinks = [
 
 export function Footer() {
   const t = useTranslations("common");
+  const tServices = useTranslations("home.services");
 
   return (
     <footer
@@ -31,7 +38,7 @@ export function Footer() {
     >
       <Container>
         <div className="py-12 md:py-16">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
             {/* Brand */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2 mb-4">
@@ -67,6 +74,25 @@ export function Footer() {
                   contato@cerneo.com.br
                 </a>
               </address>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
+                {t("footer.services")}
+              </h4>
+              <ul className="space-y-2">
+                {serviceLinks.map((link) => (
+                  <li key={link.key}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-gray-400 hover:text-neo-400 transition-colors duration-300"
+                    >
+                      {tServices(`${link.key}.title`)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Products */}

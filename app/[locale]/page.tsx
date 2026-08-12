@@ -9,6 +9,9 @@ import {
   BarChart3,
   Lock,
   Headphones,
+  Rocket,
+  Blocks,
+  Users,
 } from "lucide-react";
 import { Hero } from "../../src/design-system/components/marketing/Hero";
 import { ProductCard } from "../../src/design-system/components/marketing/ProductCard";
@@ -37,6 +40,12 @@ export default async function HomePage({
     logoSrc: "/images/product-logo/kalender-logo.png",
   };
 
+  const services = [
+    { key: "development", icon: <Rocket className="h-5 w-5" /> },
+    { key: "consulting", icon: <Blocks className="h-5 w-5" /> },
+    { key: "staffing", icon: <Users className="h-5 w-5" /> },
+  ];
+
   const differentials = [
     { key: "reliability", icon: <ShieldCheck className="h-5 w-5" /> },
     { key: "scalability", icon: <TrendingUp className="h-5 w-5" /> },
@@ -54,12 +63,12 @@ export default async function HomePage({
         title={t("hero.title")}
         subtitle={t("hero.subtitle")}
       >
-        <Link href="#products">
+        <Link href="#services">
           <Button color="neo" size="lg">
             {t("hero.cta1")}
           </Button>
         </Link>
-        <Link href="/about">
+        <Link href="#products">
           <Button variant="outline" color="white" size="lg">
             {t("hero.cta2")}
           </Button>
@@ -97,7 +106,34 @@ export default async function HomePage({
         </Container>
       </Section>
 
-      {/* 3. Logo Hex */}
+      {/* 3. Services */}
+      <Section variant="default" id="services" className="scroll-mt-16">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
+              {t("services.title")}
+            </h2>
+            <p className="mt-4 text-lg text-steel dark:text-gray-400">{t("services.subtitle")}</p>
+          </div>
+          <FeatureGrid
+            columns={3}
+            features={services.map((s) => ({
+              icon: s.icon,
+              title: t(`services.${s.key}.title`),
+              description: t(`services.${s.key}.description`),
+            }))}
+          />
+          <div className="mt-12 text-center">
+            <Link href="#contact">
+              <Button color="neo" size="lg" icon={<ArrowRight className="h-4 w-4" />} iconPosition="right">
+                {t("services.cta")}
+              </Button>
+            </Link>
+          </div>
+        </Container>
+      </Section>
+
+      {/* 4. Logo Hex */}
       <Section variant="mist">
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-12">
@@ -125,7 +161,7 @@ export default async function HomePage({
         </Container>
       </Section>
 
-      {/* 4. Products */}
+      {/* 5. Products */}
       <Section variant="default" id="products" className="scroll-mt-16">
         <Container>
           <div className="mx-auto max-w-2xl text-center mb-12">
@@ -147,7 +183,7 @@ export default async function HomePage({
         </Container>
       </Section>
 
-      {/* 5. Differentials */}
+      {/* 6. Differentials */}
       <Section variant="mist">
         <Container>
           <div className="mx-auto max-w-2xl text-center mb-12">
@@ -169,7 +205,7 @@ export default async function HomePage({
         </Container>
       </Section>
 
-      {/* 6. Culture Teaser */}
+      {/* 7. Culture Teaser */}
       <CTA
         variant="centered"
         background="charcoal"
@@ -183,7 +219,7 @@ export default async function HomePage({
         </Link>
       </CTA>
 
-      {/* 7. Contact */}
+      {/* 8. Contact */}
       <ContactSection />
     </>
   );

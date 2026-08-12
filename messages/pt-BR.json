@@ -2,6 +2,7 @@
   "common": {
     "nav": {
       "home": "Início",
+      "services": "Serviços",
       "about": "Sobre",
       "peopleCulture": "Pessoas & Cultura",
       "products": "Produtos",
@@ -13,7 +14,8 @@
       "whistleblowing": "Canal de Denúncias"
     },
     "footer": {
-      "brand": "Produtos digitais que simplificam operações e impulsionam negócios.",
+      "brand": "Produtos digitais e consultoria de tecnologia para negócios que não param.",
+      "services": "Serviços",
       "products": "Produtos",
       "company": "Empresa",
       "legal": "Legal",
@@ -31,16 +33,33 @@
   "home": {
     "hero": {
       "title": "Software bem feito. Para negócios que não param.",
-      "subtitle": "A Cerneo desenvolve produtos digitais que resolvem problemas reais, com a robustez que a sua operação exige.",
-      "cta1": "Conheça Nossos Produtos",
-      "cta2": "Sobre a Cerneo"
+      "subtitle": "A Cerneo constrói produtos digitais próprios e coloca a mesma engenharia a serviço de outras empresas — do discovery à operação.",
+      "cta1": "Conheça Nossos Serviços",
+      "cta2": "Nossos Produtos"
     },
     "manifesto": {
       "title": "Por Que Cerneo?",
       "quote": "Software bom não deveria ser exceção",
       "paragraph1": "Cerneo vem da fusão de <strong>Cerne</strong> — o núcleo, a essência — com <strong>Neo</strong> — o novo, a evolução. Tecnologia construída a partir de uma base sólida.",
       "paragraph2": "Existimos porque software bom não deveria ser exceção. Negócios dependem de <strong>ferramentas que funcionam, que escalam e que não quebram quando mais importa</strong>.",
-      "paragraph3": "Cada produto que construímos resolve um problema específico, de forma simples e confiável. <strong>Sem complexidade desnecessária. Sem promessas vazias.</strong>"
+      "paragraph3": "Cada solução que construímos — produto nosso ou projeto de cliente — resolve um problema específico, de forma simples e confiável. <strong>Sem complexidade desnecessária. Sem promessas vazias.</strong>"
+    },
+    "services": {
+      "title": "Nossos Serviços",
+      "subtitle": "A mesma engenharia dos nossos produtos, a serviço do seu negócio.",
+      "development": {
+        "title": "Desenvolvimento de Produto",
+        "description": "Do discovery ao lançamento: MVPs, aplicações web e produtos digitais completos. Construímos para clientes com o mesmo rigor que aplicamos nos nossos próprios produtos."
+      },
+      "consulting": {
+        "title": "Consultoria Técnica & Arquitetura",
+        "description": "Arquitetura de software, revisão técnica, modernização de stack e cloud. Diagnóstico honesto e um plano de ação que seu time consegue executar."
+      },
+      "staffing": {
+        "title": "Time Estendido",
+        "description": "Squads completos ou especialistas integrados ao seu time. Senioridade, autonomia e cultura de entrega desde o primeiro dia."
+      },
+      "cta": "Fale com Nosso Time"
     },
     "logo": {
       "title": "O Hexágono Cerneo",
@@ -54,7 +73,7 @@
     },
     "products": {
       "title": "Nossos Produtos",
-      "subtitle": "Ferramentas digitais que resolvem problemas reais do dia a dia.",
+      "subtitle": "Ferramentas próprias que resolvem problemas reais — e provam, em produção, a engenharia que praticamos.",
       "kalender": {
         "name": "Cerneo Kalender",
         "description": "Agendamento inteligente para empresas. Automatize reservas, reduza no-shows e gerencie horários em um só lugar."
@@ -73,7 +92,7 @@
       },
       "agility": {
         "title": "Evolução Contínua",
-        "description": "Atualizações frequentes com base em feedback real. Nossos produtos melhoram junto com as necessidades do seu negócio."
+        "description": "Entregas frequentes com base em feedback real. O software evolui junto com as necessidades do seu negócio."
       },
       "datadriven": {
         "title": "Dados que Fazem Sentido",
@@ -85,7 +104,7 @@
       },
       "support": {
         "title": "Suporte que Resolve",
-        "description": "Equipe técnica que entende o produto. Sem scripts prontos, sem burocracia."
+        "description": "Equipe técnica que conhece o que constrói. Sem scripts prontos, sem burocracia."
       }
     },
     "culture": {
@@ -148,7 +167,7 @@
     "story": {
       "title": "Nossa História",
       "paragraph1": "A Cerneo nasceu de uma pergunta simples: por que tantas ferramentas de negócios são tão difíceis de usar?",
-      "paragraph2": "Fundada por engenheiros de software, a empresa existe para criar produtos que funcionam como deveriam — confiáveis, intuitivos e prontos para o dia a dia real. Reunimos sob um mesmo teto soluções que compartilham a mesma base: código testado, design pensado no usuário e infraestrutura sólida.",
+      "paragraph2": "Fundada por engenheiros de software, a empresa existe para criar produtos que funcionam como deveriam — confiáveis, intuitivos e prontos para o dia a dia real. Reunimos sob um mesmo teto soluções que compartilham a mesma base: código testado, design pensado no usuário e infraestrutura sólida. Hoje, além dos produtos próprios, colocamos essa engenharia a serviço de outras empresas — em desenvolvimento de produto, consultoria técnica e times estendidos.",
       "paragraph3": "Nosso nome une Cerne (essência) e Neo (novo). Construímos o novo a partir de bases que funcionam."
     },
     "timeline": {
@@ -172,6 +191,11 @@
         "year": "2025",
         "title": "Expansão",
         "description": "Crescimento do ecossistema Cerneo com novas funcionalidades e integrações."
+      },
+      "item5": {
+        "year": "2026",
+        "title": "Serviços & Consultoria",
+        "description": "A Cerneo passa a oferecer sua engenharia como serviço: desenvolvimento de produto, consultoria técnica e times estendidos."
       }
     },
     "values": {
@@ -328,7 +352,7 @@
       },
       "services": {
         "title": "2. Descrição dos Serviços",
-        "content": "A Cerneo é uma holding de tecnologia que oferece produtos de software, incluindo o Cerneo Kalender. Cada produto pode ter termos específicos adicionais."
+        "content": "A Cerneo é uma empresa de tecnologia que desenvolve produtos próprios de software — incluindo o Cerneo Kalender — e presta serviços de desenvolvimento, consultoria e alocação de times. Cada produto ou serviço pode ter termos específicos adicionais."
       },
       "responsibilities": {
         "title": "3. Responsabilidades do Usuário",
