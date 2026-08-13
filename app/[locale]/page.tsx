@@ -62,6 +62,7 @@ export default async function HomePage({
         variant="home"
         title={t("hero.title")}
         subtitle={t("hero.subtitle")}
+        badge={t("hero.badge")}
       >
         <Link href="#services">
           <Button color="neo" size="lg">

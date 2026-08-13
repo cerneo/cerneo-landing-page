@@ -12,6 +12,7 @@ interface HeroProps {
   variant?: THeroVariant;
   title: string;
   subtitle: string;
+  badge?: string;
   children?: ReactNode;
   className?: string;
 }
@@ -80,6 +81,7 @@ export function Hero({
   variant = "page",
   title,
   subtitle,
+  badge,
   children,
   className,
 }: HeroProps) {
@@ -185,15 +187,17 @@ export function Hero({
               className="flex-1 text-center lg:text-left"
             >
               {/* Glassmorphic badge */}
-              <motion.div variants={fadeInUp}>
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/[0.06] backdrop-blur-sm px-4 py-1.5 text-sm font-medium text-neo-300 mb-6 border border-neo-500/20 shadow-[0_0_15px_rgba(20,184,166,0.1)]">
-                  <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neo-400 opacity-75" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-neo-400" />
+              {badge && (
+                <motion.div variants={fadeInUp}>
+                  <span className="inline-flex items-center gap-2 rounded-full bg-white/[0.06] backdrop-blur-sm px-4 py-1.5 text-sm font-medium text-neo-300 mb-6 border border-neo-500/20 shadow-[0_0_15px_rgba(20,184,166,0.1)]">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neo-400 opacity-75" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-neo-400" />
+                    </span>
+                    {badge}
                   </span>
-                  Holding de Tecnologia
-                </span>
-              </motion.div>
+                </motion.div>
+              )}
 
               {/* Title with gradient text */}
               <motion.h1

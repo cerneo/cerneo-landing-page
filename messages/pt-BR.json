@@ -32,6 +32,7 @@
   },
   "home": {
     "hero": {
+      "badge": "Produtos & Consultoria de Tecnologia",
       "title": "Software bem feito. Para negócios que não param.",
       "subtitle": "A Cerneo constrói produtos digitais próprios e coloca a mesma engenharia a serviço de outras empresas — do discovery à operação.",
       "cta1": "Conheça Nossos Serviços",
