@@ -9,8 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@cerneo/tokens": "0.2.2",
-    "@cerneo/ui": "0.1.2",
+    "@cerneo/tokens": "0.2.3",
+    "@cerneo/ui": "0.1.3",
     "next": "16.1.6",
     "next-intl": "^4.8.3",
     "react": "19.2.3",
