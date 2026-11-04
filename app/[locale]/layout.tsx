@@ -1,45 +1,49 @@
 import type { ReactNode } from "react";
-import type { Metadata } from "next";
-import { Urbanist } from "next/font/google";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
-import { routing } from "../../src/i18n/routing";
-import { Navbar } from "../../src/design-system/components/layout/Navbar";
-import { Footer } from "../../src/design-system/components/layout/Footer";
-import { ThemeProvider } from "../../src/design-system/components/layout/ThemeProvider";
-import { Analytics } from "@vercel/analytics/next";
+import type { Metadata, Viewport } from "next";
+import { notFound } from "next/navigation";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import "@cerneo/tokens/css";
+import "@cerneo/ui/styles.css";
 import "../globals.css";
+import { routing } from "../../src/i18n/routing";
+import { fontVariables } from "../../src/lib/fonts";
+import { SITE_URL } from "../../src/lib/site";
+import { THEME_CANVAS, THEME_INIT_SCRIPT } from "../../src/lib/theme";
+import { NavTransitions, SiteConsent, SiteFooter, SiteHeaderBar } from "../../src/components/SiteChrome";
 
-const urbanist = Urbanist({
-  subsets: ["latin"],
-  variable: "--font-urbanist",
-  display: "swap",
-});
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) return {};
+  const t = await getTranslations({ locale, namespace: "common.meta" });
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: { template: "%s · Cerneo", default: "Cerneo" },
+    description: t("description"),
+    applicationName: "Cerneo",
+    // Gerados do Emblem do DS por `scripts/gen-icons.mjs`.
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "48x48" },
+        { url: "/icon.svg", type: "image/svg+xml" },
+      ],
+      apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+    },
+    manifest: "/manifest.webmanifest",
+  };
+}
 
-export const metadata: Metadata = {
-  title: {
-    template: "%s | Cerneo",
-    default: "Cerneo | A Nova Base da Tecnologia",
-  },
-  description:
-    "Consultoria de tecnologia e produtos digitais. Engenharia sênior para construir, modernizar e escalar o software que sustenta o seu negócio.",
-  icons: {
-    icon: [
-      { url: "/images/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/images/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-    ],
-    shortcut: "/images/favicon/favicon.ico",
-    apple: "/images/favicon/apple-touch-icon.png",
-  },
-  manifest: "/images/favicon/site.webmanifest",
-  openGraph: {
-    type: "website",
-    siteName: "Cerneo",
-    title: "Cerneo | A Nova Base da Tecnologia",
-    description:
-      "Consultoria de tecnologia e produtos digitais. Engenharia sênior para construir, modernizar e escalar o software que sustenta o seu negócio.",
-  },
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: THEME_CANVAS.light },
+    { media: "(prefers-color-scheme: dark)", color: THEME_CANVAS.dark },
+  ],
 };
+
+// Só os três locales existem: qualquer outro primeiro segmento (`/x.php`) é 404 direto.
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -53,20 +57,35 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
-  const messages = await getMessages();
 
   return (
-    <html lang={locale} className={urbanist.variable} suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col">
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider>
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </ThemeProvider>
+    /*
+     * `suppressHydrationWarning` só no <html>: o script do <head> escreve
+     * `data-theme`, a classe e o `color-scheme` antes da hidratação, de propósito.
+     * `data-scroll-behavior` deixa o Next desligar a rolagem suave na troca de rota.
+     */
+    <html
+      lang={locale}
+      className={fontVariables}
+      data-brand="cerneo"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
+      <body>
+        <NextIntlClientProvider>
+          <SiteHeaderBar />
+          <main id="conteudo" tabIndex={-1} className="site-main">
+            {children}
+          </main>
+          <SiteFooter year={new Date().getFullYear()} />
+          <SiteConsent />
+          <NavTransitions />
         </NextIntlClientProvider>
-        <Analytics />
       </body>
     </html>
   );

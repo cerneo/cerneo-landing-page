@@ -1,227 +1,147 @@
+import type { ReactNode } from "react";
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
-  Calendar,
-  Hexagon,
-  ArrowRight,
-  ShieldCheck,
-  TrendingUp,
-  Clock,
-  BarChart3,
-  Lock,
-  Headphones,
-  Rocket,
-  Blocks,
-  Users,
-} from "lucide-react";
-import { Hero } from "../../src/design-system/components/marketing/Hero";
-import { ProductCard } from "../../src/design-system/components/marketing/ProductCard";
-import { FeatureGrid } from "../../src/design-system/components/marketing/FeatureGrid";
-import { CTA } from "../../src/design-system/components/marketing/CTA";
-import { ContactSection } from "../../src/design-system/components/marketing/ContactSection";
-import { Section } from "../../src/design-system/components/layout/Section";
-import { Container } from "../../src/design-system/components/layout/Container";
-import { Button } from "../../src/design-system/components/ui/Button";
-import { Link } from "../../src/i18n/navigation";
+  CTABand,
+  FeatureGrid,
+  HeroSection,
+  Illustration,
+  Link,
+  Manifesto,
+  ProductShowcase,
+  Section,
+} from "@cerneo/ui";
+import type { FeatureItem } from "@cerneo/ui";
+import { ContactBlock } from "../../src/components/ContactBlock";
+import { pageMetadata } from "../../src/lib/metadata";
+import { ANCHORS, NANAPET_URL, href } from "../../src/lib/site";
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home.meta" });
+  return pageMetadata(locale, "home", { title: t("title"), description: t("description"), absoluteTitle: true });
+}
+
+const strong = (chunks: ReactNode) => <strong>{chunks}</strong>;
+
+export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("home");
-  const tCta = await getTranslations("common.cta");
+  const contact = href(locale, "contact");
 
-  const kalender = {
-    key: "kalender",
-    icon: <Calendar className="h-6 w-6 text-product-kalender" />,
-    accent: "bg-product-kalender",
-    logoSrc: "/images/product-logo/kalender-logo.png",
-  };
-
-  const services = [
-    { key: "development", icon: <Rocket className="h-5 w-5" /> },
-    { key: "consulting", icon: <Blocks className="h-5 w-5" /> },
-    { key: "staffing", icon: <Users className="h-5 w-5" /> },
+  const services: FeatureItem[] = [
+    { id: "product", icon: "code", title: t("services.product.title"), description: t("services.product.description"), href: contact },
+    { id: "consulting", icon: "workflow", title: t("services.consulting.title"), description: t("services.consulting.description"), href: contact },
+    { id: "team", icon: "users", title: t("services.team.title"), description: t("services.team.description"), href: contact },
   ];
 
-  const differentials = [
-    { key: "reliability", icon: <ShieldCheck className="h-5 w-5" /> },
-    { key: "scalability", icon: <TrendingUp className="h-5 w-5" /> },
-    { key: "agility", icon: <Clock className="h-5 w-5" /> },
-    { key: "datadriven", icon: <BarChart3 className="h-5 w-5" /> },
-    { key: "security", icon: <Lock className="h-5 w-5" /> },
-    { key: "support", icon: <Headphones className="h-5 w-5" /> },
+  const differentials: FeatureItem[] = [
+    { id: "reliability", icon: "activity", size: "2x1", tone: "yellow", title: t("differentials.reliability.title"), description: t("differentials.reliability.description") },
+    { id: "scalability", icon: "trending-up", title: t("differentials.scalability.title"), description: t("differentials.scalability.description") },
+    { id: "evolution", icon: "refresh-cw", title: t("differentials.evolution.title"), description: t("differentials.evolution.description") },
+    { id: "data", icon: "chart-column", title: t("differentials.data.title"), description: t("differentials.data.description") },
+    { id: "security", icon: "shield-check", title: t("differentials.security.title"), description: t("differentials.security.description") },
+    { id: "support", icon: "handshake", size: "2x1", title: t("differentials.support.title"), description: t("differentials.support.description") },
   ];
+
+  const trust: FeatureItem[] = [
+    { id: "privacy", icon: "lock", title: t("trust.privacy.title"), description: t("trust.privacy.description"), href: href(locale, "privacy") },
+    { id: "conduct", icon: "handshake", title: t("trust.conduct.title"), description: t("trust.conduct.description"), href: href(locale, "conduct") },
+    { id: "anti-corruption", icon: "scale", title: t("trust.antiCorruption.title"), description: t("trust.antiCorruption.description"), href: href(locale, "antiCorruption") },
+    { id: "whistleblowing", icon: "megaphone", title: t("trust.whistleblowing.title"), description: t("trust.whistleblowing.description"), href: href(locale, "whistleblowing") },
+  ];
+
+  const bullets = (key: string) => t.raw(`products.${key}.bullets`) as string[];
 
   return (
     <>
-      {/* 1. Hero */}
-      <Hero
-        variant="home"
+      <HeroSection
+        variant="aura"
+        eyebrow={t("hero.eyebrow")}
         title={t("hero.title")}
         subtitle={t("hero.subtitle")}
-        badge={t("hero.badge")}
-      >
-        <Link href="#services">
-          <Button color="neo" size="lg">
-            {t("hero.cta1")}
-          </Button>
-        </Link>
-        <Link href="#products">
-          <Button variant="outline" color="white" size="lg">
-            {t("hero.cta2")}
-          </Button>
-        </Link>
-      </Hero>
+        primaryAction={{ label: t("hero.primary"), href: href(locale, "home", ANCHORS.services) }}
+        secondaryAction={{ label: t("hero.secondary"), href: href(locale, "home", ANCHORS.products), iconRight: "arrow-right" }}
+        media={<Illustration name="hero-cerne" size={640} motion="reveal" decorative />}
+      />
 
-      {/* 2. Manifesto */}
-      <Section variant="dark" className="relative overflow-hidden">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-neo-500/70 via-neo-500/20 to-transparent"
+      <Manifesto
+        heading={t("manifesto.heading")}
+        lines={[t("manifesto.line")]}
+        rings
+        spacing="xl"
+        body={[
+          <p key="p1">{t.rich("manifesto.p1", { strong })}</p>,
+          <p key="p2">{t.rich("manifesto.p2", { strong })}</p>,
+        ]}
+      />
+
+      <Section
+        id={ANCHORS.services}
+        tone="surface"
+        layout="split"
+        eyebrow={t("services.eyebrow")}
+        title={t("services.title")}
+        lead={t("services.lead")}
+        actions={
+          <Link variant="standalone" href={contact} iconRight="arrow-right">
+            {t("services.action")}
+          </Link>
+        }
+      >
+        <FeatureGrid columns={3} items={services} linkLabel={t("services.linkLabel")} />
+      </Section>
+
+      <Section id={ANCHORS.products} eyebrow={t("products.eyebrow")} title={t("products.title")} lead={t("products.lead")}>
+        <ProductShowcase
+          layout="featured"
+          products={[
+            {
+              product: "studios",
+              tagline: t("products.studios.tagline"),
+              description: t("products.studios.description"),
+              bullets: bullets("studios"),
+              action: { label: t("products.studios.action"), href: contact },
+            },
+            {
+              product: "forge",
+              tagline: t("products.forge.tagline"),
+              bullets: bullets("forge"),
+              action: { label: t("products.forge.action"), href: contact },
+            },
+            {
+              product: "originals",
+              tagline: t("products.originals.tagline"),
+              description: t("products.originals.description"),
+              bullets: bullets("originals"),
+              action: { label: t("products.originals.action"), href: NANAPET_URL, target: "_blank", rel: "noopener noreferrer" },
+            },
+          ]}
         />
-        <Container>
-          <div className="grid items-center gap-12 md:grid-cols-2 md:gap-0">
-            <div className="md:pr-14">
-              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-neo-400">
-                {t("manifesto.title")}
-              </span>
-              <blockquote className="mt-6 border-l-4 border-neo-500 pl-6 text-3xl font-semibold italic leading-snug text-white md:text-4xl">
-                &ldquo;{t("manifesto.quote")}&rdquo;
-              </blockquote>
-            </div>
-            <div className="space-y-5 leading-relaxed text-gray-400 md:border-l md:border-white/10 md:pl-14">
-              {(["paragraph1", "paragraph2", "paragraph3"] as const).map((key) => (
-                <p key={key}>
-                  {t.rich(`manifesto.${key}`, {
-                    strong: (chunks) => (
-                      <strong className="font-semibold text-white">{chunks}</strong>
-                    ),
-                  })}
-                </p>
-              ))}
-            </div>
-          </div>
-        </Container>
       </Section>
 
-      {/* 3. Services */}
-      <Section variant="default" id="services" className="scroll-mt-16">
-        <Container>
-          <div className="mx-auto max-w-2xl text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
-              {t("services.title")}
-            </h2>
-            <p className="mt-4 text-lg text-steel dark:text-gray-400">{t("services.subtitle")}</p>
-          </div>
-          <FeatureGrid
-            columns={3}
-            features={services.map((s) => ({
-              icon: s.icon,
-              title: t(`services.${s.key}.title`),
-              description: t(`services.${s.key}.description`),
-            }))}
-          />
-          <div className="mt-12 text-center">
-            <Link href="#contact">
-              <Button color="neo" size="lg" icon={<ArrowRight className="h-4 w-4" />} iconPosition="right">
-                {t("services.cta")}
-              </Button>
-            </Link>
-          </div>
-        </Container>
+      <Section tone="surface" headerSize="md" eyebrow={t("differentials.eyebrow")} title={t("differentials.title")}>
+        <FeatureGrid variant="bento" items={differentials} />
       </Section>
 
-      {/* 4. Logo Hex */}
-      <Section variant="mist">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center mb-12">
-            <Hexagon className="mx-auto h-16 w-16 text-neo-500 mb-6" />
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
-              {t("logo.title")}
-            </h2>
-            <p className="mt-4 text-lg text-steel dark:text-gray-400">{t("logo.subtitle")}</p>
-          </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 max-w-4xl mx-auto">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="text-center">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-neo-50 dark:bg-neo-950">
-                  <Hexagon className="h-6 w-6 text-neo-600 dark:text-neo-400" />
-                </div>
-                <h3 className="mt-4 text-lg font-semibold text-charcoal dark:text-gray-100">
-                  {t(`logo.item${i}Title`)}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-steel dark:text-gray-400">
-                  {t(`logo.item${i}Desc`)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* 5. Products */}
-      <Section variant="default" id="products" className="scroll-mt-16">
-        <Container>
-          <div className="mx-auto max-w-2xl text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
-              {t("products.title")}
-            </h2>
-            <p className="mt-4 text-lg text-steel dark:text-gray-400">{t("products.subtitle")}</p>
-          </div>
-          <div className="flex justify-center max-w-md mx-auto">
-            <ProductCard
-              name={t(`products.${kalender.key}.name`)}
-              description={t(`products.${kalender.key}.description`)}
-              icon={kalender.icon}
-              accentColor={kalender.accent}
-              logoSrc={kalender.logoSrc}
-              href="https://www.kalender.com.br"
-            />
-          </div>
-        </Container>
-      </Section>
-
-      {/* 6. Differentials */}
-      <Section variant="mist">
-        <Container>
-          <div className="mx-auto max-w-2xl text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
-              {t("differentials.title")}
-            </h2>
-            <p className="mt-4 text-lg text-steel dark:text-gray-400">
-              {t("differentials.subtitle")}
-            </p>
-          </div>
-          <FeatureGrid
-            columns={3}
-            features={differentials.map((f) => ({
-              icon: f.icon,
-              title: t(`differentials.${f.key}.title`),
-              description: t(`differentials.${f.key}.description`),
-            }))}
-          />
-        </Container>
-      </Section>
-
-      {/* 7. Culture Teaser */}
-      <CTA
-        variant="centered"
-        background="charcoal"
+      <CTABand
+        tone="yellow"
+        align="center"
+        eyebrow={t("culture.eyebrow")}
         title={t("culture.title")}
-        subtitle={t("culture.subtitle")}
-      >
-        <Link href="/people-culture">
-          <Button color="neo" size="lg" icon={<ArrowRight className="h-4 w-4" />} iconPosition="right">
-            {t("culture.cta")}
-          </Button>
-        </Link>
-      </CTA>
+        description={t("culture.description")}
+        primaryAction={{ label: t("culture.primary"), href: href(locale, "peopleCulture") }}
+        secondaryAction={{ label: t("culture.secondary"), href: href(locale, "about") }}
+      />
 
-      {/* 8. Contact */}
-      <ContactSection />
+      <Section headerSize="md" spacing="md" eyebrow={t("trust.eyebrow")} title={t("trust.title")} lead={t("trust.lead")}>
+        <FeatureGrid columns={4} appearance="plain" items={trust} linkLabel={t("trust.linkLabel")} />
+      </Section>
+
+      <ContactBlock id={ANCHORS.contact} tone="surface" />
     </>
   );
 }

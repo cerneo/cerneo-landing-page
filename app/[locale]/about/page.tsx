@@ -1,132 +1,84 @@
+import type { ReactNode } from "react";
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import {
-  ArrowRight,
-  Award,
-  Lightbulb,
-  Eye,
-  Target,
-} from "lucide-react";
-import { Hero } from "../../../src/design-system/components/marketing/Hero";
-import { FeatureGrid } from "../../../src/design-system/components/marketing/FeatureGrid";
-import { CTA } from "../../../src/design-system/components/marketing/CTA";
-import { Section } from "../../../src/design-system/components/layout/Section";
-import { Container } from "../../../src/design-system/components/layout/Container";
-import { Button } from "../../../src/design-system/components/ui/Button";
-import {
-  Timeline,
-  TimelineItem,
-} from "../../../src/design-system/components/ui/Timeline";
-import { Link } from "../../../src/i18n/navigation";
+import { CTABand, HeroSection, Illustration, Manifesto, Section, Timeline, ValuesList } from "@cerneo/ui";
+import type { IconName } from "@cerneo/ui";
+import { pageMetadata } from "../../../src/lib/metadata";
+import { href } from "../../../src/lib/site";
 
-export default async function AboutPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+type Props = { params: Promise<{ locale: string }> };
+type Item = { date?: string; title: string; description: string };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "about.meta" });
+  return pageMetadata(locale, "about", { title: t("title"), description: t("description") });
+}
+
+const strong = (chunks: ReactNode) => <strong>{chunks}</strong>;
+const VALUE_ICONS: IconName[] = ["target", "zap", "eye", "trending-up"];
+
+export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("about");
+  const tc = await getTranslations("common.timeline");
 
-  const values = [
-    { key: "excellence", icon: <Award className="h-5 w-5" /> },
-    { key: "innovation", icon: <Lightbulb className="h-5 w-5" /> },
-    { key: "transparency", icon: <Eye className="h-5 w-5" /> },
-    { key: "impact", icon: <Target className="h-5 w-5" /> },
-  ];
-
-  const timelineItems = [
-    { key: "item1" },
-    { key: "item2" },
-    { key: "item3" },
-    { key: "item4" },
-    { key: "item5" },
-  ];
+  const milestones = t.raw("timeline.items") as Item[];
+  const values = t.raw("values.items") as Item[];
 
   return (
     <>
-      <Hero
-        variant="page"
+      <HeroSection
+        variant="split"
+        eyebrow={t("hero.eyebrow")}
         title={t("hero.title")}
         subtitle={t("hero.subtitle")}
+        primaryAction={{ label: t("hero.primary"), href: href(locale, "contact") }}
+        secondaryAction={{ label: t("hero.secondary"), href: "#milestones" }}
+        media={<Illustration name="hero-ecossistema" size={640} motion="reveal" decorative />}
       />
 
-      {/* Story */}
-      <Section variant="default">
-        <Container>
-          <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
-              {t("story.title")}
-            </h2>
-            <div className="mt-8 space-y-4 text-lg leading-relaxed text-steel dark:text-gray-400">
-              <p>{t("story.paragraph1")}</p>
-              <p>{t("story.paragraph2")}</p>
-              <p>{t("story.paragraph3")}</p>
-            </div>
-          </div>
-        </Container>
+      <Manifesto
+        heading={t("story.heading")}
+        tone="surface"
+        size="heading"
+        spacing="xl"
+        lines={[t("story.line")]}
+        body={[
+          <p key="p1">{t.rich("story.p1", { strong })}</p>,
+          <p key="p2">{t.rich("story.p2", { strong })}</p>,
+        ]}
+      />
+
+      <Timeline
+        id="milestones"
+        orientation="horizontal"
+        eyebrow={t("timeline.eyebrow")}
+        title={t("timeline.title")}
+        lead={t("timeline.lead")}
+        currentLabel={tc("current")}
+        scrollLabel={tc("scroll")}
+        items={milestones.map((m, i) => ({ ...m, id: `m${i}`, current: i === milestones.length - 1 }))}
+      />
+
+      <Section tone="surface" headerSize="md" eyebrow={t("values.eyebrow")} title={t("values.title")}>
+        <ValuesList
+          layout="grid"
+          columns={2}
+          label={t("values.label")}
+          items={values.map((v, i) => ({ ...v, id: `v${i}`, icon: VALUE_ICONS[i] }))}
+        />
       </Section>
 
-      {/* Timeline */}
-      <Section variant="mist">
-        <Container>
-          <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl mb-12">
-              {t("timeline.title")}
-            </h2>
-            <Timeline>
-              {timelineItems.map((item) => (
-                <TimelineItem
-                  key={item.key}
-                  year={t(`timeline.${item.key}.year`)}
-                  title={t(`timeline.${item.key}.title`)}
-                >
-                  {t(`timeline.${item.key}.description`)}
-                </TimelineItem>
-              ))}
-            </Timeline>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Values */}
-      <Section variant="default">
-        <Container>
-          <div className="mx-auto max-w-2xl text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
-              {t("values.title")}
-            </h2>
-            <p className="mt-4 text-lg text-steel dark:text-gray-400">{t("values.subtitle")}</p>
-          </div>
-          <FeatureGrid
-            columns={2}
-            features={values.map((v) => ({
-              icon: v.icon,
-              title: t(`values.${v.key}.title`),
-              description: t(`values.${v.key}.description`),
-            }))}
-          />
-        </Container>
-      </Section>
-
-      {/* CTA */}
-      <CTA
-        variant="centered"
-        background="neo"
+      <CTABand
+        tone="ink"
+        eyebrow={t("cta.eyebrow")}
         title={t("cta.title")}
-        subtitle={t("cta.subtitle")}
-      >
-        <Link href="/people-culture">
-          <Button
-            variant="solid"
-            color="white"
-            size="lg"
-            icon={<ArrowRight className="h-4 w-4" />}
-            iconPosition="right"
-          >
-            {t("cta.button")}
-          </Button>
-        </Link>
-      </CTA>
+        description={t("cta.description")}
+        primaryAction={{ label: t("cta.primary"), href: href(locale, "peopleCulture") }}
+        secondaryAction={{ label: t("cta.secondary"), href: href(locale, "contact") }}
+      />
     </>
   );
 }

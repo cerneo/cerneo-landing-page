@@ -3,292 +3,483 @@
     "nav": {
       "home": "Inicio",
       "services": "Servicios",
-      "about": "Sobre",
-      "peopleCulture": "Personas & Cultura",
       "products": "Productos",
+      "about": "Nosotros",
+      "peopleCulture": "Personas y cultura",
       "contact": "Contacto",
-      "privacy": "Política de Privacidad",
-      "terms": "Términos de Uso",
-      "conduct": "Código de Conducta",
-      "antiCorruption": "Política Anticorrupción",
-      "whistleblowing": "Canal de Denuncias"
+      "privacy": "Política de privacidad",
+      "terms": "Términos de uso",
+      "conduct": "Código de conducta",
+      "antiCorruption": "Política anticorrupción",
+      "whistleblowing": "Canal de denuncias",
+      "servicesProduct": "Desarrollo de producto",
+      "servicesProductDesc": "Del discovery al lanzamiento",
+      "servicesConsulting": "Consultoría y arquitectura",
+      "servicesConsultingDesc": "Diagnóstico honesto y plan de acción",
+      "servicesTeam": "Equipo extendido",
+      "servicesTeamDesc": "Squads integrados a tu equipo"
+    },
+    "header": {
+      "homeLabel": "Cerneo, página de inicio",
+      "skip": "Saltar al contenido",
+      "menu": "Menú",
+      "navLabel": "Navegación principal",
+      "language": "Idioma",
+      "cta": "Hablar con el equipo",
+      "themeDark": "Usar el tema oscuro",
+      "themeLight": "Usar el tema claro"
+    },
+    "languages": {
+      "pt-BR": "Português",
+      "en": "English",
+      "es": "Español"
     },
     "footer": {
-      "brand": "Productos digitales y consultoría de tecnología para negocios que no paran.",
+      "label": "Pie de página",
+      "tagline": "Productos digitales y consultoría de tecnología para negocios que no se detienen.",
       "services": "Servicios",
       "products": "Productos",
       "company": "Empresa",
       "legal": "Legal",
-      "rights": "Todos los derechos reservados."
+      "rights": "© {year} Cerneo. Todos los derechos reservados.",
+      "privacy": "Privacidad",
+      "terms": "Términos",
+      "cookies": "Cookies"
     },
-    "cta": {
-      "learnMore": "Más Información",
-      "getStarted": "Comenzar",
-      "contactUs": "Contáctenos",
-      "viewAll": "Ver Todos",
-      "readMore": "Leer Más",
-      "backToHome": "Volver al Inicio"
+    "link": {
+      "external": "se abre en una pestaña nueva"
+    },
+    "cookies": {
+      "title": "Cookies en este sitio",
+      "description": "Usamos lo necesario para que el sitio funcione y, con tu permiso, la medición de visitas.",
+      "policy": "Política de privacidad",
+      "accept": "Aceptar todas",
+      "reject": "Rechazar",
+      "customize": "Personalizar",
+      "save": "Guardar elección",
+      "dialogTitle": "Preferencias de cookies",
+      "dialogDescription": "Elige qué puede quedar activo. Puedes cambiarlo cuando quieras en el pie de página, en Cookies.",
+      "locked": "Siempre activas",
+      "necessary": "Necesarias",
+      "necessaryDesc": "Mantienen el sitio en marcha: tema, idioma y esta elección.",
+      "analytics": "Análisis",
+      "analyticsDesc": "Cuentan visitas y muestran las páginas más leídas, sin identificarte."
+    },
+    "notFound": {
+      "metaTitle": "Página no encontrada",
+      "eyebrow": "Error 404",
+      "title": "No encontramos esta página.",
+      "description": "La dirección puede haber cambiado o la página ya no existe. Los caminos de abajo llevan a lo que más se busca.",
+      "home": "Ir al inicio",
+      "back": "Volver a la página anterior",
+      "linksLabel": "Caminos que suelen ayudar",
+      "servicesDesc": "Producto, consultoría y equipo extendido",
+      "aboutLabel": "Sobre Cerneo",
+      "aboutDesc": "Historia, trayectoria y valores",
+      "cultureDesc": "Cómo pensamos y cómo trabajamos",
+      "contactDesc": "Respuesta en hasta 1 día hábil"
+    },
+    "legalPage": {
+      "eyebrow": "Legal",
+      "toc": "En esta página",
+      "tocCount": "{count, plural, one {# sección} other {# secciones}}",
+      "backToTop": "Volver arriba"
+    },
+    "timeline": {
+      "current": "Etapa actual",
+      "scroll": "Línea de tiempo, desplázate para ver todos los hitos"
+    },
+    "meta": {
+      "siteName": "Cerneo",
+      "description": "Consultoría de tecnología y productos digitales. Ingeniería sénior para construir, modernizar y escalar el software que sostiene tu negocio."
     }
   },
   "home": {
+    "meta": {
+      "title": "Software bien hecho. Para negocios que no se detienen.",
+      "description": "Cerneo construye productos digitales propios y pone la misma ingeniería al servicio de otras empresas: desarrollo de producto, consultoría y equipo extendido."
+    },
     "hero": {
-      "badge": "Productos & Consultoría de Tecnología",
-      "title": "Software bien hecho. Para negocios que no paran.",
-      "subtitle": "Cerneo construye productos digitales propios y pone la misma ingeniería al servicio de otras empresas — del discovery a la operación.",
-      "cta1": "Conozca Nuestros Servicios",
-      "cta2": "Nuestros Productos"
+      "eyebrow": "Productos y consultoría de tecnología",
+      "title": "Software bien hecho. Para negocios que no se detienen.",
+      "subtitle": "Cerneo construye productos digitales propios y pone la misma ingeniería al servicio de otras empresas, del discovery a la operación.",
+      "primary": "Conocer los servicios",
+      "secondary": "Ver los productos"
     },
     "manifesto": {
-      "title": "¿Por Qué Cerneo?",
-      "quote": "El buen software no debería ser la excepción",
-      "paragraph1": "Cerneo viene de la fusión de <strong>Cerne</strong> — el núcleo, la esencia — con <strong>Neo</strong> — lo nuevo, la evolución. Tecnología construida desde una base sólida.",
-      "paragraph2": "Existimos porque el buen software no debería ser la excepción. Los negocios dependen de <strong>herramientas que funcionan, que escalan y que no fallan cuando más importa</strong>.",
-      "paragraph3": "Cada solución que construimos — producto propio o proyecto de cliente — resuelve un problema específico, de forma simple y confiable. <strong>Sin complejidad innecesaria. Sin promesas vacías.</strong>"
+      "heading": "Por qué Cerneo",
+      "line": "El buen software no debería ser la *excepción*.",
+      "p1": "Cerneo nace de la fusión de <strong>Cerne</strong>, el núcleo, con <strong>Neo</strong>, lo nuevo. Tecnología construida sobre una base sólida.",
+      "p2": "Los negocios dependen de <strong>herramientas que funcionan, que escalan y que no fallan cuando más importa</strong>. Cada solución resuelve un problema específico, de forma simple. Sin complejidad innecesaria. Sin promesas vacías."
     },
     "services": {
-      "title": "Nuestros Servicios",
-      "subtitle": "La misma ingeniería de nuestros productos, al servicio de su negocio.",
-      "development": {
-        "title": "Desarrollo de Producto",
-        "description": "Del discovery al lanzamiento: MVPs, aplicaciones web y productos digitales completos. Construimos para clientes con el mismo rigor que aplicamos en nuestros propios productos."
+      "eyebrow": "Servicios",
+      "title": "La misma ingeniería de nuestros productos, al servicio de tu negocio.",
+      "lead": "Tres formas de trabajar con Cerneo, todas con equipo sénior y entregas en ciclos cortos.",
+      "action": "Hablar con el equipo",
+      "linkLabel": "Hablar sobre esto",
+      "product": {
+        "title": "Desarrollo de producto",
+        "description": "Del discovery al lanzamiento: MVPs, aplicaciones web y productos digitales completos, con el rigor de nuestros propios productos."
       },
       "consulting": {
-        "title": "Consultoría Técnica & Arquitectura",
-        "description": "Arquitectura de software, revisión técnica, modernización de stack y cloud. Un diagnóstico honesto y un plan de acción que su equipo puede ejecutar."
+        "title": "Consultoría y arquitectura",
+        "description": "Arquitectura, revisión técnica, modernización de stack y cloud. Un diagnóstico honesto y un plan que tu equipo puede ejecutar."
       },
-      "staffing": {
-        "title": "Equipo Extendido",
-        "description": "Squads completos o especialistas integrados a su equipo. Seniority, autonomía y cultura de entrega desde el primer día."
-      },
-      "cta": "Hable con Nuestro Equipo"
-    },
-    "logo": {
-      "title": "El Hexágono Cerneo",
-      "subtitle": "Nuestro símbolo es el hexágono — la forma más eficiente encontrada en la naturaleza.",
-      "item1Title": "Estructura",
-      "item1Desc": "La geometría más resistente de la naturaleza. Nuestras soluciones siguen el mismo principio: construidas para durar.",
-      "item2Title": "Modularidad",
-      "item2Desc": "Los hexágonos encajan sin dejar huecos. Nuestros productos están diseñados para funcionar juntos, de forma integrada.",
-      "item3Title": "Precisión",
-      "item3Desc": "Presente en cristales, colmenas e ingeniería molecular. Cada detalle existe por una razón."
+      "team": {
+        "title": "Equipo extendido",
+        "description": "Squads completos o especialistas integrados a tu equipo. Seniority, autonomía y cultura de entrega desde el primer día."
+      }
     },
     "products": {
-      "title": "Nuestros Productos",
-      "subtitle": "Herramientas propias que resuelven problemas reales — y prueban, en producción, la ingeniería que practicamos.",
-      "kalender": {
-        "name": "Cerneo Kalender",
-        "description": "Agendamiento inteligente para empresas. Automatice reservas, reduzca ausencias y gestione horarios en un solo lugar."
+      "eyebrow": "Ecosistema",
+      "title": "Tres productos, un mismo núcleo.",
+      "lead": "Herramientas propias que resuelven problemas reales y demuestran, en producción, la ingeniería que practicamos.",
+      "studios": {
+        "tagline": "La agenda de tus marcas, en un solo lugar.",
+        "description": "Calendario, revisión y publicación para quien cuida varias marcas a la vez.",
+        "bullets": [
+          "Calendario de 9 canales",
+          "Revisión en fila, con motivo",
+          "Publicación a la hora justa"
+        ],
+        "action": "Conocer Studios"
+      },
+      "forge": {
+        "tagline": "La máquina de creación. Guion, pieza y versión.",
+        "bullets": [
+          "Guion a partir del briefing",
+          "Piezas para 9 canales",
+          "Versiones por canal e idioma"
+        ],
+        "action": "Conocer Forge"
+      },
+      "originals": {
+        "tagline": "Marcas propias, de la idea al estreno.",
+        "description": "El portafolio de marcas de Cerneo. La primera es NanaPet, de cuidado de mascotas.",
+        "bullets": [
+          "Guion y dirección",
+          "Grabación y edición",
+          "Estreno y distribución"
+        ],
+        "action": "Conocer NanaPet"
       }
     },
     "differentials": {
-      "title": "Por Qué Elegir Cerneo",
-      "subtitle": "Resultados concretos para la operación de su negocio.",
+      "eyebrow": "Diferenciales",
+      "title": "Resultados concretos para la operación de tu negocio.",
       "reliability": {
         "title": "Estabilidad",
-        "description": "Sistemas diseñados para alta disponibilidad. Su operación sigue funcionando, incluso en horarios pico."
+        "description": "Sistemas diseñados para alta disponibilidad. Tu operación sigue en marcha, incluso en hora pico."
       },
       "scalability": {
         "title": "Escalabilidad",
-        "description": "Infraestructura que acompaña el crecimiento de su empresa. Sin migraciones forzadas, sin sorpresas."
+        "description": "Infraestructura que acompaña el crecimiento. Sin migraciones forzadas, sin sorpresas."
       },
-      "agility": {
-        "title": "Evolución Continua",
-        "description": "Entregas frecuentes basadas en feedback real. El software evoluciona junto con las necesidades de su negocio."
+      "evolution": {
+        "title": "Evolución continua",
+        "description": "Entregas frecuentes basadas en retorno real."
       },
-      "datadriven": {
-        "title": "Datos con Sentido",
-        "description": "Paneles e informes que traducen números en decisiones. Información clara para quien necesita actuar rápido."
+      "data": {
+        "title": "Datos que tienen sentido",
+        "description": "Paneles que convierten números en decisiones."
       },
       "security": {
-        "title": "Seguridad Real",
-        "description": "Protección de datos en conformidad con la LGPD. Cifrado, control de acceso y monitoreo continuo."
+        "title": "Seguridad de verdad",
+        "description": "Datos protegidos conforme a la LGPD, con cifrado y control de acceso."
       },
       "support": {
-        "title": "Soporte que Resuelve",
-        "description": "Equipo técnico que conoce lo que construye. Sin guiones predefinidos, sin burocracia."
+        "title": "Soporte que resuelve",
+        "description": "Un equipo técnico que conoce lo que construye. Sin guiones, sin burocracia."
       }
     },
     "culture": {
-      "title": "Nuestra Cultura",
-      "subtitle": "Buenos productos nacen de buenos equipos. Invertimos en las personas detrás de la tecnología.",
-      "cta": "Conozca Nuestra Cultura"
+      "eyebrow": "Nuestra cultura",
+      "title": "Los buenos productos nacen de buenos equipos.",
+      "description": "Invertimos en las personas detrás de la tecnología.",
+      "primary": "Conocer la cultura",
+      "secondary": "Leer nuestra historia"
     },
     "trust": {
-      "title": "Transparencia",
-      "subtitle": "Operamos de forma abierta. Conozca nuestros compromisos.",
-      "privacyTitle": "Política de Privacidad",
-      "privacyDesc": "Cómo tratamos y protegemos sus datos.",
-      "termsTitle": "Términos de Uso",
-      "termsDesc": "Condiciones de uso de nuestros servicios."
+      "eyebrow": "Transparencia",
+      "title": "Operamos de forma abierta.",
+      "lead": "Conoce nuestros compromisos con quienes trabajan con nosotros.",
+      "linkLabel": "Leer el documento",
+      "privacy": {
+        "title": "Privacidad",
+        "description": "Cómo tratamos y protegemos tus datos, conforme a la LGPD."
+      },
+      "conduct": {
+        "title": "Código de conducta",
+        "description": "Derechos humanos, trabajo digno y respeto en el día a día."
+      },
+      "antiCorruption": {
+        "title": "Anticorrupción",
+        "description": "Tolerancia cero con el soborno, en todas sus formas."
+      },
+      "whistleblowing": {
+        "title": "Canal de denuncias",
+        "description": "Un canal confidencial, abierto a cualquier persona."
+      }
     }
   },
   "contact": {
+    "meta": {
+      "title": "Contacto",
+      "description": "Habla con Cerneo por correo, WhatsApp o el formulario. Respondemos en hasta 1 día hábil."
+    },
+    "eyebrow": "Contacto",
     "title": "Hablemos",
-    "subtitle": "¿Tienes un proyecto, duda o propuesta? Elige el canal que prefieras.",
-    "email": {
-      "cardTitle": "Envía un Email",
-      "cardDescription": "Completa el formulario y responderemos en 1 día hábil.",
-      "directLinkPrefix": "O escribe directamente a"
+    "lead": "¿Tienes un proyecto, una duda o una propuesta? Elige el canal que prefieras.",
+    "whatsappMessage": "Hola, llegué por el sitio de Cerneo.",
+    "subjects": {
+      "product": "Desarrollo de producto",
+      "consulting": "Consultoría y arquitectura",
+      "team": "Equipo extendido",
+      "products": "Studios, Forge u Originals",
+      "other": "Otro asunto"
     },
-    "whatsapp": {
-      "cardTitle": "Escríbenos por WhatsApp",
-      "cardDescription": "Habla ahora con nuestro equipo por WhatsApp."
-    },
-    "form": {
-      "title": "Contáctenos",
+    "labels": {
+      "emailTitle": "Correo",
+      "emailDescription": "Respondemos en hasta 1 día hábil.",
+      "emailAction": "Escribir un correo",
+      "whatsappTitle": "WhatsApp",
+      "whatsappDescription": "Habla con el equipo en días hábiles.",
+      "whatsappAction": "Abrir la conversación",
+      "copy": "Copiar",
+      "copied": "Copiado",
+      "copiedEmail": "Correo copiado.",
+      "copiedWhatsapp": "Número copiado.",
+      "copyFailed": "No se pudo copiar. Selecciona el texto y cópialo.",
+      "formTitle": "Envía un mensaje",
       "name": "Nombre",
       "namePlaceholder": "Tu nombre",
-      "email": "Email",
+      "email": "Correo",
       "emailPlaceholder": "tu@empresa.com",
-      "company": "Empresa",
-      "companyOptional": "opcional",
-      "companyPlaceholder": "Nombre de la empresa",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Elige un asunto",
       "message": "Mensaje",
-      "messagePlaceholder": "¿Cómo podemos ayudarte?",
-      "submit": "Enviar Mensaje",
-      "sending": "Enviando...",
-      "successTitle": "¡Mensaje enviado!",
-      "successMessage": "Gracias por contactarnos. Te responderemos pronto.",
-      "close": "Cerrar",
-      "errorMessage": "No pudimos enviar tu mensaje. Inténtalo de nuevo o escribe a contato@cerneo.com.br.",
-      "directPrefix": "¿Prefieres email directo?",
-      "validation": {
-        "nameRequired": "Ingresa tu nombre.",
-        "emailRequired": "Ingresa tu email.",
-        "emailInvalid": "Email inválido.",
-        "messageRequired": "Escribe un mensaje de al menos 10 caracteres."
-      }
+      "messagePlaceholder": "Cuéntanos qué necesitas y para cuándo",
+      "consent": "Acepto el uso de mis datos para responder este contacto, conforme a la",
+      "privacy": "Política de privacidad",
+      "consentLabel": "Consentimiento",
+      "submit": "Enviar mensaje",
+      "note": "Tus datos quedan solo con Cerneo.",
+      "nameRequired": "Escribe tu nombre.",
+      "emailRequired": "Escribe tu correo.",
+      "emailInvalid": "Revisa el correo. El formato es nombre@empresa.com.",
+      "subjectRequired": "Elige un asunto.",
+      "messageRequired": "Escribe al menos 10 caracteres.",
+      "consentRequired": "Acepta la Política de privacidad para enviar.",
+      "summary": "{count, plural, one {Corrige 1 campo para enviar.} other {Corrige # campos para enviar.}}",
+      "successTitle": "Mensaje enviado.",
+      "successText": "Respondemos en hasta 1 día hábil, al correo que nos diste.",
+      "again": "Enviar otro mensaje",
+      "errorTitle": "El mensaje no se envió.",
+      "errorText": "Tu mensaje sigue aquí. Inténtalo de nuevo o escribe a {email}.",
+      "retry": "Intentar de nuevo"
+    },
+    "faq": {
+      "eyebrow": "Dudas",
+      "title": "Antes de escribir",
+      "asidePrefix": "¿No encontraste la respuesta?",
+      "asideLink": "Escribir al equipo",
+      "items": [
+        {
+          "category": "Contratación",
+          "question": "¿Cuánto tarda en empezar un proyecto?",
+          "answer": "Depende del alcance. En la primera conversación acordamos el discovery y la fecha de inicio."
+        },
+        {
+          "category": "Contratación",
+          "question": "¿Trabajan con alcance cerrado?",
+          "answer": "Trabajamos en ciclos cortos, con el alcance revisado en cada ciclo. Para un MVP con plazo fijo, cerramos el alcance en el discovery."
+        },
+        {
+          "category": "Datos y LGPD",
+          "question": "¿Quién es dueño del código y de los datos?",
+          "answer": "Tú. El código y los datos del proyecto son tuyos, y el tratamiento de datos sigue nuestra política de privacidad."
+        },
+        {
+          "category": "Datos y LGPD",
+          "question": "¿Cómo hablo con el encargado de datos?",
+          "answer": "Por el correo privacidade@cerneo.com.br. Respondemos dentro del plazo de la LGPD."
+        }
+      ]
     }
   },
   "about": {
+    "meta": {
+      "title": "Nosotros",
+      "description": "Una empresa de tecnología que cree que el software bien construido cambia la forma en que operan los negocios."
+    },
     "hero": {
+      "eyebrow": "Quiénes somos",
       "title": "Sobre Cerneo",
-      "subtitle": "Una empresa de tecnología que cree que el software bien construido cambia la forma en que los negocios operan."
+      "subtitle": "Una empresa de tecnología que cree que el software bien construido cambia la forma en que operan los negocios.",
+      "primary": "Hablar con el equipo",
+      "secondary": "Ver la trayectoria"
     },
     "story": {
-      "title": "Nuestra Historia",
-      "paragraph1": "Cerneo nació de una pregunta simple: ¿por qué tantas herramientas de negocio son tan difíciles de usar?",
-      "paragraph2": "Fundada por ingenieros de software, la empresa existe para crear productos que funcionan como deberían — confiables, intuitivos y listos para el día a día real. Reunimos bajo un mismo techo soluciones que comparten la misma base: código probado, diseño centrado en el usuario e infraestructura sólida. Hoy, además de los productos propios, ponemos esa ingeniería al servicio de otras empresas — en desarrollo de producto, consultoría técnica y equipos extendidos.",
-      "paragraph3": "Nuestro nombre une Cerne (esencia) y Neo (nuevo). Construimos lo nuevo a partir de bases que funcionan."
+      "heading": "Nuestra historia",
+      "line": "Cerneo nació de una pregunta simple: ¿por qué tantas herramientas de negocio son *tan difíciles de usar*?",
+      "p1": "Fundada por ingenieros de software, la empresa existe para crear productos que funcionan como deberían: <strong>confiables, intuitivos y listos para el día a día real</strong>. Código probado, diseño pensado en quien lo usa e infraestructura sólida.",
+      "p2": "Hoy, además de los productos propios, ponemos esa ingeniería al servicio de otras empresas. El nombre une <strong>Cerne</strong>, la esencia, y <strong>Neo</strong>, lo nuevo. Construimos lo nuevo sobre bases que funcionan."
     },
     "timeline": {
-      "title": "Nuestra Trayectoria",
-      "item1": {
-        "year": "2024",
-        "title": "Fundación",
-        "description": "Nace Cerneo con la misión de crear productos digitales que realmente resuelven problemas."
-      },
-      "item2": {
-        "year": "2024",
-        "title": "Primer Producto",
-        "description": "Inicio del desarrollo de Cerneo Kalender."
-      },
-      "item3": {
-        "year": "2025",
-        "title": "Lanzamiento",
-        "description": "Cerneo Kalender entra en producción con los primeros clientes."
-      },
-      "item4": {
-        "year": "2025",
-        "title": "Expansión",
-        "description": "Crecimiento del ecosistema Cerneo con nuevas funcionalidades e integraciones."
-      },
-      "item5": {
-        "year": "2026",
-        "title": "Servicios & Consultoría",
-        "description": "Cerneo comienza a ofrecer su ingeniería como servicio: desarrollo de producto, consultoría técnica y equipos extendidos."
-      }
+      "eyebrow": "Trayectoria",
+      "title": "De 2024 hasta hoy",
+      "lead": "Cinco hitos, del primer commit a los servicios.",
+      "items": [
+        {
+          "date": "2024",
+          "title": "Fundación",
+          "description": "Nace Cerneo, para crear productos digitales que resuelven problemas de verdad."
+        },
+        {
+          "date": "2024",
+          "title": "Primer producto",
+          "description": "Empieza el desarrollo del primer producto propio, con el equipo de ingeniería que fundó la empresa."
+        },
+        {
+          "date": "2025",
+          "title": "Lanzamiento",
+          "description": "El primer producto entra en producción con las primeras empresas."
+        },
+        {
+          "date": "2025",
+          "title": "Ecosistema",
+          "description": "Studios, Forge y Originals pasan a compartir la misma base de código y de diseño."
+        },
+        {
+          "date": "2026",
+          "title": "Servicios y consultoría",
+          "description": "La ingeniería se vuelve servicio: producto, consultoría técnica y equipo extendido."
+        }
+      ]
     },
     "values": {
-      "title": "Nuestros Valores",
-      "subtitle": "Lo que guía cada decisión en Cerneo.",
-      "excellence": {
-        "title": "Esmero",
-        "description": "Los detalles importan. Del código al píxel, cada entrega refleja el estándar que nos exigimos a nosotros mismos."
-      },
-      "innovation": {
-        "title": "Pragmatismo",
-        "description": "Innovación es resolver problemas de forma mejor, no usar tecnología por moda."
-      },
-      "transparency": {
-        "title": "Honestidad",
-        "description": "Decimos lo que pensamos — con clientes, socios y entre nosotros. La transparencia no es un valor de pared."
-      },
-      "impact": {
-        "title": "Impacto",
-        "description": "Medimos el éxito por los resultados que generamos para quienes usan nuestros productos."
-      }
+      "eyebrow": "Valores",
+      "title": "Lo que guía cada decisión en Cerneo.",
+      "label": "Valores de Cerneo",
+      "items": [
+        {
+          "title": "Esmero",
+          "description": "Los detalles importan. Del código al píxel, cada entrega refleja el estándar que nos exigimos."
+        },
+        {
+          "title": "Pragmatismo",
+          "description": "Innovar es resolver el problema de una forma mejor, no usar tecnología por moda."
+        },
+        {
+          "title": "Honestidad",
+          "description": "Decimos lo que pensamos, a quien nos contrata, a los socios y entre nosotros. La transparencia no es un cartel en la pared."
+        },
+        {
+          "title": "Impacto",
+          "description": "Medimos el éxito por el resultado que generamos para quien usa lo que construimos."
+        }
+      ]
     },
     "cta": {
-      "title": "¿Quiere Ser Parte?",
-      "subtitle": "Estamos creciendo y buscando personas que comparten esta mentalidad.",
-      "button": "Conozca Nuestra Cultura"
+      "eyebrow": "Carrera",
+      "title": "¿Quieres ser parte?",
+      "description": "Estamos creciendo y buscamos personas que comparten esta mentalidad.",
+      "primary": "Conocer la cultura",
+      "secondary": "Hablar con el equipo"
     }
   },
   "peopleCulture": {
+    "meta": {
+      "title": "Personas y cultura",
+      "description": "La buena tecnología la hace buena gente. Los principios y las prácticas que definen cómo trabaja Cerneo."
+    },
     "hero": {
-      "title": "Personas & Cultura",
-      "subtitle": "Buena tecnología la hace buena gente. Así de simple."
+      "eyebrow": "Personas y cultura",
+      "title": "La buena tecnología la hace buena gente.",
+      "subtitle": "Así de simple. Por eso invertimos tanto en las personas como en los productos.",
+      "primary": "Hablar con el equipo",
+      "secondary": "Ver cómo trabajamos"
     },
     "philosophy": {
-      "title": "Cómo Pensamos",
-      "paragraph1": "La cultura no es un póster en la pared. Es cómo tomamos decisiones en el día a día.",
-      "paragraph2": "Creemos que las mejores soluciones nacen de equipos que combinan competencia técnica con respeto genuino. Por eso, invertimos tanto en las personas como en los productos.",
-      "paragraph3": "Nuestro ambiente está construido sobre tres pilares: autonomía para hacer, confianza para experimentar y responsabilidad para entregar."
+      "heading": "Cómo pensamos",
+      "lines": [
+        "La cultura no es un póster en la pared.",
+        "Es cómo *tomamos decisiones* en el día a día."
+      ],
+      "p1": "Las mejores soluciones nacen de equipos que combinan <strong>competencia técnica con respeto genuino</strong>.",
+      "p2": "El ambiente se apoya en tres pilares: <strong>autonomía para hacer, confianza para experimentar y responsabilidad para entregar</strong>."
     },
     "values": {
-      "title": "Lo Que Valoramos",
-      "subtitle": "Los principios que definen cómo trabajamos.",
-      "ownership": {
-        "title": "Ownership",
-        "description": "Cada persona es dueña de su trabajo. Decidimos, ejecutamos y respondemos por los resultados."
-      },
-      "quality": {
-        "title": "Calidad",
-        "description": "Hacemos bien desde el inicio. El atajo se convierte en retrabajo, y el retrabajo es caro."
-      },
-      "collaboration": {
-        "title": "Colaboración",
-        "description": "Nadie construye nada solo. Las mejores ideas surgen cuando visiones diferentes se encuentran."
-      },
-      "growth": {
-        "title": "Evolución",
-        "description": "Quien deja de aprender, deja de crecer. Invertimos en el desarrollo de cada persona del equipo."
-      },
-      "transparency": {
-        "title": "Franqueza",
-        "description": "Hablamos con claridad, incluso cuando es incómodo. Problema oculto se convierte en problema mayor."
-      },
-      "balance": {
-        "title": "Equilibrio",
-        "description": "Resultados consistentes exigen energía consistente. La vida fuera del trabajo no es opcional."
-      }
+      "eyebrow": "Principios",
+      "title": "Lo que valoramos",
+      "lead": "Los principios que definen cómo trabajamos.",
+      "label": "Principios de Cerneo",
+      "items": [
+        {
+          "title": "Ownership",
+          "description": "Cada persona es dueña de su trabajo. Decidimos, ejecutamos y respondemos por el resultado."
+        },
+        {
+          "title": "Calidad",
+          "description": "Bien hecho desde el inicio. El atajo se vuelve retrabajo, y el retrabajo cuesta caro."
+        },
+        {
+          "title": "Colaboración",
+          "description": "Nadie construye nada solo. Las mejores ideas surgen cuando visiones distintas se encuentran."
+        },
+        {
+          "title": "Evolución",
+          "description": "Quien deja de aprender deja de crecer. Invertimos en el desarrollo de cada persona."
+        },
+        {
+          "title": "Franqueza",
+          "description": "Hablamos con claridad, aunque sea incómodo. Un problema escondido se vuelve un problema mayor."
+        },
+        {
+          "title": "Equilibrio",
+          "description": "Un resultado constante exige energía constante. La vida fuera del trabajo no es opcional."
+        }
+      ]
     },
     "howWeWork": {
-      "title": "Cómo Trabajamos",
-      "subtitle": "Prácticas que sustentan nuestra forma de operar.",
-      "remote": {
-        "title": "Remote-First",
-        "description": "Trabajo remoto como estándar. Flexibilidad de horario y ubicación."
-      },
-      "async": {
-        "title": "Comunicación Asíncrona",
-        "description": "Documentación escrita sobre reuniones. Respetamos el enfoque y el tiempo de cada uno."
-      },
-      "reviews": {
-        "title": "Code Review",
-        "description": "Todo código pasa por revisión. Es aprendizaje, no burocracia."
-      },
-      "learning": {
-        "title": "Budget de Aprendizaje",
-        "description": "Inversión en cursos, conferencias y certificaciones para todo el equipo."
-      }
+      "eyebrow": "Cómo trabajamos",
+      "title": "Prácticas que sostienen nuestra forma de operar.",
+      "items": [
+        {
+          "title": "Remoto por defecto",
+          "description": "Flexibilidad de horario y de lugar, con encuentros presenciales cuando tienen sentido."
+        },
+        {
+          "title": "Comunicación asíncrona",
+          "description": "Un documento escrito antes de una reunión. Respetamos el foco y el tiempo de cada persona."
+        },
+        {
+          "title": "Revisión de código",
+          "description": "Todo el código pasa por revisión. Es aprendizaje, no burocracia."
+        },
+        {
+          "title": "Presupuesto de aprendizaje",
+          "description": "Cursos, conferencias y certificaciones para todo el equipo."
+        }
+      ]
     },
     "cta": {
-      "title": "¿Quiere Trabajar en Cerneo?",
-      "subtitle": "Buscamos personas que quieren construir productos que hacen la diferencia.",
-      "button": "Contáctenos"
+      "eyebrow": "Vacantes",
+      "title": "¿Quieres trabajar en Cerneo?",
+      "description": "Buscamos personas que quieren construir productos que marcan la diferencia.",
+      "primary": "Hablar con nosotros"
     }
+  },
+  "legalMeta": {
+    "privacy": "Cómo Cerneo recopila, usa, guarda y protege tus datos personales, conforme a la LGPD.",
+    "terms": "Las condiciones de uso del sitio y de los servicios de Cerneo.",
+    "conduct": "Los compromisos de Cerneo con los derechos humanos, el trabajo digno, la igualdad y la integridad.",
+    "antiCorruption": "Tolerancia cero con la corrupción y el soborno, conforme a la Ley 12.846/2013.",
+    "whistleblowing": "El canal confidencial para reportar violaciones de conducta, ética o ley."
+  },
+  "og": {
+    "tagline": "Software bien hecho."
   },
   "legal": {
     "privacy": {
@@ -353,7 +544,7 @@
       },
       "services": {
         "title": "2. Descripción de los Servicios",
-        "content": "Cerneo es una empresa de tecnología que desarrolla productos propios de software — incluyendo Cerneo Kalender — y presta servicios de desarrollo, consultoría y asignación de equipos. Cada producto o servicio puede tener términos específicos adicionales."
+        "content": "Cerneo es una empresa de tecnología que desarrolla productos propios de software, como Cerneo Studios, Cerneo Forge y Cerneo Originals, y presta servicios de desarrollo, consultoría y asignación de equipos. Cada producto o servicio puede tener términos específicos adicionales."
       },
       "responsibilities": {
         "title": "3. Responsabilidades del Usuario",

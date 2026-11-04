@@ -1,0 +1,34 @@
+{
+  "name": "Cerneo",
+  "short_name": "Cerneo",
+  "description": "Produtos digitais e consultoria de tecnologia para negócios que não param.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "lang": "pt-BR",
+  "background_color": "#19191B",
+  "theme_color": "#19191B",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

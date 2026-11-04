@@ -1,135 +1,81 @@
+import type { ReactNode } from "react";
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import {
-  ArrowRight,
-  Flame,
-  CheckCircle,
-  UsersRound,
-  TrendingUp,
-  Eye,
-  Scale,
-  Wifi,
-  FileText,
-  GitPullRequest,
-  GraduationCap,
-} from "lucide-react";
-import { Hero } from "../../../src/design-system/components/marketing/Hero";
-import { FeatureGrid } from "../../../src/design-system/components/marketing/FeatureGrid";
-import { CTA } from "../../../src/design-system/components/marketing/CTA";
-import { Section } from "../../../src/design-system/components/layout/Section";
-import { Container } from "../../../src/design-system/components/layout/Container";
-import { Button } from "../../../src/design-system/components/ui/Button";
-import { Link } from "../../../src/i18n/navigation";
+import { CTABand, FeatureGrid, HeroSection, Manifesto, Section, ValuesList } from "@cerneo/ui";
+import type { IconName } from "@cerneo/ui";
+import { Doodle } from "@cerneo/ui/doodles";
+import { pageMetadata } from "../../../src/lib/metadata";
+import { href } from "../../../src/lib/site";
 
-export default async function PeopleCulturePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+type Props = { params: Promise<{ locale: string }> };
+type Item = { title: string; description: string };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "peopleCulture.meta" });
+  return pageMetadata(locale, "peopleCulture", { title: t("title"), description: t("description") });
+}
+
+const strong = (chunks: ReactNode) => <strong>{chunks}</strong>;
+const PRINCIPLE_ICONS: IconName[] = ["target", "award", "users", "book-open", "eye", "coffee"];
+const PRACTICE_ICONS: IconName[] = ["globe", "file-text", "git-branch", "book-open"];
+
+export default async function PeopleCulturePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("peopleCulture");
 
-  const coreValues = [
-    { key: "ownership", icon: <Flame className="h-5 w-5" /> },
-    { key: "quality", icon: <CheckCircle className="h-5 w-5" /> },
-    { key: "collaboration", icon: <UsersRound className="h-5 w-5" /> },
-    { key: "growth", icon: <TrendingUp className="h-5 w-5" /> },
-    { key: "transparency", icon: <Eye className="h-5 w-5" /> },
-    { key: "balance", icon: <Scale className="h-5 w-5" /> },
-  ];
-
-  const howWeWork = [
-    { key: "remote", icon: <Wifi className="h-5 w-5" /> },
-    { key: "async", icon: <FileText className="h-5 w-5" /> },
-    { key: "reviews", icon: <GitPullRequest className="h-5 w-5" /> },
-    { key: "learning", icon: <GraduationCap className="h-5 w-5" /> },
-  ];
+  const principles = t.raw("values.items") as Item[];
+  const practices = t.raw("howWeWork.items") as Item[];
 
   return (
     <>
-      <Hero
-        variant="page"
+      <HeroSection
+        variant="doodle"
+        eyebrow={t("hero.eyebrow")}
         title={t("hero.title")}
         subtitle={t("hero.subtitle")}
+        media={<Doodle name="connecting" size={400} motion="reveal" />}
+        primaryAction={{ label: t("hero.primary"), href: href(locale, "contact") }}
+        secondaryAction={{ label: t("hero.secondary"), href: "#how-we-work" }}
       />
 
-      {/* Philosophy */}
-      <Section variant="default">
-        <Container>
-          <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
-              {t("philosophy.title")}
-            </h2>
-            <div className="mt-8 space-y-4 text-lg leading-relaxed text-steel dark:text-gray-400">
-              <p>{t("philosophy.paragraph1")}</p>
-              <p>{t("philosophy.paragraph2")}</p>
-              <p>{t("philosophy.paragraph3")}</p>
-            </div>
-          </div>
-        </Container>
+      <Manifesto
+        heading={t("philosophy.heading")}
+        tone="surface"
+        spacing="xl"
+        lines={t.raw("philosophy.lines") as string[]}
+        body={[
+          <p key="p1">{t.rich("philosophy.p1", { strong })}</p>,
+          <p key="p2">{t.rich("philosophy.p2", { strong })}</p>,
+        ]}
+      />
+
+      <Section layout="split" eyebrow={t("values.eyebrow")} title={t("values.title")} lead={t("values.lead")}>
+        <ValuesList
+          layout="grid"
+          columns={3}
+          label={t("values.label")}
+          items={principles.map((v, i) => ({ ...v, id: `p${i}`, icon: PRINCIPLE_ICONS[i] }))}
+        />
       </Section>
 
-      {/* Core Values */}
-      <Section variant="mist">
-        <Container>
-          <div className="mx-auto max-w-2xl text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
-              {t("values.title")}
-            </h2>
-            <p className="mt-4 text-lg text-steel dark:text-gray-400">{t("values.subtitle")}</p>
-          </div>
-          <FeatureGrid
-            columns={3}
-            features={coreValues.map((v) => ({
-              icon: v.icon,
-              title: t(`values.${v.key}.title`),
-              description: t(`values.${v.key}.description`),
-            }))}
-          />
-        </Container>
+      <Section id="how-we-work" tone="surface" headerSize="md" eyebrow={t("howWeWork.eyebrow")} title={t("howWeWork.title")}>
+        <FeatureGrid
+          columns={4}
+          appearance="plain"
+          items={practices.map((v, i) => ({ ...v, id: `w${i}`, icon: PRACTICE_ICONS[i] }))}
+        />
       </Section>
 
-      {/* How We Work */}
-      <Section variant="default">
-        <Container>
-          <div className="mx-auto max-w-2xl text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-gray-100 md:text-4xl">
-              {t("howWeWork.title")}
-            </h2>
-            <p className="mt-4 text-lg text-steel dark:text-gray-400">
-              {t("howWeWork.subtitle")}
-            </p>
-          </div>
-          <FeatureGrid
-            columns={2}
-            features={howWeWork.map((item) => ({
-              icon: item.icon,
-              title: t(`howWeWork.${item.key}.title`),
-              description: t(`howWeWork.${item.key}.description`),
-            }))}
-          />
-        </Container>
-      </Section>
-
-      {/* CTA */}
-      <CTA
-        variant="centered"
-        background="gradient"
+      <CTABand
+        tone="yellow"
+        align="center"
+        eyebrow={t("cta.eyebrow")}
         title={t("cta.title")}
-        subtitle={t("cta.subtitle")}
-      >
-        <Link href="/#contact">
-          <Button
-            variant="solid"
-            color="white"
-            size="lg"
-            icon={<ArrowRight className="h-4 w-4" />}
-            iconPosition="right"
-          >
-            {t("cta.button")}
-          </Button>
-        </Link>
-      </CTA>
+        description={t("cta.description")}
+        primaryAction={{ label: t("cta.primary"), href: href(locale, "contact") }}
+      />
     </>
   );
 }

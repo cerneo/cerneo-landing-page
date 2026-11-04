@@ -1,6 +1,0 @@
-export { Container } from "./Container";
-export { Section } from "./Section";
-export { Navbar } from "./Navbar";
-export { Footer } from "./Footer";
-export { LegalLayout } from "./LegalLayout";
-export { ThemeProvider } from "./ThemeProvider";

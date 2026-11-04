@@ -1,0 +1,31 @@
+# Pedidos da landing ao Cerneo DS
+
+O que faltou no Cerneo DS (pedidos abertos com `@cerneo/ui` 0.1.1 + `@cerneo/tokens` 0.2.1; a landing hoje usa 0.1.2 + 0.2.2) ao montar o cerneo.com.br. Nada disto foi copiado para cá: onde houve contorno, ele está descrito e sai quando o DS resolver.
+
+Ordem: primeiro o que dá erro, depois o que força contorno, depois conforto.
+
+## Erros
+
+1. ~~**`Accordion` passa `inert=""`**~~ **Atendido no DS 0.2.2** (`@cerneo/ui` 0.1.2, build local ainda sem release). `Accordion` e `Testimonial` passam a usar um valor de `inert` aceito pelo React 19; o aviso sumiu do console no Contato e nas cinco páginas legais (tour de 03/11: 0 erros em 120 capturas). Era: o painel fechado recebia `inert=""` e o React 19 em dev acusava `Received an empty string for a boolean attribute inert`.
+
+## Contornos que a landing faz hoje
+
+2. **`SiteHeader` sem encaixe para o seletor de tema.** O botão de tema (IconButton sol/lua) vai junto do CTA, num nó próprio passado em `cta`; por isso aparece na barra e no rodapé da gaveta. Pedido: um slot `utilities` (ou `themeSwitch`) entre o idioma e o CTA, repetido na gaveta.
+3. **Blocos renderizam `<a href>` e não aceitam o `Link` do Next.** `SiteHeader`, `NavMenu`, `Footer`, `FeatureGrid`, `CTABand`, `HeroSection`, `ErrorPage` e `ProductShowcase` montam âncoras próprias. A landing intercepta os cliques internos no `document` (`src/components/SiteChrome.tsx`, `NavTransitions`) para usar o roteador e a View Transition. Pedido: um provedor (`<CerneoLinkProvider as={NextLink}>`) que os blocos usem em todo link interno.
+4. **View Transition de site.** O DS só nomeia `cn-main` em `.cn-appshell__main`. A landing repete a regra do kit (`[data-vt=nav] .site-main { view-transition-name: cn-main }`). Pedido: uma classe pública (`.cn-vt-main`) e um helper `navigateWithTransition(apply)` que já respeite `--cn-motion-distance`.
+5. **`ProductShowcase` só aceita `studios | forge | originals`.** A NanaPet (submarca) não tem card; hoje ela entra como ação do card do Originals ("Conhecer a NanaPet"). Pedido: `product: "nanapet"` com `ProductLogo` na faixa, e `action.external` (nova aba + "abre em nova aba" no nome acessível). Hoje a ação externa leva `target="_blank"` sem o aviso.
+6. **`Footer` não troca o texto oculto de link externo** nem aceita item com `onClick`. O "Cookies" que reabre as preferências é um `href="#cookies"` ouvido por `hashchange`. Pedido: `externalLabel` repassado ao `Link` e `onClick` em `FooterLink`.
+7. **`ContactSection` sem campo opcional e sem honeypot.** O formulário antigo tinha "Empresa (opcional)" e um campo-isca contra robôs; o do DS não tem nenhum dos dois. A rota `/api/contact` ainda aceita `company` e o honeypot `website`, mas o formulário não os envia. Pedido: `extraFields` (texto curto opcional) e `honeypot` embutido.
+8. **`CookieConsent` nasce aberto no SSR** (`defaultOpen = true`) e só fecha depois de ler o `localStorage`: quem já escolheu vê a barra piscar. A landing controla `open` e só abre depois da hidratação. Pedido: começar fechado e abrir no mount quando não houver escolha gravada.
+
+## Idiomas
+
+9. **Textos padrão só em pt-BR.** O site tem pt-BR, en e es; para cada bloco a landing passa todos os rótulos (ContactSection: 38 chaves e 2 funções; CookieConsent: 13; SiteHeader: 6; Prose, Timeline, ErrorPage, Footer). Pedido: um `locale` no provedor do DS com as strings de en e es, mantendo as props para ajuste.
+10. **`Link` externo** diz "abre em nova aba" por padrão, e os blocos que o usam por dentro (Footer, ContactSection "Abrir conversa") não deixam trocar.
+
+## Peso e entrega
+
+11. **`styles.css` tem 516 KB** (sem gzip). O CSS por grupo existe, mas o `base` (elementos, foco, `.cn-mark`) só vem dentro do `styles.css`. Pedido: exportar `@cerneo/ui/base.css` para um site importar só base + `core`, `forms`, `feedback`, `navigation`, `brand`, `blocks`, `marketing`, `motion`, `content`, `doodles`.
+12. **Ícones e OG.** O Studios e a landing têm cada um uma cópia do `scripts/gen-icons.mjs` (favicon, apple-touch, manifest a partir do `Emblem`). A landing também monta a imagem de Open Graph à mão (`src/og/image.tsx`: ink, assinatura, título em Plus Jakarta Sans, faixa do gradiente a 110°). Pedido: os dois como ferramenta do pacote (`npx cerneo-icons`, `ogTemplate()`), com a fonte WOFF que o Satori lê.
+13. **Tarball no repositório público.** A landing é pública e o `vendor/` com `cerneo-ui-*.tgz` publica o DS inteiro (privado, UNLICENSED). Pedido: um registry privado (GitHub Packages) ou uma decisão explícita de que o pacote compilado pode ser público.
+   **Atendido (03/11):** pacotes no GitHub Packages privado (`npm.pkg.github.com`, escopo `@cerneo`); `.npmrc` lê `NPM_TOKEN`, que a Vercel precisa ter (token com `read:packages`).
