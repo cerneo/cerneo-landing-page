@@ -4,6 +4,7 @@
       "home": "Início",
       "services": "Serviços",
       "products": "Produtos",
+      "originals": "Originals",
       "about": "Sobre",
       "peopleCulture": "Pessoas e cultura",
       "contact": "Contato",
@@ -39,6 +40,7 @@
       "tagline": "Produtos digitais e consultoria de tecnologia para negócios que não param.",
       "services": "Serviços",
       "products": "Produtos",
+      "originals": "Cerneo Originals",
       "company": "Empresa",
       "legal": "Legal",
       "rights": "© {year} {company}. Todos os direitos reservados.",
@@ -132,9 +134,9 @@
       }
     },
     "products": {
-      "eyebrow": "Ecossistema",
-      "title": "Quatro produtos, um mesmo cerne.",
-      "lead": "Ferramentas e marcas próprias que resolvem problemas reais e provam, em produção, a engenharia que praticamos.",
+      "eyebrow": "Produtos",
+      "title": "Duas ferramentas, um mesmo cerne.",
+      "lead": "Produtos próprios que resolvem problemas reais e provam, em produção, a engenharia que praticamos.",
       "studios": {
         "tagline": "A agenda das suas marcas, num só lugar.",
         "description": "Calendário, revisão e publicação para quem cuida de várias marcas ao mesmo tempo.",
@@ -154,21 +156,26 @@
           "Versões por canal e idioma"
         ],
         "action": "Conhecer o Forge"
-      },
-      "originals": {
-        "tagline": "Marcas próprias, da ideia à estreia.",
-        "description": "O portfólio de marcas da Cerneo. A primeira é a NanaPet, de cuidado de pets.",
+      }
+    },
+    "originals": {
+      "eyebrow": "Cerneo Originals",
+      "title": "Marcas próprias, da ideia à estreia.",
+      "lead": "O selo das marcas e obras próprias da Cerneo: filmes, a NanaPet e as próximas. Cada uma é uma marca Cerneo Originals.",
+      "seal": {
+        "label": "Selo de marcas próprias",
+        "tagline": "Criamos, produzimos e lançamos.",
+        "description": "A mesma engenharia dos nossos produtos, aplicada às nossas próprias marcas e obras.",
         "bullets": [
           "Roteiro e direção",
           "Gravação e edição",
           "Estreia e distribuição"
-        ],
-        "action": "Conhecer o Originals"
+        ]
       },
       "nanapet": {
         "endorsement": "Uma marca Cerneo Originals",
         "tagline": "O cuidado do seu pet, num só app.",
-        "description": "Para tutores e parceiros de pets. A primeira marca do Originals.",
+        "description": "Para tutores e parceiros de pets.",
         "bullets": [
           "Carteirinha digital do pet",
           "Busca de parceiros pet",

@@ -115,27 +115,40 @@ export default async function HomePage({ params }: Props) {
               bullets: bullets("forge"),
               action: { label: t("products.forge.action"), href: contact },
             },
-            {
-              product: "originals",
-              tagline: t("products.originals.tagline"),
-              description: t("products.originals.description"),
-              bullets: bullets("originals"),
-              action: { label: t("products.originals.action"), href: contact },
-            },
+          ]}
+        />
+      </Section>
+
+      <Section
+        id={ANCHORS.originals}
+        tone="surface"
+        eyebrow={t("originals.eyebrow")}
+        title={t("originals.title")}
+        lead={t("originals.lead")}
+      >
+        <ProductShowcase
+          layout="portfolio"
+          seal={{
+            label: t("originals.seal.label"),
+            tagline: t("originals.seal.tagline"),
+            description: t("originals.seal.description"),
+            bullets: t.raw("originals.seal.bullets") as string[],
+          }}
+          products={[
             {
               product: "nanapet",
               logo: <ProductLogo src={NANAPET_LOGO.src} ratio={NANAPET_LOGO.ratio} name="NanaPet" highlight="Pet" height={64} />,
-              endorsement: t("products.nanapet.endorsement"),
-              tagline: t("products.nanapet.tagline"),
-              description: t("products.nanapet.description"),
-              bullets: bullets("nanapet"),
-              action: { label: t("products.nanapet.action"), href: NANAPET_URL, external: true, externalLabel: tc("link.external") },
+              endorsement: t("originals.nanapet.endorsement"),
+              tagline: t("originals.nanapet.tagline"),
+              description: t("originals.nanapet.description"),
+              bullets: t.raw("originals.nanapet.bullets") as string[],
+              action: { label: t("originals.nanapet.action"), href: NANAPET_URL, external: true, externalLabel: tc("link.external") },
             },
           ]}
         />
       </Section>
 
-      <Section tone="surface" headerSize="md" eyebrow={t("differentials.eyebrow")} title={t("differentials.title")}>
+      <Section headerSize="md" eyebrow={t("differentials.eyebrow")} title={t("differentials.title")}>
         <FeatureGrid variant="bento" items={differentials} />
       </Section>
 
