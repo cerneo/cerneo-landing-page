@@ -19,6 +19,10 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/**": ["./src/og/**/*"],
   },
+  // Nenhuma página usa `next/image`. Desligar o otimizador deixa a imagem
+  // Docker sem o `sharp` (binário nativo), o que permite o cross-build do
+  // Dockerfile: `/_next/image` não existe.
+  images: { unoptimized: true },
 };
 
 export default withNextIntl(nextConfig);
