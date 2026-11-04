@@ -39,7 +39,7 @@ export const PAGES = {
 export type PageKey = keyof typeof PAGES;
 
 /** Âncoras da home. Mantêm os nomes do site antigo para links externos continuarem valendo. */
-export const ANCHORS = { services: "services", products: "products", originals: "originals", contact: "contact" } as const;
+export const ANCHORS = { services: "services", products: "products", contact: "contact" } as const;
 
 /**
  * Caminho com o prefixo do locale, para os blocos do DS (que renderizam `<a href>`).

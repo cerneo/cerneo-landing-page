@@ -4,7 +4,6 @@
       "home": "Inicio",
       "services": "Servicios",
       "products": "Productos",
-      "originals": "Originals",
       "about": "Nosotros",
       "peopleCulture": "Personas y cultura",
       "contact": "Contacto",
@@ -40,7 +39,6 @@
       "tagline": "Productos digitales y consultoría de tecnología para negocios que no se detienen.",
       "services": "Servicios",
       "products": "Productos",
-      "originals": "Cerneo Originals",
       "company": "Empresa",
       "legal": "Legal",
       "rights": "© {year} {company}. Todos los derechos reservados.",
@@ -134,9 +132,9 @@
       }
     },
     "products": {
-      "eyebrow": "Productos",
-      "title": "Dos herramientas, un mismo núcleo.",
-      "lead": "Productos propios que resuelven problemas reales y demuestran, en producción, la ingeniería que practicamos.",
+      "eyebrow": "Cerneo Originals",
+      "title": "Tres productos, un mismo núcleo.",
+      "lead": "Studios, Forge y NanaPet son marcas Cerneo Originals: productos que Cerneo crea, construye y opera, y que demuestran en producción la ingeniería que practicamos.",
       "studios": {
         "tagline": "La agenda de tus marcas, en un solo lugar.",
         "description": "Calendario, revisión y publicación para quien cuida varias marcas a la vez.",
@@ -156,24 +154,9 @@
           "Versiones por canal e idioma"
         ],
         "action": "Conocer Forge"
-      }
-    },
-    "originals": {
-      "eyebrow": "Cerneo Originals",
-      "title": "Marcas propias, de la idea al estreno.",
-      "lead": "El sello de las marcas y obras propias de Cerneo: películas, NanaPet y las próximas. Cada una es una marca Cerneo Originals.",
-      "seal": {
-        "label": "Sello de marcas propias",
-        "tagline": "Creamos, producimos y lanzamos.",
-        "description": "La misma ingeniería de nuestros productos, aplicada a nuestras propias marcas y obras.",
-        "bullets": [
-          "Guion y dirección",
-          "Grabación y edición",
-          "Estreno y distribución"
-        ]
       },
+      "endorsement": "Una marca Cerneo Originals",
       "nanapet": {
-        "endorsement": "Una marca Cerneo Originals",
         "tagline": "El cuidado de tu mascota, en una sola app.",
         "description": "Para tutores y aliados de mascotas.",
         "bullets": [
@@ -255,7 +238,7 @@
       "product": "Desarrollo de producto",
       "consulting": "Consultoría y arquitectura",
       "team": "Equipo extendido",
-      "products": "Studios, Forge u Originals",
+      "products": "Studios, Forge o NanaPet",
       "other": "Otro asunto"
     },
     "labels": {

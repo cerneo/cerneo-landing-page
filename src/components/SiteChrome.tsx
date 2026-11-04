@@ -56,7 +56,6 @@ export function SiteHeaderBar() {
       ],
     },
     { id: "products", label: t("nav.products"), href: href(locale, "home", ANCHORS.products) },
-    { id: "originals", label: t("nav.originals"), href: href(locale, "home", ANCHORS.originals) },
     { id: "about", label: t("nav.about"), href: href(locale, "about") },
     { id: "peopleCulture", label: t("nav.peopleCulture"), href: href(locale, "peopleCulture") },
   ];
@@ -119,11 +118,8 @@ export function SiteFooter({ year }: { year: number }) {
           links: [
             { label: "Studios", href: href(locale, "home", ANCHORS.products) },
             { label: "Forge", href: href(locale, "home", ANCHORS.products) },
+            { label: "NanaPet", href: NANAPET_URL, external: true },
           ],
-        },
-        {
-          label: t("footer.originals"),
-          links: [{ label: "NanaPet", href: NANAPET_URL, external: true }],
         },
         {
           label: t("footer.company"),
