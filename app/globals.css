@@ -52,3 +52,24 @@ body {
 [data-vt="nav"] .site-main {
   view-transition-name: cn-main;
 }
+
+/* O átomo do hero (src/components/HeroAtom.tsx): pôster e, por cima, o
+   vídeo. O fundo preto some na aura pelo `lighten`, aplicado na coluna de
+   mídia do hero: ela tem `z-index` (é um contexto de empilhamento), então o
+   blend no vídeo só veria o fundo transparente da coluna. */
+.cn-hero__media:has(> .hero-atom) {
+  mix-blend-mode: lighten;
+}
+.hero-atom {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 976 / 912;
+}
+.hero-atom > * {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}

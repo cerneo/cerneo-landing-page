@@ -5,7 +5,6 @@ import {
   CTABand,
   FeatureGrid,
   HeroSection,
-  Illustration,
   Link,
   Manifesto,
   ProductLogo,
@@ -14,6 +13,7 @@ import {
 } from "@cerneo/ui";
 import type { FeatureItem } from "@cerneo/ui";
 import { ContactBlock } from "../../src/components/ContactBlock";
+import { HeroAtom } from "../../src/components/HeroAtom";
 import { pageMetadata } from "../../src/lib/metadata";
 import { ANCHORS, NANAPET_LOGO, NANAPET_URL, href } from "../../src/lib/site";
 
@@ -67,7 +67,7 @@ export default async function HomePage({ params }: Props) {
         subtitle={t("hero.subtitle")}
         primaryAction={{ label: t("hero.primary"), href: href(locale, "home", ANCHORS.services) }}
         secondaryAction={{ label: t("hero.secondary"), href: href(locale, "home", ANCHORS.products), iconRight: "arrow-right" }}
-        media={<Illustration name="hero-cerne" size={640} motion="reveal" decorative />}
+        media={<HeroAtom />}
       />
 
       <Manifesto
