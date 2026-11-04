@@ -8,7 +8,6 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { usePathname as useRawPathname, useRouter as useRawRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { Analytics } from "@vercel/analytics/next";
 import { Button, CookieConsent, Footer, IconButton, SiteHeader } from "@cerneo/ui";
 import type { NavMenuItem } from "@cerneo/ui";
 import { routing } from "../i18n/routing";
@@ -187,8 +186,11 @@ const noopSubscribe = () => () => {};
 
 /**
  * LGPD: a barra aparece na primeira visita, depois da hidratação (quem já
- * escolheu não vê a barra piscar). A Vercel Analytics só carrega com "Análise"
- * aceita. "Cookies" no rodapé (`#cookies`) reabre as preferências.
+ * escolheu não vê a barra piscar). A categoria "Análise" continua na barra e
+ * gravada no consentimento, mas hoje nada a usa: a Vercel Analytics saiu com a
+ * ida para o K3s e a substituta ainda não foi escolhida
+ * (docs/pedidos-landing-ds.md). Quem vier deve carregar só com
+ * `consent?.analytics`. "Cookies" no rodapé (`#cookies`) reabre as preferências.
  */
 export function SiteConsent() {
   const t = useTranslations("common.cookies");
@@ -235,7 +237,6 @@ export function SiteConsent() {
         dialogDescription={t("dialogDescription")}
         lockedLabel={t("locked")}
       />
-      {consent?.analytics ? <Analytics /> : null}
     </>
   );
 }
