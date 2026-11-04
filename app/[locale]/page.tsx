@@ -8,13 +8,14 @@ import {
   Illustration,
   Link,
   Manifesto,
+  ProductLogo,
   ProductShowcase,
   Section,
 } from "@cerneo/ui";
 import type { FeatureItem } from "@cerneo/ui";
 import { ContactBlock } from "../../src/components/ContactBlock";
 import { pageMetadata } from "../../src/lib/metadata";
-import { ANCHORS, NANAPET_URL, href } from "../../src/lib/site";
+import { ANCHORS, NANAPET_LOGO, NANAPET_URL, href } from "../../src/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -30,6 +31,7 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("home");
+  const tc = await getTranslations("common");
   const contact = href(locale, "contact");
 
   const services: FeatureItem[] = [
@@ -97,7 +99,7 @@ export default async function HomePage({ params }: Props) {
 
       <Section id={ANCHORS.products} eyebrow={t("products.eyebrow")} title={t("products.title")} lead={t("products.lead")}>
         <ProductShowcase
-          layout="featured"
+          layout="grid"
           products={[
             {
               product: "studios",
@@ -109,6 +111,7 @@ export default async function HomePage({ params }: Props) {
             {
               product: "forge",
               tagline: t("products.forge.tagline"),
+              description: t("products.forge.description"),
               bullets: bullets("forge"),
               action: { label: t("products.forge.action"), href: contact },
             },
@@ -117,7 +120,16 @@ export default async function HomePage({ params }: Props) {
               tagline: t("products.originals.tagline"),
               description: t("products.originals.description"),
               bullets: bullets("originals"),
-              action: { label: t("products.originals.action"), href: NANAPET_URL, target: "_blank", rel: "noopener noreferrer" },
+              action: { label: t("products.originals.action"), href: contact },
+            },
+            {
+              product: "nanapet",
+              logo: <ProductLogo src={NANAPET_LOGO.src} ratio={NANAPET_LOGO.ratio} name="NanaPet" highlight="Pet" height={64} />,
+              endorsement: t("products.nanapet.endorsement"),
+              tagline: t("products.nanapet.tagline"),
+              description: t("products.nanapet.description"),
+              bullets: bullets("nanapet"),
+              action: { label: t("products.nanapet.action"), href: NANAPET_URL, external: true, externalLabel: tc("link.external") },
             },
           ]}
         />

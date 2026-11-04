@@ -13,10 +13,24 @@ Ordem: primeiro o que dá erro, depois o que força contorno, depois conforto.
 2. **`SiteHeader` sem encaixe para o seletor de tema.** O botão de tema (IconButton sol/lua) vai junto do CTA, num nó próprio passado em `cta`; por isso aparece na barra e no rodapé da gaveta. Pedido: um slot `utilities` (ou `themeSwitch`) entre o idioma e o CTA, repetido na gaveta.
 3. **Blocos renderizam `<a href>` e não aceitam o `Link` do Next.** `SiteHeader`, `NavMenu`, `Footer`, `FeatureGrid`, `CTABand`, `HeroSection`, `ErrorPage` e `ProductShowcase` montam âncoras próprias. A landing intercepta os cliques internos no `document` (`src/components/SiteChrome.tsx`, `NavTransitions`) para usar o roteador e a View Transition. Pedido: um provedor (`<CerneoLinkProvider as={NextLink}>`) que os blocos usem em todo link interno.
 4. **View Transition de site.** O DS só nomeia `cn-main` em `.cn-appshell__main`. A landing repete a regra do kit (`[data-vt=nav] .site-main { view-transition-name: cn-main }`). Pedido: uma classe pública (`.cn-vt-main`) e um helper `navigateWithTransition(apply)` que já respeite `--cn-motion-distance`.
-5. **`ProductShowcase` só aceita `studios | forge | originals`.** A NanaPet (submarca) não tem card; hoje ela entra como ação do card do Originals ("Conhecer a NanaPet"). Pedido: `product: "nanapet"` com `ProductLogo` na faixa, e `action.external` (nova aba + "abre em nova aba" no nome acessível). Hoje a ação externa leva `target="_blank"` sem o aviso.
-6. **`Footer` não troca o texto oculto de link externo** nem aceita item com `onClick`. O "Cookies" que reabre as preferências é um `href="#cookies"` ouvido por `hashchange`. Pedido: `externalLabel` repassado ao `Link` e `onClick` em `FooterLink`.
+5. ~~**`ProductShowcase` só aceita `studios | forge | originals`.**~~ **Atendido no DS 0.2.3** (`@cerneo/ui` 0.1.3, commit local no DS, ainda sem release). `product: "nanapet"` + `logo={<ProductLogo … />}` + `endorsement` ("Uma marca Cerneo Originals"); `layout="grid"` (2 × 2 no desktop, uma coluna no celular); `action.external` (nova aba + "abre em nova aba" no nome acessível, texto trocável por `externalLabel`). O `featured` deixou de esticar a faixa de gradiente (cerca de 550 px vazios no card do Studios): o destaque agora deita na largura toda. A home usa `grid` com Studios, Forge, Originals e NanaPet (logo oficial em `public/brands/nanapet/logo-768.webp`, CTA para `NANAPET_URL` em nova aba); o Originals deixou de ser o CTA da NanaPet.
+6. **`Footer` não aceita item com `onClick`.** (O texto oculto de link externo foi atendido no DS 0.2.3: `Footer externalLabel`, que a landing passa com `common.link.external`.) O "Cookies" que reabre as preferências é um `href="#cookies"` ouvido por `hashchange`. Pedido: `externalLabel` repassado ao `Link` e `onClick` em `FooterLink`.
 7. **`ContactSection` sem campo opcional e sem honeypot.** O formulário antigo tinha "Empresa (opcional)" e um campo-isca contra robôs; o do DS não tem nenhum dos dois. A rota `/api/contact` ainda aceita `company` e o honeypot `website`, mas o formulário não os envia. Pedido: `extraFields` (texto curto opcional) e `honeypot` embutido.
 8. **`CookieConsent` nasce aberto no SSR** (`defaultOpen = true`) e só fecha depois de ler o `localStorage`: quem já escolheu vê a barra piscar. A landing controla `open` e só abre depois da hidratação. Pedido: começar fechado e abrir no mount quando não houver escolha gravada.
+
+15. **Dados da empresa no rodapé.** **Atendido no DS 0.2.3:** `Footer address` (um `<address>`, uma linha por item). A landing passa razão social, CNPJ, endereço, CEP e e-mail de `COMPANY`/`CONTACT_EMAIL` (`src/lib/site.ts`), como o rodapé do site antigo; a linha legal volta a dizer "Cerneo Tecnologia LTDA". As páginas legais já citavam a razão social (o site antigo não punha CNPJ nelas).
+
+## Pendente: release do DS 0.2.3
+
+A validação local usa os tarballs gerados do DS (`vendor/cerneo-tokens-0.2.3.tgz` e `vendor/cerneo-ui-0.1.3.tgz`, fora do git). O `package.json` e o `package-lock.json` que apontam para `file:vendor/…` **não foram commitados**: no git, eles continuam no registry (0.2.2/0.1.2) até o release. Depois que o dono publicar `@cerneo/tokens@0.2.3` e `@cerneo/ui@0.1.3` no GitHub Packages:
+
+```sh
+rm -rf vendor
+NPM_TOKEN="$(gh auth token)" npm i @cerneo/tokens@0.2.3 @cerneo/ui@0.1.3 --save-exact
+git add package.json package-lock.json && git commit -m "DS 0.2.3 do registry"
+```
+
+O lock volta a resolver em `npm.pkg.github.com` e o `Dockerfile` original funciona sem mudança.
 
 ## Idiomas
 

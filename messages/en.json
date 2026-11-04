@@ -41,7 +41,7 @@
       "products": "Products",
       "company": "Company",
       "legal": "Legal",
-      "rights": "© {year} Cerneo. All rights reserved.",
+      "rights": "© {year} {company}. All rights reserved.",
       "privacy": "Privacy",
       "terms": "Terms",
       "cookies": "Cookies"
@@ -133,8 +133,8 @@
     },
     "products": {
       "eyebrow": "Ecosystem",
-      "title": "Three products, one core.",
-      "lead": "Our own tools that solve real problems and prove, in production, the engineering we practice.",
+      "title": "Four products, one core.",
+      "lead": "Our own tools and brands that solve real problems and prove, in production, the engineering we practice.",
       "studios": {
         "tagline": "Your brands' schedule, in one place.",
         "description": "Calendar, review and publishing for people who look after several brands at once.",
@@ -147,6 +147,7 @@
       },
       "forge": {
         "tagline": "The creation engine. Script, piece and version.",
+        "description": "From the brief to a finished piece for each channel, with versions per language.",
         "bullets": [
           "Scripts from the brief",
           "Pieces for 9 channels",
@@ -161,6 +162,17 @@
           "Script and direction",
           "Shooting and editing",
           "Premiere and distribution"
+        ],
+        "action": "Discover Originals"
+      },
+      "nanapet": {
+        "endorsement": "A Cerneo Originals brand",
+        "tagline": "Your pet's care, in one app.",
+        "description": "For pet owners and pet partners. The first Originals brand.",
+        "bullets": [
+          "Digital pet ID card",
+          "Pet partner search",
+          "Care schedule"
         ],
         "action": "Discover NanaPet"
       }

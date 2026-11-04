@@ -35,3 +35,6 @@ next-env.d.ts
 
 # testing
 coverage/
+
+# tarballs locais do Cerneo DS (só validação antes do release; nunca no git: o repo é público)
+/vendor/

@@ -41,7 +41,7 @@
       "products": "Produtos",
       "company": "Empresa",
       "legal": "Legal",
-      "rights": "© {year} Cerneo. Todos os direitos reservados.",
+      "rights": "© {year} {company}. Todos os direitos reservados.",
       "privacy": "Privacidade",
       "terms": "Termos",
       "cookies": "Cookies"
@@ -133,8 +133,8 @@
     },
     "products": {
       "eyebrow": "Ecossistema",
-      "title": "Três produtos, um mesmo cerne.",
-      "lead": "Ferramentas próprias que resolvem problemas reais e provam, em produção, a engenharia que praticamos.",
+      "title": "Quatro produtos, um mesmo cerne.",
+      "lead": "Ferramentas e marcas próprias que resolvem problemas reais e provam, em produção, a engenharia que praticamos.",
       "studios": {
         "tagline": "A agenda das suas marcas, num só lugar.",
         "description": "Calendário, revisão e publicação para quem cuida de várias marcas ao mesmo tempo.",
@@ -147,6 +147,7 @@
       },
       "forge": {
         "tagline": "A máquina de criação. Roteiro, peça e versão.",
+        "description": "Do briefing à peça pronta para cada canal, com versões por idioma.",
         "bullets": [
           "Roteiro a partir do briefing",
           "Peças para 9 canais",
@@ -161,6 +162,17 @@
           "Roteiro e direção",
           "Gravação e edição",
           "Estreia e distribuição"
+        ],
+        "action": "Conhecer o Originals"
+      },
+      "nanapet": {
+        "endorsement": "Uma marca Cerneo Originals",
+        "tagline": "O cuidado do seu pet, num só app.",
+        "description": "Para tutores e parceiros de pets. A primeira marca do Originals.",
+        "bullets": [
+          "Carteirinha digital do pet",
+          "Busca de parceiros pet",
+          "Agenda de cuidados"
         ],
         "action": "Conhecer a NanaPet"
       }

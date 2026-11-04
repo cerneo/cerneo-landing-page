@@ -8,11 +8,11 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { usePathname as useRawPathname, useRouter as useRawRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { Button, CookieConsent, Footer, IconButton, SiteHeader } from "@cerneo/ui";
+import { Button, CookieConsent, Footer, IconButton, Link, SiteHeader } from "@cerneo/ui";
 import type { NavMenuItem } from "@cerneo/ui";
 import { routing } from "../i18n/routing";
 import { usePathname, useRouter } from "../i18n/navigation";
-import { ANCHORS, href } from "../lib/site";
+import { ANCHORS, COMPANY, CONTACT_EMAIL, NANAPET_URL, href } from "../lib/site";
 import { applyTheme, ensureTheme, type Theme } from "../lib/theme";
 
 const LANG_LABEL: Record<string, string> = { "pt-BR": "PT", en: "EN", es: "ES" };
@@ -102,6 +102,7 @@ export function SiteFooter({ year }: { year: number }) {
   return (
     <Footer
       label={t("footer.label")}
+      externalLabel={t("link.external")}
       tagline={t("footer.tagline")}
       columns={[
         {
@@ -118,6 +119,7 @@ export function SiteFooter({ year }: { year: number }) {
             { label: "Studios", href: href(locale, "home", ANCHORS.products) },
             { label: "Forge", href: href(locale, "home", ANCHORS.products) },
             { label: "Originals", href: href(locale, "home", ANCHORS.products) },
+            { label: "NanaPet", href: NANAPET_URL, external: true },
           ],
         },
         {
@@ -139,7 +141,17 @@ export function SiteFooter({ year }: { year: number }) {
           ],
         },
       ]}
-      legal={t("footer.rights", { year })}
+      address={[
+        COMPANY.legalName,
+        `CNPJ ${COMPANY.cnpj}`,
+        COMPANY.street,
+        COMPANY.city,
+        `CEP ${COMPANY.cep}`,
+        <Link key="email" href={`mailto:${CONTACT_EMAIL}`} tone="muted">
+          {CONTACT_EMAIL}
+        </Link>,
+      ]}
+      legal={t("footer.rights", { year, company: COMPANY.legalName })}
       legalLinks={[
         { label: t("footer.privacy"), href: href(locale, "privacy") },
         { label: t("footer.terms"), href: href(locale, "terms") },
