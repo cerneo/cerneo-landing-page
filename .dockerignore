@@ -1,0 +1,24 @@
+# Só o que o build precisa. Nunca segredo: o NPM_TOKEN chega por
+# `--secret id=npm_token`, e .env* não entra no contexto.
+.git
+.gitignore
+.claude
+node_modules
+.next
+out
+build
+dist
+coverage
+.vercel
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+.DS_Store
+.vscode
+.idea
+Dockerfile
+.dockerignore
+docs
